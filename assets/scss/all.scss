@@ -6,3 +6,9 @@
 
 @import "./util/utilities";
 @import "bootstrap/scss/utilities/api";
+@import "../scss/layout/header";
+@import "../scss/layout/footer";
+@import "../scss/pages/index";
+@import "../scss/pages/about";
+@import "../scss/pages/product";
+@import "../scss/pages/cart";

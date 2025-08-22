@@ -10,6 +10,7 @@ $utilities: map-merge(
             map-merge(
               map-get(map-get($utilities, "font-size"), "values"),
               (
+                0: 56px,
                 1: $h1-font-size,
                 2: $h2-font-size,
                 3: $h3-font-size,

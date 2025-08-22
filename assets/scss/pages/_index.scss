@@ -1,0 +1,5 @@
+.title-shadow {
+  color: #fff; /* 文字本身的顏色 */
+  text-shadow: -1px -1px 0 #000, /* 左上 */ 1px -1px 0 #000,
+    /* 右上 */ -1px 1px 0 #000, /* 左下 */ 1px 1px 0 #000; /* 右下 */
+}
