@@ -350,6 +350,7 @@ $Error: #b25144;
 $Alert: #f5c43d;
 
 $Background: #f5f3ef;
+$Background-02: #f5f3efb2;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
@@ -401,7 +402,8 @@ $theme-colors: (
   "success": $Success,
   "error": $Error,
   "alert": $Alert,
-  "background": $Background
+  "background": $Background,
+  "background-02": $Background-02
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -462,7 +464,7 @@ $enable-grid-classes: true !default;
 $enable-container-classes: true !default;
 $enable-cssgrid: false !default;
 $enable-button-pointers: true !default;
-$enable-rfs: true !default;
+$enable-rfs: false; //true !default;
 $enable-validation-icons: true !default;
 $enable-negative-margins: false !default;
 $enable-deprecation-messages: true !default;
@@ -646,7 +648,7 @@ $border-widths: (
   5: 5px,
 ) !default;
 $border-style: solid !default;
-$border-color: $gray-300 !default;
+$border-color: $Neutral-200; //$gray-300 !default;
 $border-color-translucent: rgba($black, 0.175) !default;
 // scss-docs-end border-variables
 
@@ -675,7 +677,7 @@ $component-active-bg: $primary !default;
 // scss-docs-start focus-ring-variables
 $focus-ring-width: 0.25rem !default;
 $focus-ring-opacity: 0.25 !default;
-$focus-ring-color: rgba($primary, $focus-ring-opacity) !default;
+$focus-ring-color: rgba($Primary-500, $focus-ring-opacity) !default;
 $focus-ring-blur: 0 !default;
 $focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
 // scss-docs-end focus-ring-variables
@@ -779,7 +781,7 @@ $display-font-sizes: (
   // 3: 4rem,
   // 4: 3.5rem,
   // 5: 3rem,
-  // 6: 2.5rem,,,,,,,,,,,,,,,,,,,
+  // 6: 2.5rem,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 
 $display-font-family: null !default;
@@ -1305,7 +1307,7 @@ $zindex-levels: (
 // Navs
 
 // scss-docs-start nav-variables
-$nav-link-padding-y: 0.5rem !default;
+$nav-link-padding-y: 0.75rem; //0.5rem !default;
 $nav-link-padding-x: 1rem !default;
 $nav-link-font-size: null !default;
 $nav-link-font-weight: null !default;

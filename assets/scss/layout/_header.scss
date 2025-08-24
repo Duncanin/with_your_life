@@ -1,0 +1,43 @@
+.w-360 {
+  max-width: 360px;
+}
+@media (min-width: 1200px) {
+  .w-360 {
+    width: 360px !important;
+  }
+}
+.w-296 {
+  width: 296px;
+}
+/* 讓 dropdown 掉到 navbar 外面 */
+.navbar .nav-online {
+  position: absolute; /* 脫離 navbar 的圓角容器 */
+  top: 100%; /* 緊貼在 navbar 下方 */
+  margin-top: 1rem; /* 與 navbar 外框留縫隙 */
+  left: 60%; /* 自動靠 trigger 對齊 */
+  z-index: 1050;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+.navbar-nav .nav-link.dropdown-toggle.show {
+  color: $Secondary-500 !important;
+}
+.nav-link:hover {
+  color: $Secondary-500 !important;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: $Primary-100;
+  border-radius: 100px;
+}
+.hamburger-menu {
+  margin-top: 95px;
+}
+
+.dropdown .nav-user {
+  position: absolute; /* 脫離 navbar 的圓角容器 */
+  top: 100%; /* 緊貼在 navbar 下方 */
+  margin-top: 2rem; /* 與 navbar 外框留縫隙 */
+  left: -40%; /* 自動靠 trigger 對齊 */
+  z-index: 1050;
+}
