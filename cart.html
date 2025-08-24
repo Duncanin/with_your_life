@@ -8,7 +8,7 @@
       href="/with_your_life/assets/logo-lcon-DHejrPId.svg"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>伴你在日常｜首頁</title>
+    <title>伴你在日常｜購物車</title>
     <!-- bs5 -->
 <link
   rel="stylesheet"
@@ -133,25 +133,103 @@
           <a class="nav-link text-neutral-950" href="#">常見問題</a>
         </li>
       </ul>
+
       <a href="cart.html">
-        <span
-          class="material-symbols-outlined text-primary-500 p-3 align-bottom me-lg-2"
-        >
-          shopping_cart
+        <span class="position-relative d-inline-block me-3 me-lg-5">
+          <span class="material-symbols-outlined text-primary-500 align-bottom">
+            shopping_cart
+          </span>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill p-1 bg-secondary-500 border border-neutral-0 border-1"
+          >
+            10
+          </span>
         </span>
       </a>
-      <button
-        type="button"
-        class="btn btn-outline-primary-500 bg-neutral-0 text-primary-500 fw-semibold btn d-none d-lg-block"
-      >
-        登入/註冊
-      </button>
-      <button
-        type="button"
-        class="btn btn-outline-primary-500 btn-sm bg-neutral-0 text-primary-500 fw-semibold btn d-lg-none"
-      >
-        登入/註冊
-      </button>
+      <div class="dropdown">
+        <button
+          class="btn btn-outline-primary-500 bg-neutral-0 text-primary-500 fw-semibold btn d-none d-lg-block ms-5"
+          type="button"
+          id="dropdownMenu-userButton"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <span class="material-symbols-outlined align-bottom me-1"> face </span
+          >會員中心
+        </button>
+        <ul
+          class="dropdown-menu nav-user bg-background border border-neutral-0 p-3"
+          aria-labelledby="navbarDropdown"
+          style="backdrop-filter: blur(8px)"
+        >
+          <li>
+            <a class="dropdown-item" href="#"
+              ><div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    notifications </span
+                  >訊息通知
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"
+              ><div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    favorite </span
+                  >我的收藏
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"
+              ><div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    assignment </span
+                  >訂單查詢
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"
+              ><div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    assignment_ind </span
+                  >會員資料
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"
+              ><div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    chip_extraction </span
+                  >登出
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <button
         class="navbar-toggler d-lg-none border-0 p-3"
         type="button"
@@ -180,12 +258,14 @@
     </form>
     <ul class="list-unstyled">
       <li>
-        <a class="nav-link text-neutral-950 py-3 px-4" href="about.html"
-          >關於我們</a
-        >
+        <a class="text-neutral-950 py-3 px-4" href="about.html">關於我們</a>
       </li>
       <li class="mt-2 border-top">
-        <a class="py-3 px-4" data-bs-toggle="collapse" href="#navbar-collapse">
+        <a
+          class="text-neutral-950 py-3 px-4"
+          data-bs-toggle="collapse"
+          href="#navbar-collapse"
+        >
           線上商城
         </a>
         <ul
@@ -247,10 +327,89 @@
         </ul>
       </li>
       <li class="mt-2 border-top">
-        <a class="nav-link text-neutral-950 py-3 px-4" href="#">常見問題</a>
+        <a class="text-neutral-950 py-3 px-4" href="#">常見問題</a>
       </li>
       <li class="mt-2">
-        <a class="nav-link text-neutral-950 py-3 px-4" href="#">會員中心</a>
+        <a
+          class="text-neutral-950 py-3 px-4"
+          data-bs-toggle="collapse"
+          href="#user-collapse"
+          >會員中心</a
+        >
+        <ul
+          class="collapse list-unstyled bg-background border border-neutral-0 rounded-20 mb-4 px-4"
+          id="user-collapse"
+          aria-labelledby="navbarDropdown"
+          style="backdrop-filter: blur(8px)"
+        >
+          <li>
+            <a class="dropdown-item" href="#">
+              <div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    notifications </span
+                  >訊息通知
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <div
+                class="d-flex justify-content-between align-items-center py-3"
+              >
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    favorite </span
+                  >我的收藏
+                </p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="#"></a>
+              <div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    assignment </span
+                  >訂單查詢
+                </p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    assignment_ind </span
+                  >會員資料
+                </p>
+              </div></a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">
+              <div class="d-flex align-items-center py-3 w-296">
+                <p>
+                  <span
+                    class="material-symbols-outlined text-primary-500 align-bottom me-3"
+                  >
+                    chip_extraction </span
+                  >登出
+                </p>
+              </div></a
+            >
+          </li>
+        </ul>
       </li>
     </ul>
   </div>
