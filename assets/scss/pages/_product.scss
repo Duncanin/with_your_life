@@ -1,0 +1,39 @@
+
+// 旗子定位
+.flag {
+  left: 18%;          /* 靠左 */
+  top: 35%;         /* 垂直置中 */
+  transform: translateY(-50%);
+}
+
+
+// 推薦產品卡片
+
+.product-img {
+  width: 118px;
+  height: 118px;
+}
+
+@media (min-width: 992px) { /* Bootstrap 預設 lg 斷點 = 桌機 */
+  .product-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+// 多行截斷
+.text-truncate-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+}
+// 桌機以上 (lg = 992px 起) 取消截斷
+@media (min-width: 992px) {
+  .text-truncate-2 {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  }
+}
