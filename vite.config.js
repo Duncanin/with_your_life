@@ -39,10 +39,10 @@ export default defineConfig({
     rollupOptions: {
       input: Object.fromEntries(
         glob
-          .sync("pages/**/*.html")
+          .sync("page/**/*.html")
           .map((file) => [
             path.relative(
-              "pages",
+              "page",
               file.slice(0, file.length - path.extname(file).length)
             ),
             fileURLToPath(new URL(file, import.meta.url)),
