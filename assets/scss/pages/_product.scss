@@ -1,9 +1,9 @@
 
 // 旗子定位
 .flag {
-  left: 18%;          /* 靠左 */
-  top: 35%;         /* 垂直置中 */
-  transform: translateY(-50%);
+  left: 18%;         
+  top: 50%;         
+  transform: translateY(-70%);
 }
 
 
@@ -36,4 +36,114 @@
   -webkit-line-clamp: 3;
   line-clamp: 3;
   }
+}
+
+
+// 產品分類導覽列
+.category-nav .nav-link.active {
+  color: var(--bs-primary-700) !important; 
+}
+
+.category-nav .nav-link {
+  position: relative;
+  display: inline-block; /* nav-link 只跟文字一樣寬 */
+  padding: 0 .5rem;      /* 視需要保留左右間距 */
+  text-align: center;
+}
+
+// active 狀態底線
+.category-nav .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0.2em;                /* 與文字距離 */
+  left: 50%;                         /* 基準點在文字中間 */
+  transform: translateX(-50%);       /* 往左移自身 50%，達到置中 */
+  width: 64px;                 
+  height: 6px;
+  background: url("/assets/photo/product/image-botton.svg") no-repeat center;
+  background-size: contain;    /* 保持比例縮放 */
+}
+
+
+/* 卡片裡的 badge */
+.product-badge{
+  position:absolute;
+  top:.8rem; left:-0.8rem;        /* 左上角 */
+  display:inline-block;       
+  width:auto !important;        
+  height:auto !important;
+  padding:4px 12px;
+  font-size:.875rem;
+  font-weight:600;
+  line-height:16.8px;
+  color:#fff;
+  background:#527752;           /* 你的綠色 */
+   border-radius: 0 999px 999px 0; /* 左邊平，右邊圓 */
+  z-index:1;
+}
+
+// 卡片裡的 badge  桌機以上 (lg = 992px 起) 
+@media (min-width: 992px) {
+  .product-badge {
+  top:.5rem; left:-2rem;        /* 左上角 */
+  padding:8px 16px;
+  font-size:1rem;
+  line-height:19.2px;
+  }
+}
+
+
+// 頁碼
+.my-pagination a,
+.my-pagination span {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #527752;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 8px 9.5px;
+}
+
+/* hover */
+.my-pagination a:hover {
+  color: #2f4a36;
+}
+
+/* active 狀態 */
+.my-pagination a.active {
+  color: #527752;
+}
+.my-pagination a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0em;                /* 與文字距離 */
+  left: 50%;                         /* 基準點在文字中間 */
+  transform: translateX(-50%);       /* 往左移自身 50%，達到置中 */
+  width: 40px;                 
+  height: 4.85px;
+  background: url("/assets/photo/product/image-botton.svg") no-repeat center;
+  background-size: contain;    /* 保持比例縮放 */
+}
+
+/* 禁用 */
+.my-pagination a.disabled {
+  color: #bbb;
+  pointer-events: none;
+}
+
+/* dots */
+.my-pagination .dots {
+  color: #888;
+}
+
+/* 圓形按鈕 */
+.my-pagination a.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f6f8f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
