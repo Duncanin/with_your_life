@@ -528,6 +528,10 @@ $spacers: (
   //80
   14: $spacer * 7.5,
   //120
+  15: $spacer * 8.75,
+  //140
+  16: $spacer * 10,
+  //160
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -781,7 +785,7 @@ $display-font-sizes: (
   // 3: 4rem,
   // 4: 3.5rem,
   // 5: 3rem,
-  // 6: 2.5rem,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  // 6: 2.5rem,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 
 $display-font-family: null !default;
@@ -1099,7 +1103,7 @@ $form-check-input-focus-border: $input-focus-border-color !default;
 $form-check-input-focus-box-shadow: $focus-ring-box-shadow !default;
 
 $form-check-input-checked-color: $component-active-color !default;
-$form-check-input-checked-bg-color: $component-active-bg !default;
+$form-check-input-checked-bg-color: $Primary-500; //$component-active-bg !default;
 $form-check-input-checked-border-color: $form-check-input-checked-bg-color !default;
 $form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$form-check-input-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/></svg>") !default;
 $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;

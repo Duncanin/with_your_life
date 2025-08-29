@@ -11,8 +11,567 @@
     <title>伴你在日常｜購物車</title>
     <%- include('./layout/link-icon'); -%>
   </head>
-  <body>
+  <body class="bg-background">
     <%- include('./layout/header-loginOut'); -%>
+    <main>
+      <section class="cart-buy">
+        <div class="container py-14">
+          <div class="row justify-content-lg-center">
+            <!-- 4.1標題 -->
+            <div
+              class="col-lg-3 d-flex justify-content-lg-center align-items-lg-center mb-lg-8"
+            >
+              <div class="text-center">
+                <h2 class="fs-lg-1 text-primary-900 mb-lg-6">陪我ㄟ東西</h2>
+                <p class="fs-lg-4 text-secondary-500">購物車</p>
+              </div>
+            </div>
+            <!-- 購買標題 -->
+            <div class="row justify-content-lg-center">
+              <div class="col-lg-10 mb-lg-6 d-flex">
+                <p class="text-neutral-700 ms-6 me-6" style="width: 96px">
+                  商品圖
+                </p>
+                <p class="text-neutral-700 me-6" style="width: 190px">商品</p>
+                <p class="text-neutral-700 me-6" style="width: 190px">價格</p>
+                <p class="text-neutral-700 me-6" style="width: 190px">數量</p>
+                <p class="text-neutral-700 me-6" style="width: 190px">小計</p>
+                <p class="text-neutral-700">刪除</p>
+              </div>
+            </div>
+            <!-- 購買項目 -->
+            <div class="col-lg-10 justify-content-lg-center mb-lg-4">
+              <div
+                class="p-lg-6 bg-neutral-0 rounded-20 d-flex align-items-lg-center"
+              >
+                <img
+                  src="../assets/photo/cart/cart-product-1.svg"
+                  alt="購物車1"
+                  class="me-6"
+                />
+                <p class="fs-lg-5 text-primary-950 me-6" style="width: 190px">
+                  洗澡椅
+                </p>
+                <p class="fs-lg-5 text-primary-950 me-6" style="width: 190px">
+                  NT$ 2,800
+                </p>
+                <div
+                  class="d-flex align-items-lg-center me-6"
+                  style="width: 190px"
+                >
+                  <button
+                    type="button"
+                    class="bg-primary-50 rounded-circle p-0 border-0 me-2"
+                  >
+                    <span class="material-symbols-outlined algin-bottom p-2">
+                      check_indeterminate_small
+                    </span>
+                  </button>
+                  <p class="fs-lg-5 text-primary-950 px-2 me-2">1</p>
+                  <button
+                    type="button"
+                    class="bg-primary-50 rounded-circle p-0 border-0 me-2"
+                  >
+                    <span class="material-symbols-outlined algin-bottom p-2">
+                      add
+                    </span>
+                  </button>
+                </div>
+                <p
+                  class="fs-lg-5 text-primary-950 px-2 bg-white me-6"
+                  style="width: 190px"
+                >
+                  NT$ 2,800
+                </p>
+                <a type="button" class="p-0 border-0 me-2">
+                  <span
+                    class="material-symbols-outlined text-primary-500 p-3 fs-3"
+                  >
+                    cancel
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-10 justify-content-lg-center mb-lg-4">
+              <div
+                class="p-lg-6 bg-neutral-0 rounded-20 d-flex align-items-lg-center"
+              >
+                <img
+                  src="../assets/photo/cart/cart-product-2.svg"
+                  alt="購物車2"
+                  class="me-6"
+                />
+                <p class="fs-lg-5 text-primary-950 me-6" style="width: 190px">
+                  多功能欄式拐杖－四腳拐杖/手杖
+                </p>
+                <p class="fs-lg-5 text-primary-950 me-6" style="width: 190px">
+                  NT$ 2,999
+                </p>
+                <div
+                  class="d-flex align-items-lg-center me-6"
+                  style="width: 190px"
+                >
+                  <button
+                    type="button"
+                    class="bg-primary-50 rounded-circle p-0 border-0 me-2"
+                  >
+                    <span class="material-symbols-outlined algin-bottom p-2">
+                      check_indeterminate_small
+                    </span>
+                  </button>
+                  <p class="fs-lg-5 text-primary-950 px-2 me-2">2</p>
+                  <button
+                    type="button"
+                    class="bg-primary-50 rounded-circle p-0 border-0 me-2"
+                  >
+                    <span class="material-symbols-outlined algin-bottom p-2">
+                      add
+                    </span>
+                  </button>
+                </div>
+                <p
+                  class="fs-lg-5 text-primary-950 px-2 bg-white me-6"
+                  style="width: 190px"
+                >
+                  NT$ 5,998
+                </p>
+                <a type="button" class="p-0 border-0 me-2">
+                  <span
+                    class="material-symbols-outlined text-primary-500 p-3 fs-3"
+                  >
+                    cancel
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-10 justify-content-lg-center">
+              <div
+                class="p-lg-6 bg-neutral-0 rounded-20 d-flex align-items-lg-center"
+              >
+                <img
+                  src="../assets/photo/cart/cart-product-3.svg"
+                  alt="購物車3"
+                  class="me-6"
+                />
+                <p class="fs-lg-5 text-primary-950 me-6" style="width: 190px">
+                  背部支撐坐墊
+                </p>
+                <p class="fs-lg-5 text-primary-950 me-6" style="width: 190px">
+                  NT$ 7,980
+                </p>
+                <div
+                  class="d-flex align-items-lg-center me-6"
+                  style="width: 190px"
+                >
+                  <button
+                    type="button"
+                    class="bg-primary-50 rounded-circle p-0 border-0 me-2"
+                  >
+                    <span class="material-symbols-outlined algin-bottom p-2">
+                      check_indeterminate_small
+                    </span>
+                  </button>
+                  <p class="fs-lg-5 text-primary-950 px-2 me-2">1</p>
+                  <button
+                    type="button"
+                    class="bg-primary-50 rounded-circle p-0 border-0 me-2"
+                  >
+                    <span class="material-symbols-outlined algin-bottom p-2">
+                      add
+                    </span>
+                  </button>
+                </div>
+                <p
+                  class="fs-lg-5 text-primary-950 px-2 bg-white me-6"
+                  style="width: 190px"
+                >
+                  NT$ 7,980
+                </p>
+                <a type="button" class="p-0 border-0 me-2">
+                  <span
+                    class="material-symbols-outlined text-primary-500 p-3 fs-3"
+                  >
+                    cancel
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cart-plus bg-neutral-0 rounded-100">
+        <div class="container py-14">
+          <div class="row justify-content-lg-center">
+            <!-- 4.2標題 -->
+            <div
+              class="col-lg-3 d-flex justify-content-lg-center align-items-lg-center mb-lg-8"
+            >
+              <div class="text-center">
+                <h2 class="fs-lg-1 text-primary-900 mb-lg-6">順手帶一件</h2>
+                <p class="fs-lg-4 text-secondary-500">加購專區｜限時優惠</p>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-lg-8">
+            <div class="col-3">
+              <div class="bg-background p-6 rounded-20">
+                <img
+                  src="../assets/photo/cart/plus-product-1.svg"
+                  alt="plus-product-1"
+                  class="mb-4"
+                />
+                <div class="mb-4">
+                  <h4 class="fs-lg-4 text-primary-950 mb-4">多功能取物夾</h4>
+                  <p class="fs-lg-4 text-primary-950">NT$ 790</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary-500 text-neutral-0 w-100 d-flex align-items-center justify-content-center"
+                >
+                  <span class="material-symbols-outlined me-1">
+                    add_shopping_cart
+                  </span>
+                  加到購物車
+                </button>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="bg-background p-6 rounded-20">
+                <img
+                  src="../assets/photo/cart/plus-product-2.svg"
+                  alt="plus-product-2"
+                  class="mb-4"
+                />
+                <div class="mb-4">
+                  <h4 class="fs-lg-4 text-primary-950 mb-4">
+                    可掛式防漏吸管水杯
+                  </h4>
+                  <p class="fs-lg-4 text-primary-950">NT$ 450</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary-500 text-neutral-0 w-100 d-flex align-items-center justify-content-center"
+                >
+                  <span class="material-symbols-outlined me-1">
+                    add_shopping_cart
+                  </span>
+                  加到購物車
+                </button>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="bg-background p-6 rounded-20">
+                <img
+                  src="../assets/photo/cart/plus-product-3.svg"
+                  alt="plus-product-3"
+                  class="mb-4"
+                />
+                <div class="mb-4">
+                  <h4 class="fs-lg-4 text-primary-950 mb-4">可彎式叉子</h4>
+                  <p class="fs-lg-4 text-primary-950">NT$ 590</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary-500 text-neutral-0 w-100 d-flex align-items-center justify-content-center"
+                >
+                  <span class="material-symbols-outlined me-1">
+                    add_shopping_cart
+                  </span>
+                  加到購物車
+                </button>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="bg-background p-6 rounded-20">
+                <img
+                  src="../assets/photo/cart/plus-product-1.svg"
+                  alt="plus-product-1"
+                  class="mb-4"
+                />
+                <div class="mb-4">
+                  <h4 class="fs-lg-4 text-primary-950 mb-4">彎柄洗背刷</h4>
+                  <p class="fs-lg-4 text-primary-950">NT$ 690</p>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary-500 text-neutral-0 w-100 d-flex align-items-center justify-content-center"
+                >
+                  <span class="material-symbols-outlined me-1">
+                    add_shopping_cart
+                  </span>
+                  加到購物車
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-5">
+              <div class="py-lg-7 px-lg-8 text-center">
+                <h5 class="fs-lg-5 text-primary-500">
+                  滿 $599 再折 $200，照顧更完整的好時機
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cart-bill">
+        <div class="container py-14">
+          <div class="row justify-content-lg-center">
+            <!-- 4.3標題 -->
+            <div
+              class="col-lg-4 d-flex justify-content-lg-center align-items-lg-center mb-lg-8"
+            >
+              <div class="text-center">
+                <h2 class="fs-lg-1 text-primary-900 mb-lg-6">
+                  確認你的陪伴選擇
+                </h2>
+                <p class="fs-lg-4 text-secondary-500">結帳資訊</p>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-lg-center mb-lg-8">
+            <div class="col-lg-10">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div
+                    class="bg-primary-50 rounded-40 border-2 border border-primary-200 p-8"
+                  >
+                    <!-- 配送方式 -->
+                    <div class="mb-lg-6">
+                      <h5 class="fs-lg-5 pb-6 border-bottom border-2">
+                        配送資訊
+                      </h5>
+                      <form>
+                        <p class="text-primary-800 mt-6 mb-3 fs-7">配送方式</p>
+                        <div class="form-check form-check-inline me-6">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="addressRadioOptions"
+                            id="addressRadio1"
+                            value="addressRadio1"
+                            checked
+                          />
+                          <label class="form-check-label" for="addressRadio1"
+                            >宅配到府</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline me-6">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="addressRadioOptions"
+                            id="addressRadio2"
+                            value="addressRadio2"
+                          />
+                          <label class="form-check-label" for="addressRadio2"
+                            >7-11超商取貨</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="addressRadioOptions"
+                            id="addressRadio3"
+                            value="addressRadio3"
+                          />
+                          <label class="form-check-label" for="addressRadio3"
+                            >全家超商取貨</label
+                          >
+                        </div>
+                      </form>
+                    </div>
+                    <!-- 配送地點 -->
+                    <div class="form-floating mb-lg-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="text-address"
+                        placeholder="請輸入宅配地址"
+                      />
+                      <label for="text-address">配送地點</label>
+                    </div>
+                    <!-- 收貨人姓名 -->
+                    <div class="form-floating mb-lg-6">
+                      <input
+                        type="name"
+                        class="form-control"
+                        id="text-name"
+                        placeholder="請輸入收貨人姓名"
+                      />
+                      <label for="text-name">收貨人姓名</label>
+                    </div>
+                    <!-- 收貨人手機號碼 -->
+                    <div class="form-floating mb-lg-6">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="tel-phone"
+                        placeholder="請輸入收貨人手機號碼"
+                      />
+                      <label for="tel-phone">收貨人手機號碼</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div
+                    class="bg-primary-50 rounded-40 border-2 border border-primary-200 p-8"
+                  >
+                    <!-- 付款方式 -->
+                    <div class="mb-lg-6">
+                      <h5 class="fs-lg-5 pb-6 border-bottom border-2">
+                        付款方式
+                      </h5>
+                      <form>
+                        <p class="text-primary-800 mt-6 mb-3 fs-7">付款方式</p>
+                        <div class="form-check form-check-inline me-6">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="paidRadioOptions"
+                            id="paidRadio1"
+                            value="paidsRadio1"
+                            checked
+                          />
+                          <label class="form-check-label" for="addressRadio1"
+                            >貨到付款</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline me-6">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="paidRadioOptions"
+                            id="paidRadio2"
+                            value="paidRadio2"
+                          />
+                          <label class="form-check-label" for="addressRadio2"
+                            >信用卡付款</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="paidRadioOptions"
+                            id="paidRadio3"
+                            value="paidRadio3"
+                          />
+                          <label class="form-check-label" for="paidRadio3"
+                            >ATM付款</label
+                          >
+                        </div>
+                      </form>
+                    </div>
+                    <!-- 購物金折抵 -->
+                    <div class="mb-lg-6">
+                      <label
+                        for="shopping-paid"
+                        class="form-label text-primary-800"
+                        >購物金折抵</label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="shopping-paid"
+                        placeholder="0"
+                      />
+                      <div
+                        id="shopping-paid-help"
+                        class="form-text fs-7 text-neutral-700"
+                      >
+                        購物金餘額：<span
+                          class="fs-7 fw-semibold text-primary-500 ms-2"
+                          >NT$ 100</span
+                        >
+                      </div>
+                    </div>
+                    <!-- 優惠折扣 -->
+                    <div class="mb-lg-5">
+                      <p class="text-primary-800 mb-1">優惠折扣</p>
+                      <div class="dropdown">
+                        <button
+                          class="form-select text-start"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          請選擇優惠折扣
+                        </button>
+                        <ul
+                          class="dropdown-menu w-100 p-3"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <li class="dropdown-item py-3 px-4">
+                            <a href="#" class="d-flex justify-content-between">
+                              <p class="text-neutral-950">新會員折抵</p>
+                              <p class="text-secondary-600 fw-semibold">
+                                - NT$ 200
+                              </p>
+                            </a>
+                          </li>
+                          <li class="dropdown-item py-3 px-4">
+                            <a href="#" class="d-flex justify-content-between">
+                              <p class="text-neutral-950">方案體驗優惠</p>
+                              <p class="text-secondary-600 fw-semibold">
+                                - NT$ 2,000
+                              </p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="mb-lg-8">
+                <div class="pd-lg-6 border-bottom border-2 mb-lg-6">
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-neutral-700">商品小計(含稅)</p>
+                    <p class="text-neutral-950 fs-5">NT$ 3,850</p>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-neutral-700">運費</p>
+                    <p class="text-neutral-950 fs-5">NT$ 60</p>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-neutral-700">運費折抵（滿額）</p>
+                    <p class="text-neutral-950 fs-5">-NT$ 60</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                  <p class="text-neutral-700">總金額</p>
+                  <p class="text-secondary-600 fs-5">NT$ 3,850</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary-500 me-6 fw-semibold"
+                  style="width: 200px"
+                >
+                  我還想再逛逛
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary-500 text-neutral-0 fw-semibold"
+                  style="width: 200px"
+                >
+                  確認訂單，前往付款
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script type="module" src="../main.js"></script>
   </body>
 </html>
