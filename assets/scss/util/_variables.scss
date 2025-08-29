@@ -291,7 +291,8 @@ $cyans: (
   "cyan-400": $cyan-400,
   "cyan-500": $cyan-500,
   "cyan-600": $cyan-600,
-  "cyan-700": $cyan-700 "cyan-800": $cyan-800,
+  "cyan-700": $cyan-700,
+  "cyan-800": $cyan-800,
   "cyan-900": $cyan-900,
 ) !default;
 // fusv-enable
@@ -784,7 +785,7 @@ $display-font-sizes: (
   // 3: 4rem,
   // 4: 3.5rem,
   // 5: 3rem,
-  // 6: 2.5rem,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  // 6: 2.5rem,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 
 $display-font-family: null !default;
