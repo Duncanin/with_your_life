@@ -3,3 +3,24 @@
   text-shadow: -1px -1px 0 #000, /* 左上 */ 1px -1px 0 #000,
     /* 右上 */ -1px 1px 0 #000, /* 左下 */ 1px 1px 0 #000; /* 右下 */
 }
+
+.banner {
+  background-image: url(/assets/photo/index/bg-phone.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100dvh;
+  position: relative;
+  
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    border-top-left-radius: 95% 30%;
+    border-top-right-radius: 95% 30%;
+  }
+  .btn {
+    margin-top: -7%;
+  }
+}
