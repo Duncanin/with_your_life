@@ -13,8 +13,8 @@ function moveOutputPlugin() {
     apply: "build",
     async generateBundle(options, bundle) {
       for (const fileName in bundle) {
-        if (fileName.startsWith("pages/")) {
-          const newFileName = fileName.slice("pages/".length);
+        if (fileName.startsWith("page/")) {
+          const newFileName = fileName.slice("page/".length);
           bundle[fileName].fileName = newFileName;
         }
       }
@@ -23,26 +23,24 @@ function moveOutputPlugin() {
 }
 
 export default defineConfig({
-  // base 的寫法:
-  // base: '/Repository 的名稱/'
+  // base: 必須跟 repo 名稱相同
   base: "/with_your_life/",
   plugins: [
-    liveReload(["./layout/**/*.ejs", "./pages/**/*.ejs", "./pages/**/*.html"]),
+    liveReload(["./layout/**/*.ejs", "./page/**/*.ejs", "./page/*.html"]),
     ViteEjsPlugin(),
     moveOutputPlugin(),
   ],
   server: {
-    // 啟動 server 時預設開啟的頁面
     open: "page/index.html",
   },
   build: {
     rollupOptions: {
       input: Object.fromEntries(
         glob
-          .sync("pages/**/*.html")
+          .sync("page/*.html") // 抓 page/ 資料夾裡的 html
           .map((file) => [
             path.relative(
-              "pages",
+              "page",
               file.slice(0, file.length - path.extname(file).length)
             ),
             fileURLToPath(new URL(file, import.meta.url)),
