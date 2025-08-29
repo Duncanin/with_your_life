@@ -3,3 +3,49 @@
   text-shadow: -1px -1px 0 #000, /* 左上 */ 1px -1px 0 #000,
     /* 右上 */ -1px 1px 0 #000, /* 左下 */ 1px 1px 0 #000; /* 右下 */
 }
+
+.banner {
+  background-color: #E8F3D8;
+  background-image: url(/assets/photo/index/bg-phone.png);
+  background-repeat: no-repeat;
+  background-position: center calc(50% + 150px);
+  background-size: cover;
+  height: 100dvh;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .overlay-1 {
+    background-image: url(/assets/photo/index/);
+    z-index: 2;
+  }
+
+  .overlay-2 {
+    background-image: url(/assets/photo/index/bg-phone.png);
+    z-index: 3;
+  }
+
+  .show {
+    opacity: 1;
+  }
+
+  
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    border-top-left-radius: 95% 30%;
+    border-top-right-radius: 95% 30%;
+  }
+  .btn {
+    margin-top: -6.5%;
+  }
+}
+
