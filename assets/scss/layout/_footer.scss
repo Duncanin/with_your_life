@@ -1,3 +1,7 @@
+.background-blur-8 {
+  backdrop-filter: blur(8px);
+}
+
 // 當尺寸是lg 時，li字體變成 fs-6
 @media (min-width: 992px) {
   .fs-lg-6 {
