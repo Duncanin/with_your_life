@@ -1,35 +1,51 @@
 .title-shadow {
-  color: #fff; /* 文字本身的顏色 */
-  text-shadow: -1px -1px 0 #000, /* 左上 */ 1px -1px 0 #000,
-    /* 右上 */ -1px 1px 0 #000, /* 左下 */ 1px 1px 0 #000; /* 右下 */
+  text-shadow:
+    // -1px -1px 0 white, /* 左上 */ 1px -1px 0 white,
+    // /* 右上 */ -1px 1px 0 white, /* 左下 */ 1px 1px 0 white; /* 右下 */
+    -2px -2px 0 white,
+    -1px -1px 0 white,
+     0px -1px 0 white,
+     1px -1px 0 white,
+     2px -2px 0 white,
+    -2px  0px 0 white,
+    -1px  0px 0 white,
+     1px  0px 0 white,
+     2px  0px 0 white,
+    -2px  2px 0 white,
+    -1px  1px 0 white,
+     0px  1px 0 white,
+     1px  1px 0 white,
+     2px  2px 0 white;
 }
-
+// body {
+//   background-color: #E8F3D8;
+// }
 .banner {
-  background-color: #E8F3D8;
-  background-image: url(/assets/photo/index/bg-phone.png);
+  // background-image: url(/assets/photo/index/bg-phone.png);
+  background: url('/assets/photo/index/bg-phone.png');
   background-repeat: no-repeat;
-  background-position: center calc(50% + 150px);
-  background-size: cover;
+  background-position: center;
+  background-size: 100% 100%;
   height: 100dvh;
   position: relative;
 
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  .overlay-1 {
-    background-image: url(/assets/photo/index/);
-    z-index: 2;
-  }
+  // .overlay {
+  //   position: absolute;
+  //   inset: 0;
+  //   background-size: cover;
+  //   background-position: center;
+  //   opacity: 0;
+  //   transition: opacity 0.5s ease;
+  // }
+  // .overlay-1 {
+  //   background-image: url(/assets/photo/index/bg-img.png);
+  //   z-index: 2;
+  // }
 
-  .overlay-2 {
-    background-image: url(/assets/photo/index/bg-phone.png);
-    z-index: 3;
-  }
+  // .overlay-2 {
+  //   background-image: url(/assets/photo/index/bg-phone.png);
+  //   z-index: 3;
+  // }
 
   .show {
     opacity: 1;
@@ -43,9 +59,12 @@
     width: 100%;
     border-top-left-radius: 95% 30%;
     border-top-right-radius: 95% 30%;
+    margin-bottom: 32px;
   }
   .btn {
-    margin-top: -6.5%;
+    white-space: nowrap;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
