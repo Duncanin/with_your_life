@@ -14,8 +14,13 @@
 
   <body>
     <%- include('./layout/header-loginOut'); -%>
-    <main>
-      <secion>
+    <main class="main">
+      <!-- 佔位用 -->
+      <div class="bg-background">
+        <div style="height: 108px"></div>
+      </div>
+      <!-- section 2.1 品牌介紹/價值 -->
+      <section>
         <h2>關於<img src="../assets/photo/header/Logo.svg" /></h2>
         <p>
           我們原是一間深耕在地多年的輔具品牌，長期陪伴無數家庭走過生活的轉變。隨著時代推進與網路普及，我們看見越來越多人對輔具的需求，也發現許多顧客在選購時面臨資訊不足、選擇困難的情況。
@@ -27,58 +32,150 @@
         <div>
           <img src="../assets/photo/about/about-brand-s1-3-angle.png" />
         </div>
-      </secion>
-      <secion>
-        <h2>我們ㄟ團隊</h2>
-        <ul>
-          <li>
-            <img
-              src="../assets/photo/about/about-brand-s2-1.png"
-              alt="專業復健科醫生圖片"
-            />
-            <div>
-              <h5>復健科專業</h5>
-              <h4>陳曉婕</h4>
+      </section>
+      <!-- section 2.2 團隊介紹 -->
+      <section>
+        <div class="container">
+          <h2 class="mb-6">我們ㄟ團隊</h2>
+          <!-- 📌目前先預設flex-wrap，晚點處理右滑 -->
+          <div class="team-members row flex-nowrap overflow-auto">
+            <!-- 第一張圖 -->
+            <div class="col-12 position-relative d-flex justify-content-center">
+              <img
+                src="../assets/photo/about/about-brand-s2-1.png"
+                class="card-img-top member-img position-absolute rounded-cirlcle rounded-100 z-3 mb-4"
+                alt="專業復健科醫生圖片"
+                style="
+                  width: 80px;
+                  height: 80px;
+                  top: 0;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                "
+              />
+              <div
+                class="card card-w-320 rounded-20 d-flex align-items-center px-4"
+              >
+                <div class="card-body text-center">
+                  <h6 class="card-subtitle fs-6 mb-3">復健科專業</h6>
+                  <h5 class="card-title fs-5 mb-4">陳曉婕</h5>
+                </div>
+                <p class="card-text fs-7">
+                  邀請長照經驗豐富的陳醫師擔任顧問，協助風險評估，提供專業醫療觀點與輔具建議！
+                </p>
+              </div>
             </div>
-            <p>
-              邀請長照經驗豐富的陳醫師擔任顧問，協助風險評估，提供專業醫療觀點與輔具建議！
-            </p>
-          </li>
-          <li>
-            <img
-              src="../assets/photo/about/about-brand-s2-2.png"
-              alt="輔具研發團隊圖片"
-            />
-            <div>
-              <h5>輔具研發團隊</h5>
-              <h4>輔研所</h4>
+            <!-- 第二張圖 -->
+            <div class="col-12">
+              <div class="card">
+                <!-- 📌等等加上 h-100屬性觀察 -->
+                <img
+                  src="../assets/photo/about/about-brand-s2-2.png"
+                  class="card-img-top"
+                  alt="輔具研發團隊圖片"
+                />
+                <div class="card-body">
+                  <h5 class="card-subtitle">輔具研發團隊</h5>
+                  <h4 class="card-title">輔研所</h4>
+                </div>
+                <p class="card-text">
+                  結合臨床建議，細緻考量每一種使用情境，打造讓照顧者與使用者都安心、放心的輔具選擇！
+                </p>
+              </div>
             </div>
-            <p>
-              結合臨床建議，細緻考量每一種使用情境，打造讓照顧者與使用者都安心、放心的輔具選擇！
-            </p>
-          </li>
-          <li>
-            <img
-              src="../assets/photo/about/about-brand-s2-3.png"
-              alt="臨床護理師圖片"
-            />
-            <div>
-              <h5>臨床護理師</h5>
-              <h4>王宏明</h4>
+            <!-- 第三張圖 -->
+            <div class="col-12">
+              <div class="card">
+                <!-- 📌等等加上 h-100屬性觀察 -->
+                <img
+                  src="../assets/photo/about/about-brand-s2-3.png"
+                  class="card-img-top"
+                  alt="臨床護理師圖片"
+                />
+                <div class="card-body">
+                  <h5 class="card-subtitle">臨床護理師</h5>
+                  <h4 class="card-title">王宏明</h4>
+                </div>
+                <p class="card-text">
+                  從照顧現場出發，深入理解需求，協助整理實用輔具知識、完善選購流程！
+                </p>
+              </div>
             </div>
-            <p>
-              從照顧現場出發，深入理解需求，協助整理實用輔具知識、完善選購流程！
-            </p>
-          </li>
-        </ul>
-      </secion>
-      <secion
-        ><img
-          src="../assets/photo/about/about-brand-s3-1.png"
-          class=""
-          alt="陪診師服務圖"
-      /></secion>
-      <secion>
+          </div>
+        </div>
+      </section>
+      <!-- section 2.3 陪診師服務 service -->
+      <section class="py-10">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <!-- 定位容器 -->
+              <div class="service-img mb-6 position-relative">
+                <img
+                  src="../assets/photo/about/about-brand-s3-1.png"
+                  class="img-fluid rounded-20"
+                  alt="陪診師服務圖"
+                />
+                <!-- 黑色漸層遮罩 -->
+                <div
+                  class="position-absolute top-0 start-0 w-100 h-100 rounded-20"
+                  style="
+                    background: linear-gradient(
+                      to top,
+                      rgba(0, 0, 0, 0.5),
+                      transparent
+                    );
+                  "
+                ></div>
+                <div class="position-absolute" style="left: 20px; bottom: 20px">
+                  <h4 class="fs-4 mb-3">
+                    <span class="bg-yellow b-radius-5 px-2">陪診師服務</span>
+                  </h4>
+                  <p class="fs-6 text-neutral-0">
+                    不只是照護，更是生活中的陪伴。
+                  </p>
+                </div>
+              </div>
+              <div class="service-info">
+                <div class="service-title text-center mb-2">
+                  <!--✨原本無text-center -->
+                  <h3 class="mb-4 text-primary-900">
+                    陪你ㄟ日常，照顧你ㄟ心情
+                  </h3>
+                  <p class="fs-5 text-secondary-500 px-2">
+                    <!--✨原本無px設定 -->
+                    「伴你ㄟ日常」的陪診師，不只是照護人員，更是你生活中的安心夥伴
+                  </p>
+                </div>
+                <div class="service-texts p-4 mb-6 bg-neutral-0 rounded-20">
+                  <p class="fs-7 mb-3">
+                    有時候出門，不一定是為了看醫生，也可能只是拿藥、回診、買東西，或是想散散步。
+                  </p>
+                  <p class="fs-7 mb-3">
+                    「陪你ㄟ日常」提供的不只是醫療上的陪伴，我們會陪你掛號、問診、拿藥，也能一起去市場買菜、陪你散步聊天。
+                  </p>
+                  <p class="fs-7">
+                    我們的陪診師，不只懂健康，更懂生活。比起「照護」，我們相信「陪伴」才是最溫柔的照顧方式。
+                  </p>
+                </div>
+                <h4 class="fs-4 text-center text-primary-500 mb-9">
+                  有我們陪你，就不再孤單。
+                </h4>
+                <!--✨原本是px-6 -->
+                <button
+                  type="button"
+                  class="btn btn-outline-primary-500 fw-semibold w-100 d-flex justify-content-center"
+                >
+                  <!-- 📌📌📌要改icon大小15*15 -->
+                  <span class="material-symbols-outlined me-1"> call </span>
+                  諮詢專線：(02) 8590-6666
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
         <h2>關於訂單，你可能想問ㄟ事</h2>
         <!-- 這裡結構要再確認 -->
         <p>如何購物？</p>
@@ -87,14 +184,14 @@
         <!-- 運費圖有分手機、桌機 -->
         <img src="../assets/photo/about/about-brand-s4-1.png" />
         <p>退貨流程？</p>
-      </secion>
-      <secion>
+      </section>
+      <section>
         <div>
           <h2>咱在這裡，隨時等你</h2>
           <img src="../assets/photo/about/about-brand-s5-1.png" />
         </div>
         <div></div>
-      </secion>
+      </section>
     </main>
     <%- include('./layout/footer'); -%>
     <script type="module" src="../main.js"></script>
