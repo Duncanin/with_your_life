@@ -5,7 +5,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/with_your_life/assets/logo-lcon-5OWO6tYw.svg"
+      href="/with_your_life/assets/logo-lcon-DHejrPId.svg"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>伴你在日常｜首頁</title>
@@ -19,9 +19,13 @@
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
 />
-    <script type="module" crossorigin src="/with_your_life/assets/main-BNjfzb1q.js"></script>
-    <link rel="stylesheet" crossorigin href="/with_your_life/assets/main-BFfMpmFA.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" crossorigin src="/with_your_life/assets/main-BE4U6ru8.js"></script>
+    <link rel="stylesheet" crossorigin href="/with_your_life/assets/main-B3_q5Yu5.css">
   </head>
+  
   <body>
     <nav class="navbar fixed-top my-lg-4 my-2">
   <div
@@ -32,10 +36,10 @@
         <picture>
           <source
             media="(max-width: 992px)"
-            srcset="/with_your_life/assets/Logo-ri3A8S26.svg"
+            srcset="/with_your_life/assets/Logo-CE263qMr.svg"
           />
           <img
-            src="/with_your_life/assets/Logo-lg-DpwiHxT0.svg"
+            src="/with_your_life/assets/Logo-lg-Bt-hVG68.svg"
             alt="logo"
             class="img-fluid object-fit-cover"
           />
@@ -255,12 +259,24 @@
   </div>
 </div>
     <div class="banner d-flex">
-      <div class="overlay overlay-1"></div>
-      <div class="overlay overlay-2"></div>
-      <div class="container d-flex">
-        <h1 class="fs-2 m-auto">
-          家，有貼心就完整了
-          <span class="d-block mt-2"> 伴你在日常 </span>
+      <div class="container d-flex position-relative">
+
+        <!-- <div class="position-absolute start-50 bottom-0 translate-middle-x" style="width: 75%; margin-bottom: 10%;">
+          <img src="/assets/photo/index/wheelchair-phone.svg" alt="" class="">
+        </div> -->
+        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100">
+          <img src="/with_your_life/assets/02-1QyBnKKl.png" alt="" class="">
+          <div class="">
+            <img src="/with_your_life/assets/01-DtqyUNG-.png" alt="">
+            <img src="/with_your_life/assets/03-D0JP1iCa.png" alt="">
+          </div>
+        </div>
+
+        <h1 class="fs-2 m-auto title-shadow text-center position-absolute top-50 start-50 translate-middle">
+          一個家，
+          <span class="d-block text-nowrap mt-2">
+            應該是什麼樣子？
+          </span>
         </h1>
       </div>
       <div class="bottom bg-background">
@@ -275,16 +291,339 @@
         </button>
       </div>
     </div>
-
+
+    <div class="service-item">
+      <div class="container">
+        <div class="py-10 position-relative">
+          <h2 class="fs-3 text-center mb-6">
+            伴你ㄟ日常，照顧路上幫你想得更周到
+          </h2>
+          <div class="overflow-x-auto">
+            <div class="d-inline-flex gap-4">
+              
+      
+              
+                <div class="card pb-6">
+                  <img src="/with_your_life/assets/service-BHzWIMtO.svg" alt="輔具推薦">
+                  <div class="card-body p-0 mt-4 text-center">
+                    <h3 class="fs-5 fw-bold mb-3">輔具推薦</h3>
+                    <p class="text-neutral-700 fs-6">依不同需求推薦適合輔具</p>
+                  </div>
+                </div>
+              
+                <div class="card pb-6">
+                  <img src="/with_your_life/assets/service02-BsSJ9Ah_.svg" alt="補助指南">
+                  <div class="card-body p-0 mt-4 text-center">
+                    <h3 class="fs-5 fw-bold mb-3">補助指南</h3>
+                    <p class="text-neutral-700 fs-6">清楚標示可申請政府補助的商品</p>
+                  </div>
+                </div>
+              
+                <div class="card pb-6">
+                  <img src="/with_your_life/assets/service03-DLjDZjt6.svg" alt="一站式選購">
+                  <div class="card-body p-0 mt-4 text-center">
+                    <h3 class="fs-5 fw-bold mb-3">一站式選購</h3>
+                    <p class="text-neutral-700 fs-6">居家、衛浴等輔具整合齊備</p>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+          <div class="tag position-absolute" style="top: 82px; left: -12px;">
+            <img src="/with_your_life/assets/tag-DT_XJVR9.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sorted bg-background">
+      <div class="container">
+        <div class="py-10">
+          <h2 class="fs-3 text-center mb-6">先從分類逛起，陪你一步步找適合的</h2>
+          
+          <div class="d-grid gap-4 sorted-grid">
+            
+              <div class="text-center bg-white sorted-item">
+                <img src="/with_your_life/assets/wheelchair-CT5QfJbc.svg" alt="行動協助" class="d-block w-50 h-auto object-fit-cover" />
+                <p class="fs-5 fw-semibold lh-sm">行動協助</p>
+              </div>
+            
+              <div class="text-center bg-white sorted-item">
+                <img src="/with_your_life/assets/meal-BbggBce3.svg" alt="用餐照護" class="d-block w-50 h-auto object-fit-cover" />
+                <p class="fs-5 fw-semibold lh-sm">用餐照護</p>
+              </div>
+            
+              <div class="text-center bg-white sorted-item">
+                <img src="/with_your_life/assets/toilet-DPu3q78v.svg" alt="如廁便利" class="d-block w-50 h-auto object-fit-cover" />
+                <p class="fs-5 fw-semibold lh-sm">如廁便利</p>
+              </div>
+            
+              <div class="text-center bg-white sorted-item">
+                <img src="/with_your_life/assets/bath-Dm7miYlC.svg" alt="洗浴安全" class="d-block w-50 h-auto object-fit-cover" />
+                <p class="fs-5 fw-semibold lh-sm">洗浴安全</p>
+              </div>
+            
+              <div class="text-center bg-white sorted-item">
+                <img src="/with_your_life/assets/welfare-CkktnXnP.svg" alt="補助專區" class="d-block w-50 h-auto object-fit-cover" />
+                <p class="fs-5 fw-semibold lh-sm">補助專區</p>
+              </div>
+            
+              <div class="text-center bg-white sorted-item">
+                <img src="/with_your_life/assets/allClass-CNofe4dv.svg" alt="全部分類" class="d-block w-50 h-auto object-fit-cover" />
+                <p class="fs-5 fw-semibold lh-sm">全部分類</p>
+              </div>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="map">
+      <div class="container">
+        <div class="py-10">
+          <h2>陪你找，最近的輔具好所在</h2>
+          <div class="mt-2 position-relative">
+            <input type="text" id="searchInput" placeholder="搜尋鄰近的輔具中心" class="form-control w-100 rounded-20 border-2 border-neutral-200 py-3 px-4" style="min-width: 350px; max-width: 416px;">
+            
+          </input>
+          <button onclick="searchLocation()" class="position-absolute end-0 top-50 translate-middle-y border-0 me-3 text-secondary-500" style="appearance: none; background: none;">
+            <span class="material-symbols-outlined mt-1">distance</span>
+          </button>
+          </div>
+          <div>
+            <div class="d-flex justify-content-center my-3 region-tabs">
+              <button class="btn btn-link text-primary-300 active" data-region="north" onclick="selectRegion(this)">北部</button>
+              <button class="btn btn-link text-primary-300" data-region="central" onclick="selectRegion(this)">中部</button>
+              <button class="btn btn-link text-primary-300" data-region="south" onclick="selectRegion(this)">南部</button>
+              <button class="btn btn-link text-primary-300" data-region="east" onclick="selectRegion(this)">東部</button>
+              <button class="btn btn-link text-primary-300" data-region="island" onclick="selectRegion(this)">離島</button>
+            </div>
+            <div id="map" style="height: 300px;"></div>
+
+            <script>
+              const regionData = {
+                north: { coords: [25.033964, 121.564468], name: "台北101" },
+                central: { coords: [24.147736, 120.673648], name: "台中火車站" },
+                south: { coords: [22.627278, 120.301435], name: "高雄85大樓" },
+                east: { coords: [23.973875, 121.600801], name: "花蓮" },
+                island: { coords: [23.101013, 121.36566], name: "綠島" }
+              };
+
+              const map = L.map('map').setView(regionData.north.coords, 13);
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+              }).addTo(map);
+              let marker = L.marker(regionData.north.coords).addTo(map).bindPopup(regionData.north.name).openPopup();
+
+              function updateMapLocation(region) {
+                const { coords, name } = regionData[region];
+                map.setView(coords, 13);
+                marker.setLatLng(coords).setPopupContent(name).openPopup();
+              }
+
+              function searchLocation() {
+                const query = document.getElementById('searchInput').value;
+                if (!query) return;
+
+                fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
+                  .then(response => response.json())
+                  .then(data => {
+                    if (data.length === 0) {
+                      alert('找不到地點');
+                      return;
+                    }
+                    const { lat, lon, display_name } = data[0];
+                    const coords = [parseFloat(lat), parseFloat(lon)];
+                    map.setView(coords, 13);
+                    marker.setLatLng(coords).setPopupContent(display_name).openPopup();
+                  })
+                  .catch(error => {
+                    console.error('地點搜尋錯誤：', error);
+                    alert('搜尋失敗，請稍後再試。');
+                  });
+              }
+
+              function selectRegion(button) {
+                document.querySelectorAll('.region-tabs button').forEach(btn => {
+                  btn.classList.remove('active', 'text-dark-emphasis');
+                  btn.classList.add('text-secondary');
+                });
+                button.classList.add('active', 'text-dark-emphasis');
+                button.classList.remove('text-secondary');
+                updateMapLocation(button.dataset.region);
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="companionist">
+      <div class="container">
+        <div>
+          <div class="py-10">
+            <div class="text-center">
+              <h2 class="fs-3">伴你走過平凡ㄟ日常</h2>
+              <p class="fs-5 text-secondary-500">陪診師，那天的專屬夥伴，陪你走過每一段醫療旅程</p>
+            </div>
+            
+            <div class="desc bg-secondary-50 rounded-20 py-6 px-4 mb-4">
+              <img src="/with_your_life/assets/companionist-CqbO3HUN.svg" alt="companionist" class="ratio-1x1 d-block mb-4">
+              <div class="d-flex gap-6 flex-column">
+                <div>
+                  <h3 class="fs-5 mb-3">一人一師，專業陪診</h3>
+                  <p class="text-neutral-700 fs-6">預約掛號、排隊取藥、解讀醫囑，我們幫你打點。</p>
+                </div>
+                <div>
+                  <h3 class="fs-5 mb-3">有溫度的陪伴</h3>
+                  <p class="text-neutral-700 fs-6">會聽、會聊、會教，讓你安心踏進診間（沒有人會被留在門外）。</p>
+                </div>
+                <div>
+                  <h3 class="fs-5 mb-3">解除流程煩惱</h3>
+                  <p class="text-neutral-700 fs-6">訓練有素的小程序助理，掌握看診進度，隨時回報家人最新狀態。</p>
+                </div>
+              </div>
+            </div>
+    
+            <div class="cta d-flex flex-column gap-4">
+              <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 px-4">
+                <div style="width: 35%;">
+                  <img src="/with_your_life/assets/companionist01-BrlmjAls.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
+                </div>
+                <h3 class="fs-5 text-center">視力退化，不敢單獨出門怎麼辦？</h3>
+                <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold">
+                  瞭解更多
+                  <span class="material-symbols-outlined align-bottom fs-6">arrow_forward</span>
+                </button>
+              </div>
+    
+              <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 px-4">
+                <div style="width: 35%;">
+                  <img src="/with_your_life/assets/companionist02-BcwPtmoI.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
+                </div>
+                <h3 class="fs-5 text-center">「剛確診新病症，完全聽不懂醫生在說什麼⋯」</h3>
+                <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold">
+                  瞭解更多
+                  <span class="material-symbols-outlined align-bottom fs-6">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="feedback">
+      <div class="container">
+        <div class="py-10 position-relative">
+          <h2 class="fs-3 mb-6 text-center">陪你ㄟ日常，聽聽他們說</h2>
+          <div id="feedbackCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner" id="feedbackInner"></div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">上一張</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#feedbackCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">下一張</span>
+              </button>
+          </div>
+
+            <div id="feedbackIndicators" class="d-flex justify-content-center align-items-center gap-1 mt-4"></div>
+
+            <script>
+              const feedbackList = [
+                {
+                  img: '../assets/photo/index/feedback/feedback1.svg',
+                  alt: '蔡小姐',
+                  role: '居家照顧員',
+                  name: '蔡小姐｜35歲',
+                  text: '我每天跑很多個案，家屬第一次照顧常手忙腳亂。我都推薦他們這個網站，分類清楚、說明簡單，還有補助資訊，幫助減少很多問題，讓照顧更有力量。'
+                },
+                {
+                  img: '../assets/photo/index/feedback/feedback2.svg',
+                  alt: '林小姐',
+                  role: '照顧者',
+                  name: '林小姐｜52歲',
+                  text: '媽媽中風後，我幾乎一手包辦她的生活起居——上網找資訊時，常常看不懂，後來朋友推薦這個網站，分類清楚又好懂。這是我第一次覺得，買輔具不是一個人的戰鬥。'
+                },
+                {
+                  img: '../assets/photo/index/feedback/feedback3.svg',
+                  alt: '周伯伯',
+                  role: '自行選購',
+                  name: '周伯伯｜68歲',
+                  text: '膝蓋退化，走路越來越不穩，連出門都會感到害怕——想找助行器，卻被許多專業網站搞得看不懂。這個平台讓我安心，分類清晰，說明簡單明瞭，還會告訴我適合的使用情境。'
+                }
+              ];
+
+              const innerEl = document.getElementById('feedbackInner');
+              const indicatorsEl = document.getElementById('feedbackIndicators');
+
+              feedbackList.forEach((item, i) => {
+                const itemEl = document.createElement('div');
+                itemEl.className = 'carousel-item' + (i === 0 ? ' active' : '');
+                itemEl.innerHTML = `
+                  <div class="card text-center bg-background rounded-20 p-4 mx-auto">
+                    <img src="${item.img}" alt="${item.alt}" class="d-block mx-auto rounded-circle">
+                    <div>
+                      <h4 class="fs-6 text-primary-500 mb-3">${item.role}</h4>
+                      <h3 class="fs-5">${item.name}</h3>
+                    </div>
+                    <p class="text-neutral-700 fs-7 mb-0">${item.text}</p>
+                  </div>`;
+                innerEl.appendChild(itemEl);
+
+                // Indicator
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.setAttribute('data-bs-target', '#feedbackCarousel');
+                btn.setAttribute('data-bs-slide-to', String(i));
+                btn.setAttribute('aria-label', `Slide ${i + 1}`);
+                if (i === 0) {
+                  btn.className = 'active';
+                  btn.setAttribute('aria-current', 'true');
+                }
+                indicatorsEl.appendChild(btn);
+              });
+
+              (function () {
+                const carouselEl = document.getElementById('feedbackCarousel');
+                if (!carouselEl) return;
+
+                try { new bootstrap.Carousel(carouselEl, { interval: false }); } catch (e) {}
+
+                carouselEl.addEventListener('slid.bs.carousel', (e) => {
+                  const idx = e.to;
+                  Array.from(indicatorsEl.children).forEach((btn, i) => {
+                    if (i === idx) {
+                      btn.classList.add('active');
+                      btn.setAttribute('aria-current', 'true');
+                    } else {
+                      btn.classList.remove('active');
+                      btn.removeAttribute('aria-current');
+                    }
+                  });
+                });
+              })();
+            </script>
+        </div>
+      </div>
+    </div>
+
     <footer>
   <div class="d-flex flex-column align-items-center py-4 background-blur-8">
     <picture class="mb-2">
       <source
         media="(max-width: 992px)"
-        srcset="/with_your_life/assets/Logo-ri3A8S26.svg"
+        srcset="/with_your_life/assets/Logo-CE263qMr.svg"
       />
       <img
-        src="/with_your_life/assets/Logo-lg-DpwiHxT0.svg"
+        src="/with_your_life/assets/Logo-lg-Bt-hVG68.svg"
         alt="logo"
         class="img-fluid object-fit-cover"
       />
