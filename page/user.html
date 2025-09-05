@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/photo/logo-icon/logo-lcon.svg"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伴你在日常｜會員中心</title>
+    <%- include('./layout/link-icon'); -%>
+  </head>
+  <body class="bg-background">
+    <%- include('./layout/header-loginIn') %>
+    <main>
+      <section class="user">
+        <div class="container py-lg-14 py-8">
+          <div class="row">
+            <div
+              class="col-lg-3 justify-content-lg-center align-content-lg-start"
+            >
+              <div
+                class="nav d-flex flex-lg-column flex-nowrap overflow-x-auto flex-lg-wrap"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <!-- 重要訊息 -->
+                <button
+                  class="fs-lg-5 fs-7 fw-semibold nav-link active p-3"
+                  id="information-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#information-item"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  重要訊息
+                </button>
+                <!-- 我的收藏 -->
+                <button
+                  class="fs-lg-5 fs-7 fw-semibold nav-link p-3"
+                  id="collection-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#collection-item"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  我的收藏
+                </button>
+                <!-- 訂單紀錄 -->
+                <button
+                  class="fs-lg-5 fs-7 fw-semibold nav-link p-3"
+                  id="booking-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#booking-item"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  訂單紀錄
+                </button>
+                <!-- 會員資料 -->
+                <button
+                  class="fs-lg-5 fs-7 fw-semibold nav-link"
+                  id="user-info-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#user-info-item"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  會員資料
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <!-- 重要訊息報你知 -->
+                <div
+                  class="tab-pane fade show active"
+                  id="information-item"
+                  role="tabpanel"
+                >
+                  <div class="container py-8 py-lg-0">
+                    <div class="row">
+                      <div class="col-12">
+                        <h2
+                          class="fs-lg-3 fs-5 text-center text-primary-900 mb-lg-6 mb-4"
+                        >
+                          重要訊息報你知
+                        </h2>
+                      </div>
+                      <div class="info col-lg-10 mx-auto mb-3">
+                        <div>
+                          <a href="#" class="fs-lg-5 fs-6 p-2 mb-3 d-flex"
+                            ><span class="me-4">2025/07/18</span>
+                            <span style="max-width: 600px"
+                              >優惠通知 |
+                              好康來了！您專屬的限時優惠已開啟，別忘了使用唷！</span
+                            ></a
+                          >
+                          <a href="#" class="fs-lg-5 fs-6 p-2 mb-3 d-flex"
+                            ><span class="me-4">2025/07/04</span>
+                            <span>
+                              新品通知 |
+                              最新輔具上架囉，看看有沒有適合您日常的新幫</span
+                            >手。</a
+                          >
+                          <a href="#" class="fs-lg-5 fs-6 p-2 mb-3 d-flex"
+                            ><span class="me-4">2025/06/25</span>
+                            <span style="max-width: 600px">
+                              補助通知 |
+                              別錯過！您可能符合補助資格，點我查看申請提</span
+                            >醒。</a
+                          >
+                          <a href="#" class="fs-lg-5 fs-6 p-2 mb-3 d-flex"
+                            ><span class="me-4">2025/06/18</span>
+                            <span style="max-width: 600px">
+                              一般消息 |
+                              我們更新了使用者體驗，快來看看介面變得更貼</span
+                            >心了！</a
+                          >
+                          <a href="#" class="fs-lg-5 fs-6 p-2 mb-3 d-flex"
+                            ><span class="me-4">2025/06/14</span>
+                            <span style="max-width: 600px">
+                              其他消息 |
+                              想分享照顧經驗？我們開放使用者故事投稿囉！</span
+                            ></a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <!-- 頁碼 -->
+                        <div
+                          style="
+                            max-width: 351px;
+                            margin: 0 auto;
+                            overflow-x: hidden;
+                          "
+                        >
+                          <nav aria-label="Page navigation">
+                            <ul
+                              class="d-flex justify-content-center align-items-center g-4 list-unstyled my-pagination my-0"
+                            >
+                              <li>
+                                <a href="#" class="disabled">
+                                  <i class="bi bi-caret-left-fill"></i>
+                                </a>
+                              </li>
+
+                              <li><a href="#" class="active">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><span class="dots">…</span></li>
+                              <li><a href="#">10</a></li>
+
+                              <li>
+                                <a href="#" class="circle">
+                                  <i class="bi bi-caret-right-fill"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 我的私藏ㄟ好物 -->
+                <div class="tab-pane fade" id="collection-item" role="tabpanel">
+                  <div class="container py-8 py-lg-0">
+                    <div class="row">
+                      <div class="col-12">
+                        <h2
+                          class="fs-lg-3 fs-5 text-center text-primary-900 mb-lg-6 mb-4"
+                        >
+                          我的私藏ㄟ好物
+                        </h2>
+                      </div>
+                      <div class="container">
+                        <ul
+                          class="row list-unstyled gx-3 mb-3 align-items-stretch;"
+                        >
+                          <!-- card-1 -->
+                          <li class="col-6 col-lg-4">
+                            <a
+                              href="#"
+                              class="card p-3 bg-background-02 border-0"
+                            >
+                              <div class="position-relative ratio ratio-1x1">
+                                <img
+                                  src="/assets/photo/product/product-7.png"
+                                  alt="高階數位減壓氣墊床"
+                                  class="img-fluid"
+                                  style="max-width: 352px"
+                                />
+                                <span
+                                  class="badge collection-badge d-flex align-items-center"
+                                  ><i class="bi bi-heart fs-6 fs-lg-5 me-2"></i>
+                                  已收藏</span
+                                >
+                              </div>
+
+                              <div class="card-body text-start py-2 px-1">
+                                <h6
+                                  class="card-title fs-6 fs-lg-5 text-neutral-950 mb-3"
+                                >
+                                  高階數位減壓氣墊床
+                                </h6>
+                                <p
+                                  class="card-text fs-6 fs-lg-5 text-primary-700 fw-semibold"
+                                >
+                                  NT$ 18,500
+                                </p>
+                                <p
+                                  class="text-decoration-line-through fs-7 fs-lg-6 text-neutral-500 fw-normal"
+                                >
+                                  NT$ NT$ 19,500
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                          <!-- card-2 -->
+                          <li class="col-6 col-lg-4">
+                            <a
+                              href="#"
+                              class="card p-3 bg-background-02 border-0"
+                            >
+                              <div class="position-relative ratio ratio-1x1">
+                                <img
+                                  src="/assets/photo/product/product-4.png"
+                                  alt="AirMove 鋁合金大輪椅"
+                                  class="img-fluid"
+                                  style="max-width: 352px"
+                                />
+                                <span
+                                  class="badge collection-badge d-flex align-items-center"
+                                  ><i class="bi bi-heart fs-6 fs-lg-5 me-2"></i>
+                                  已收藏</span
+                                >
+                              </div>
+
+                              <div class="card-body text-start py-2 px-1">
+                                <h6
+                                  class="card-title fs-6 fs-lg-5 text-neutral-950 mb-3"
+                                >
+                                  AirMove 鋁合金大輪椅
+                                </h6>
+                                <p
+                                  class="card-text fs-6 fs-lg-5 text-primary-700 fw-semibold"
+                                >
+                                  NT$ 14,300
+                                </p>
+                                <p
+                                  class="text-decoration-line-through fs-7 fs-lg-6 text-neutral-500 fw-normal"
+                                >
+                                  NT$ 15,500
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                          <!-- card-3 -->
+                          <li class="col-6 col-lg-4">
+                            <a
+                              href="#"
+                              class="card p-3 bg-background-02 border-0"
+                            >
+                              <div class="position-relative ratio ratio-1x1">
+                                <img
+                                  src="/assets/photo/product/product-3.png"
+                                  alt="日式三馬達溫馨電動床"
+                                  class="img-fluid"
+                                  style="max-width: 352px"
+                                />
+                                <span
+                                  class="badge collection-badge d-flex align-items-center"
+                                  ><i class="bi bi-heart fs-6 fs-lg-5 me-2"></i>
+                                  已收藏</span
+                                >
+                              </div>
+
+                              <div class="card-body text-start py-2 px-1">
+                                <h6
+                                  class="card-title fs-6 fs-lg-5 text-neutral-950 mb-3"
+                                >
+                                  日式三馬達溫馨電動床
+                                </h6>
+                                <div class="mt-auto">
+                                  <p
+                                    class="card-text fs-6 fs-lg-5 text-primary-700 fw-semibold"
+                                  >
+                                    NT$ 27,500
+                                  </p>
+                                  <p
+                                    class="text-decoration-line-through fs-7 fs-lg-6 text-neutral-500 fw-normal"
+                                  >
+                                    NT$ 30,500
+                                  </p>
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                          <!-- card-4 -->
+                          <li class="col-6 col-lg-4">
+                            <a
+                              href="#"
+                              class="card p-3 bg-background-02 border-0"
+                            >
+                              <div class="position-relative ratio ratio-1x1">
+                                <img
+                                  src="/assets/photo/product/product-15.png"
+                                  alt="超輕量北歐健走杖"
+                                  class="img-fluid"
+                                  style="max-width: 352px"
+                                />
+                                <span
+                                  class="badge collection-badge d-flex align-items-center"
+                                  ><i class="bi bi-heart fs-6 fs-lg-5 me-2"></i>
+                                  已收藏</span
+                                >
+                              </div>
+
+                              <div class="card-body text-start py-2 px-1">
+                                <h6
+                                  class="card-title fs-6 fs-lg-5 text-neutral-950 mb-3"
+                                >
+                                  超輕量北歐健走杖
+                                </h6>
+                                <p
+                                  class="card-text fs-6 fs-lg-5 fs-lg-4 text-primary-700 fw-semibold"
+                                >
+                                  NT$ 2,150
+                                </p>
+                                <p
+                                  class="text-decoration-line-through fs-7 fs-lg-6 text-neutral-500 fw-normal"
+                                >
+                                  NT$ 2,480
+                                </p>
+                              </div>
+                            </a>
+                          </li>
+                          <!-- card-5 -->
+                          <li class="col-6 col-lg-4">
+                            <div class="card p-3 bg-background-02 border-0">
+                              <div class="position-relative ratio ratio-1x1">
+                                <img
+                                  src="/assets/photo/product/product-6.png"
+                                  alt="藍芽輔聽器"
+                                  class="img-fluid"
+                                  style="max-width: 352px"
+                                />
+                                <span
+                                  class="badge collection-badge d-flex align-items-center"
+                                  ><i class="bi bi-heart fs-6 fs-lg-5 me-2"></i>
+                                  已收藏</span
+                                >
+                              </div>
+
+                              <div class="card-body text-start py-2 px-1">
+                                <h6
+                                  class="card-title fs-6 fs-lg-5 text-neutral-950 mb-3"
+                                >
+                                  藍芽輔聽器
+                                </h6>
+                                <p
+                                  class="card-text fs-6 fs-lg-5 text-primary-700 fw-semibold"
+                                >
+                                  NT$ 28,500
+                                </p>
+                                <p
+                                  class="text-decoration-line-through fs-7 fs-lg-6 text-neutral-500 fw-normal"
+                                >
+                                  NT$ 25,000
+                                </p>
+                              </div>
+                            </div>
+                          </li>
+                          <!-- card-6 -->
+                          <li class="col-6 col-lg-4">
+                            <div class="card p-3 bg-background-02 border-0">
+                              <div class="position-relative ratio ratio-1x1">
+                                <img
+                                  src="/assets/photo/product/product-14.png"
+                                  alt="睡眠專用床護欄"
+                                  class="img-fluid"
+                                  style="max-width: 352px"
+                                />
+                                <span
+                                  class="badge collection-badge d-flex align-items-center"
+                                  ><i class="bi bi-heart fs-6 fs-lg-5 me-2"></i>
+                                  已收藏</span
+                                >
+                              </div>
+
+                              <div class="card-body text-start py-2 px-1">
+                                <h6
+                                  class="card-title fs-6 fs-lg-5 text-neutral-950 mb-3"
+                                >
+                                  睡眠專用床護欄
+                                </h6>
+                                <div class="mt-auto">
+                                  <p
+                                    class="card-text fs-6 fs-lg-5 text-primary-700 fw-semibold"
+                                  >
+                                    NT$ 4,500
+                                  </p>
+                                  <p
+                                    class="text-decoration-line-through fs-7 fs-lg-6 text-neutral-500 fw-normal"
+                                  >
+                                    NT$ 3,880
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 頁碼 -->
+                      <div class="col-12">
+                        <div
+                          style="
+                            max-width: 351px;
+                            margin: 0 auto;
+                            overflow-x: hidden;
+                          "
+                        >
+                          <nav aria-label="Page navigation">
+                            <ul
+                              class="d-flex justify-content-center align-items-center gap-4 list-unstyled my-pagination"
+                            >
+                              <li>
+                                <a href="#" class="disabled">
+                                  <i class="bi bi-caret-left-fill"></i>
+                                </a>
+                              </li>
+
+                              <li><a href="#" class="active">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><span class="dots">…</span></li>
+                              <li><a href="#">10</a></li>
+
+                              <li>
+                                <a href="#" class="circle">
+                                  <i class="bi bi-caret-right-fill"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 我ㄟ訂單資訊-->
+                <div class="tab-pane fade" id="booking-item" role="tabpanel">
+                  <div class="container py-8 py-lg-0">
+                    <div class="row">
+                      <div class="col-12">
+                        <h2
+                          class="fs-lg-3 fs-5 text-center text-primary-900 mb-lg-6 mb-4"
+                        >
+                          我ㄟ訂單資訊
+                        </h2>
+                        <div class="container">
+                          <!-- 手機版 -->
+                          <div class="row d-lg-none">
+                            <div class="col-12">
+                              <div class="bg-neutral-0 rounded-20 p-4 mb-4">
+                                <p class="text-neutral-950 fs-7">
+                                  訂單編號：#20250728-001
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  訂單狀態：處理中
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  配送狀態： 配送中（黑貓）
+                                </p>
+                                <div class="d-flex justify-content-end mt-1">
+                                  <a
+                                    href="#"
+                                    class="btn btn-primary-300 text-neutral-0 py-2 px-3 fs-7"
+                                    ><span
+                                      class="material-symbols-outlined align-bottom fs-6"
+                                    >
+                                      search </span
+                                    >查看詳情</a
+                                  >
+                                </div>
+                              </div>
+                              <div class="bg-neutral-0 rounded-20 p-4 mb-4">
+                                <p class="text-neutral-950 fs-7">
+                                  訂單編號：#20250724-002
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  訂單狀態：已取消
+                                </p>
+                                <p class="text-neutral-950 fs-7">配送狀態：-</p>
+                                <div class="d-flex justify-content-end mt-1">
+                                  <a
+                                    href="#"
+                                    class="btn btn-primary-300 text-neutral-0 py-2 px-3 fs-7"
+                                    ><span
+                                      class="material-symbols-outlined align-bottom fs-6"
+                                    >
+                                      search </span
+                                    >查看詳情</a
+                                  >
+                                </div>
+                              </div>
+                              <div class="bg-neutral-0 rounded-20 p-4 mb-4">
+                                <p class="text-neutral-950 fs-7">
+                                  訂單編號：#20250720-003
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  訂單狀態：已完成
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  配送狀態：已送達
+                                </p>
+                                <div class="d-flex justify-content-end mt-1">
+                                  <a
+                                    href="#"
+                                    class="btn btn-primary-300 text-neutral-0 py-2 px-3 fs-7"
+                                    ><span
+                                      class="material-symbols-outlined align-bottom fs-6"
+                                    >
+                                      search </span
+                                    >查看詳情</a
+                                  >
+                                </div>
+                              </div>
+                              <div class="bg-neutral-0 rounded-20 p-4 mb-4">
+                                <p class="text-neutral-950 fs-7">
+                                  訂單編號：#20250716-008
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  訂單狀態：退貨處理中
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  配送狀態：退貨中
+                                </p>
+                                <div class="d-flex justify-content-end mt-1">
+                                  <a
+                                    href="#"
+                                    class="btn btn-primary-300 text-neutral-0 py-2 px-3 fs-7"
+                                    ><span
+                                      class="material-symbols-outlined align-bottom fs-6"
+                                    >
+                                      search </span
+                                    >查看詳情</a
+                                  >
+                                </div>
+                              </div>
+                              <div class="bg-neutral-0 rounded-20 p-4 mb-4">
+                                <p class="text-neutral-950 fs-7">
+                                  訂單編號：#20250703-011
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  訂單狀態：已完成
+                                </p>
+                                <p class="text-neutral-950 fs-7">
+                                  配送狀態：已送達
+                                </p>
+                                <div class="d-flex justify-content-end mt-1">
+                                  <a
+                                    href="#"
+                                    class="btn btn-primary-300 text-neutral-0 py-2 px-3 fs-7"
+                                    ><span
+                                      class="material-symbols-outlined align-bottom fs-6"
+                                    >
+                                      search </span
+                                    >查看詳情</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 電腦版 -->
+                          <div class="row d-none d-lg-block">
+                            <div class="col-12">
+                              <table
+                                class="table table-borderless table-transparent text-center"
+                              >
+                                <thead>
+                                  <tr class="fs-7 fs-lg-6">
+                                    <th scope="col">訂單編號</th>
+                                    <th scope="col">訂單狀態</th>
+                                    <th scope="col">金額</th>
+                                    <th scope="col">配送狀態</th>
+                                    <th scope="col">訂購日期</th>
+                                    <th scope="col">詳情</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="fs-7 fs-lg-6">
+                                    <th scope="row">#20250728-001</th>
+                                    <td>處理中</td>
+                                    <td>NT$2,580</td>
+                                    <td>配送中（黑貓）</td>
+                                    <td>2025/07/25</td>
+                                    <td>
+                                      <a href="#"
+                                        ><span
+                                          class="material-symbols-outlined align-bottom"
+                                        >
+                                          search </span
+                                        >查看詳情</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr class="fs-7 fs-lg-6">
+                                    <th scope="row">#20250724-002</th>
+                                    <td>已取消</td>
+                                    <td>NT$6,580</td>
+                                    <td>-</td>
+                                    <td>2025/07/24</td>
+                                    <td>
+                                      <a href="#"
+                                        ><span
+                                          class="material-symbols-outlined align-bottom"
+                                        >
+                                          search </span
+                                        >查看詳情</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr class="fs-7 fs-lg-6">
+                                    <th scope="row">#20250720-003</th>
+                                    <td>已完成</td>
+                                    <td>NT$12,580</td>
+                                    <td>已送達</td>
+                                    <td>2025/07/20</td>
+                                    <td>
+                                      <a href="#"
+                                        ><span
+                                          class="material-symbols-outlined align-bottom"
+                                        >
+                                          search </span
+                                        >查看詳情</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr class="fs-7 fs-lg-6">
+                                    <th scope="row">#20250716-008</th>
+                                    <td>退貨處理中</td>
+                                    <td>NT$8,580</td>
+                                    <td>退貨中</td>
+                                    <td>2025/07/06</td>
+                                    <td>
+                                      <a href="#"
+                                        ><span
+                                          class="material-symbols-outlined align-bottom"
+                                        >
+                                          search </span
+                                        >查看詳情</a
+                                      >
+                                    </td>
+                                  </tr>
+                                  <tr class="fs-7 fs-lg-6">
+                                    <th scope="row">#20250703-011</th>
+                                    <td>已完成</td>
+                                    <td>NT$62,580</td>
+                                    <td>已送達</td>
+                                    <td>2025/07/03</td>
+                                    <td>
+                                      <a href="#"
+                                        ><span
+                                          class="material-symbols-outlined align-bottom"
+                                        >
+                                          search </span
+                                        >查看詳情</a
+                                      >
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 頁碼 -->
+                      <div
+                        style="
+                          max-width: 351px;
+                          margin: 0 auto;
+                          overflow-x: hidden;
+                        "
+                      >
+                        <nav aria-label="Page navigation">
+                          <ul
+                            class="d-flex justify-content-center align-items-center gap-4 list-unstyled my-pagination"
+                          >
+                            <li>
+                              <a href="#" class="disabled">
+                                <i class="bi bi-caret-left-fill"></i>
+                              </a>
+                            </li>
+
+                            <li><a href="#" class="active">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><span class="dots">…</span></li>
+                            <li><a href="#">10</a></li>
+
+                            <li>
+                              <a href="#" class="circle">
+                                <i class="bi bi-caret-right-fill"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 關於你ㄟ資料 -->
+                <div class="tab-pane fade" id="user-info-item" role="tabpanel">
+                  <div class="container py-8 py-lg-0">
+                    <div class="row">
+                      <div class="col-12">
+                        <h2
+                          class="fs-lg-3 fs-5 text-center text-primary-900 mb-lg-6 mb-4"
+                        >
+                          關於你ㄟ資料
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="row mb-4">
+                      <div
+                        class="col-lg-4 d-flex flex-column justify-content-start align-items-center mb-4 mb-lg-0"
+                      >
+                        <img
+                          src="../assets/photo/user/users.png"
+                          alt="會員圖片"
+                          class="rounded-circle mb-3"
+                        />
+                        <label
+                          class="btn btn-outline-neutral-600 py-2 px-3 rounded-pill d-inline-flex align-button fs-7 fs-lg-6"
+                        >
+                          <span class="material-symbols-outlined">
+                            upload
+                          </span>
+                          <span class="ps-1">更新大頭貼</span>
+                          <input type="file" hidden />
+                        </label>
+                      </div>
+                      <div class="col-lg-8">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="name-floatingInput"
+                            placeholder="請輸入您的姓名"
+                            value="王曉明"
+                          />
+                          <label for="name-floatingInput">姓名</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="account-floatingInput"
+                            placeholder="請輸入您的帳號"
+                            value="xiaoming@gmail.com"
+                          />
+                          <label for="account-floatingInput">帳號</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="password-floatingInput"
+                            placeholder="請輸入您的密碼"
+                            value="xiaoming@gmail.com"
+                          />
+                          <label for="password-floatingInput">密碼</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="date-floatingInput"
+                            placeholder="請輸入您的生日"
+                            value="1998-01-10"
+                          />
+                          <label for="date-floatingInput">生日</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="email-floatingInput"
+                            placeholder="請輸入您的電子信箱"
+                            value="xiaoming@gmail.com"
+                          />
+                          <label for="account-floatingInput">電子信箱</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="address-floatingInput"
+                            placeholder="請輸入您的地址"
+                            value="台北市信義區照護路25巷18號86樓"
+                          />
+                          <label for="address-floatingInput">地址</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <!-- 手機版 -->
+                      <div
+                        class="d-lg-none col-12 d-flex justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary-500 fw-semibold"
+                        >
+                          <span
+                            class="material-symbols-outlined me-1 align-bottom"
+                          >
+                            edit </span
+                          >編輯資料
+                        </button>
+                      </div>
+                      <!-- 桌機版 -->
+                      <div
+                        class="d-none col-12 d-lg-flex justify-content-center"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary-500 fw-semibold w-25"
+                        >
+                          <span
+                            class="material-symbols-outlined me-1 align-bottom"
+                          >
+                            edit </span
+                          >編輯資料
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
