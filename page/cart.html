@@ -12,7 +12,7 @@
     <%- include('./layout/link-icon'); -%>
   </head>
   <body class="bg-background">
-    <%- include('./layout/header-loginOut'); -%>
+    <%- include('./layout/header-loginIn') %>
     <main>
       <section class="cart-buy">
         <div class="container py-lg-14 py-8">
@@ -552,12 +552,22 @@
               </div>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-5">
+          <div class="row justify-content-center position-relative">
+            <div class="col-12">
               <div class="py-lg-7 px-lg-8 text-center">
                 <h5 class="fs-lg-5 fs-6 text-primary-500">
                   滿 $599 再折 $200，照顧更完整的好時機
                 </h5>
+                <img
+                  src="/assets/photo/cart/cart-04.svg"
+                  class="position-absolute cart-position-4 d-none d-lg-block"
+                  alt="上引號"
+                />
+                <img
+                  src="/assets/photo/cart/cart-05.svg"
+                  class="position-absolute cart-position-5 d-none d-lg-block"
+                  alt="上引號"
+                />
               </div>
             </div>
           </div>
@@ -800,7 +810,7 @@
                   </div>
                   <div class="d-flex justify-content-between mb-2">
                     <p class="text-neutral-700 fs-7 fs-lg-6">運費</p>
-                    <p class="text-neutral-950 fs-6 fs-lg-">NT$ 60</p>
+                    <p class="text-neutral-950 fs-6 fs-lg-5">NT$ 60</p>
                   </div>
                   <div class="d-flex justify-content-between mb-2">
                     <p class="text-neutral-700 fs-7 fs-lg-6">
