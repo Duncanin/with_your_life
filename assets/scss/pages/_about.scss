@@ -44,11 +44,11 @@
 
 // 展開時的 hover 效果
 .accordion .accordion-button:not(.collapsed) {
-  background: #d1d5db; // Tailwind bg-neutral-300 的顏色
+  background: #d1d1d1; // Tailwind bg-neutral-200 的顏色
   box-shadow: none;
 
   &:hover {
-    background: #d1d5db;
+    background: #d1d1d1;
   }
 }
 
