@@ -113,16 +113,26 @@
             <h2 class="fs-3 fs-lg-1 text-primary-900 mb-4 mb-lg-6">商品總覽｜伴你在日常安心選物</h2>
 
             <!-- 商品導覽 -->
-            <ul class="nav category-nav mb-4 mb-lg-6">
-              <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4 active">總覽</a></li>
-              <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4">最新商品</a></li>
-              <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4">行動協助</a></li>
-              <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4">用餐照護</a></li>
-              <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4">如廁便利</a></li>
-              <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4">洗浴安全</a></li>
-              <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4">補助專區</a></li>
+            <div class="overflow-x-auto mb-4 mb-lg-6">
+              <ul class="nav category-nav flex-nowrap d-flex ">
+                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4 active"
+                    style="width:96px;">總覽</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width:100px;">最新商品</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width:100px;">行動協助</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width:100px;">用餐照護</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width:100px;">如廁便利</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width:100px;">洗浴安全</a></li>
+                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width:100px;">補助專區</a></li>
 
-            </ul>
+              </ul>
+
+            </div>
 
             <!-- 搜尋框+排序 -->
             <div class="d-lg-flex justify-content-between mb-6 mb-lg-10">
@@ -457,32 +467,32 @@
 
 
               <!-- 頁碼 -->
-               <div style="max-width: 351px; margin: 0 auto; overflow-x: hidden;">
-                 <nav aria-label="Page navigation">
-                   <ul class="d-flex justify-content-center align-items-center gap-4 list-unstyled my-pagination">
-   
-                     <li>
-                       <a href="#" class="disabled">
-                         <i class="bi bi-caret-left-fill"></i>
-                       </a>
-                     </li>
-   
-                     
-                     <li><a href="#" class="active">1</a></li>
-                     <li><a href="#">2</a></li>
-                     <li><a href="#">3</a></li>
-                     <li><span class="dots">…</span></li>
-                     <li><a href="#">10</a></li>
-   
-                     
-                     <li>
-                       <a href="#" class="circle">
-                         <i class="bi bi-caret-right-fill"></i>
-                       </a>
-                     </li>
-                   </ul>
-                 </nav>
-               </div>
+              <div style="max-width: 351px; margin: 0 auto; overflow-x: hidden;">
+                <nav aria-label="Page navigation">
+                  <ul class="d-flex justify-content-center align-items-center gap-4 list-unstyled my-pagination">
+
+                    <li>
+                      <a href="#" class="disabled">
+                        <i class="bi bi-caret-left-fill"></i>
+                      </a>
+                    </li>
+
+
+                    <li><a href="#" class="active">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><span class="dots">…</span></li>
+                    <li><a href="#">10</a></li>
+
+
+                    <li>
+                      <a href="#" class="circle">
+                        <i class="bi bi-caret-right-fill"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
 
 
             </div>
@@ -497,10 +507,32 @@
 
     </section>
 
+    <!-- 固定右下角的圓形按鈕 -->
+    <div class="position-fixed" style="bottom:5%; right:5%;">
+      <button class="btn rounded-circle border border-primary border-3 d-flex align-items-center justify-content-center fs-7 text-primary-800" type="button"
+        data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"
+        style="width:110px; height:110px;">
+        輔具補助 <br>
+        級距說明
+      </button>
+    </div>
+
+    <!-- 畫布 Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">輔具也能補助喔!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>新制輔具補助項目中，依評估規定分為以下四類：</p>
+      </div>
+    </div>
 
 
 
-    <script type="module" src="../main.js"></script>
+    <%- include('./layout/footer'); -%>
+
+      <script type="module" src="../main.js"></script>
 </body>
 
 </html>
