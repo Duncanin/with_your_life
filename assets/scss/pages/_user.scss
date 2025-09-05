@@ -1,0 +1,45 @@
+.user {
+  margin-top: 76px;
+}
+@media (min-width: 992px) {
+  .cart-buy {
+    margin-top: 108px;
+  }
+}
+
+/* 預設狀態 */
+.nav-link {
+  color: $Primary-600;
+}
+/* active 狀態 */
+.nav-link.active {
+  color: $Secondary-500;
+}
+
+.info a:hover {
+  color: $Secondary-600;
+  background-color: $Neutral-100;
+  border-radius: 8px;
+}
+
+.collection-badge {
+  position: absolute;
+  top: 0.8rem;
+  left: -0.8rem; /* 左上角 */
+  display: inline-block;
+  width: auto !important;
+  height: auto !important;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 16.8px;
+  color: #fff;
+  background: $Error;
+  border-radius: 0 999px 999px 0; /* 左邊平，右邊圓 */
+  z-index: 1;
+}
+
+.table-transparent,
+.table-transparent > :not(caption) > * > * {
+  background-color: transparent;
+}
