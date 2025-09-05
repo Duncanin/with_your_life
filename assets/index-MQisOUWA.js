@@ -1,0 +1,9 @@
+import"./main-BkVJqbDF.js";const d=[{img:"../assets/photo/index/feedback/feedback1.svg",alt:"蔡小姐",role:"居家照顧員",name:"蔡小姐｜35歲",text:"我每天跑很多個案，家屬第一次照顧常手忙腳亂。我都推薦他們這個網站，分類清楚、說明簡單，還有補助資訊，幫助減少很多問題，讓照顧更有力量。"},{img:"../assets/photo/index/feedback/feedback2.svg",alt:"林小姐",role:"照顧者",name:"林小姐｜52歲",text:"媽媽中風後，我幾乎一手包辦她的生活起居——上網找資訊時，常常看不懂，後來朋友推薦這個網站，分類清楚又好懂。這是我第一次覺得，買輔具不是一個人的戰鬥。"},{img:"../assets/photo/index/feedback/feedback3.svg",alt:"周伯伯",role:"自行選購",name:"周伯伯｜68歲",text:"膝蓋退化，走路越來越不穩，連出門都會感到害怕——想找助行器，卻被許多專業網站搞得看不懂。這個平台讓我安心，分類清晰，說明簡單明瞭，還會告訴我適合的使用情境。"}],n=document.getElementById("feedbackInner"),r=document.getElementById("feedbackIndicators");d.forEach((t,a)=>{const s=document.createElement("div");s.className="carousel-item"+(a===0?" active":""),s.innerHTML=`
+                  <div class="card text-center bg-background rounded-20 p-4 mx-auto">
+                    <img src="${t.img}" alt="${t.alt}" class="d-block mx-auto rounded-circle">
+                    <div>
+                      <h4 class="fs-6 text-primary-500 mb-3">${t.role}</h4>
+                      <h3 class="fs-5">${t.name}</h3>
+                    </div>
+                    <p class="text-neutral-700 fs-7 mb-0">${t.text}</p>
+                  </div>`,n.appendChild(s);const e=document.createElement("button");e.type="button",e.setAttribute("data-bs-target","#feedbackCarousel"),e.setAttribute("data-bs-slide-to",String(a)),e.setAttribute("aria-label",`Slide ${a+1}`),a===0&&(e.className="active",e.setAttribute("aria-current","true")),r.appendChild(e)});(function(){const t=document.getElementById("feedbackCarousel");if(t){try{new bootstrap.Carousel(t,{interval:!1})}catch{}t.addEventListener("slid.bs.carousel",a=>{const s=a.to;Array.from(r.children).forEach((e,c)=>{c===s?(e.classList.add("active"),e.setAttribute("aria-current","true")):(e.classList.remove("active"),e.removeAttribute("aria-current"))})})}})();
