@@ -1,48 +1,51 @@
-.w-360 {
-  max-width: 360px;
+// header 搜尋欄寬度
+.min-w-300 {
+  min-width: 300px;
 }
-@media (min-width: 1200px) {
-  .w-360 {
-    width: 360px !important;
-  }
-}
-
-.w-300 {
-  max-width: 300px;
+.min-w-280 {
+  min-width: 280px;
 }
 
-.w-296 {
-  width: 296px;
-}
-/* 讓 dropdown 掉到 navbar 外面 */
-.navbar .nav-online {
-  position: absolute; /* 脫離 navbar 的圓角容器 */
-  top: 100%; /* 緊貼在 navbar 下方 */
-  margin-top: 1rem; /* 與 navbar 外框留縫隙 */
-  left: 60%; /* 自動靠 trigger 對齊 */
-  z-index: 1050;
-}
-.dropdown-toggle::after {
-  display: none !important;
-}
+//選單active show 覆蓋bs5的css設定
 .navbar-nav .nav-link.dropdown-toggle.show {
   color: $Secondary-500 !important;
 }
 .nav-link:hover {
   color: $Secondary-500 !important;
 }
+
+//讓 線上商城 dropdown 掉到 navbar 外面
+.navbar .nav-online {
+  position: absolute; //脫離 navbar 的圓角容器
+  top: 100%; //緊貼在 navbar 下方
+  margin-top: 1rem; //與 navbar 外框留縫隙
+  left: 60%; //自動靠 trigger 對齊
+  z-index: 1050;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+//dropdown 寬度
+.w-296 {
+  width: 296px;
+}
+//線上商城 子項目 設定
 .dropdown-menu .dropdown-item:hover {
   background-color: $Primary-100;
   border-radius: 100px;
 }
+
+// 漢堡選單位置移動
 .hamburger-menu {
   margin-top: 95px;
 }
 
+//讓 會員中心 dropdown 掉到 navbar 外面
 .dropdown .nav-user {
-  position: absolute; /* 脫離 navbar 的圓角容器 */
-  top: 100%; /* 緊貼在 navbar 下方 */
-  margin-top: 2rem; /* 與 navbar 外框留縫隙 */
-  left: -40%; /* 自動靠 trigger 對齊 */
+  position: absolute; //脫離 navbar 的圓角容器
+  top: 100%; //緊貼在 navbar 下方
+  margin-top: 2rem; // 與 navbar 外框留縫隙
+  left: -40%; // 自動靠 trigger 對齊
   z-index: 1050;
 }

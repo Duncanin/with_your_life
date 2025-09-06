@@ -1,3 +1,4 @@
+// 保留被fix佔據的位置
 .cart-buy {
   margin-top: 76px;
 }
@@ -9,13 +10,13 @@
 
 // 購物車定位
 .cart-position-1 {
-  right: 24%;
+  right: 23%;
   top: 50%;
   transform: translateY(-70%);
 }
 
 .cart-position-2 {
-  left: 25%;
+  left: 23%;
   top: 50%;
   transform: translateY(-70%);
 }
