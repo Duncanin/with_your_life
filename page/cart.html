@@ -33,7 +33,7 @@
                 />
               </div>
             </div>
-            <!-- 手機版 -->
+            <!-- 手機版購物區 -->
             <div class="d-block d-lg-none">
               <div class="row">
                 <div class="col-12 mb-3">
@@ -218,7 +218,7 @@
                 </div>
               </div>
             </div>
-            <!-- 桌機版 -->
+            <!-- 桌機版購物區-->
             <div class="d-none d-lg-block">
               <!-- 購買標題 -->
               <div class="row justify-content-lg-center">
@@ -431,7 +431,7 @@
           <div class="row justify-content-center position-relative">
             <!-- 4.2標題 -->
             <div
-              class="col-lg-3 d-flex justify-content-center align-items-center mb-lg-8 mb-6"
+              class="col-12 d-flex justify-content-center align-items-center mb-lg-8 mb-6"
             >
               <div class="text-center">
                 <h2 class="fs-lg-1 fs-3 text-primary-900 mb-lg-6 mb-4">
@@ -448,6 +448,7 @@
               </div>
             </div>
           </div>
+          <!-- 加購區商品 -->
           <div
             class="row flex-nowrap overflow-x-auto flex-lg-wrap mb-lg-8 mb-6"
           >
@@ -508,8 +509,8 @@
                 class="bg-background p-lg-6 p-4 rounded-20 d-flex flex-column justify-content-center h-100"
               >
                 <img
-                  src="../assets/photo/cart/plus-product-1.svg"
-                  alt="plus-product-1"
+                  src="../assets/photo/cart/plus-product-3.svg"
+                  alt="plus-product-3"
                   class="img-fluid object-fit-cover mb-lg-4 mb-3"
                 />
                 <div class="mb-lg-4 mb-3">
@@ -532,8 +533,8 @@
                 class="bg-background p-lg-6 p-4 rounded-20 d-flex flex-column justify-content-center h-100"
               >
                 <img
-                  src="../assets/photo/cart/plus-product-1.svg"
-                  alt="plus-product-1"
+                  src="../assets/photo/cart/plus-product-4.svg"
+                  alt="plus-product-4"
                   class="img-fluid object-fit-cover mb-lg-4 mb-3"
                 />
                 <div class="mb-lg-4 mb-3">
@@ -552,6 +553,7 @@
               </div>
             </div>
           </div>
+          <!-- 折扣在行銷 -->
           <div class="row justify-content-center position-relative">
             <div class="col-12">
               <div class="py-lg-7 px-lg-8 text-center">
@@ -593,9 +595,11 @@
               </div>
             </div>
           </div>
+          <!-- 填寫相關資訊 -->
           <div class="row justify-content-lg-center mb-lg-8">
             <div class="col-lg-10">
               <div class="row">
+                <!-- 左邊表單 -->
                 <div class="col-lg-6">
                   <div
                     class="bg-primary-50 rounded-40 border-2 border border-primary-200 p-lg-8 p-6 mb-6 mb-lg-0"
@@ -671,7 +675,7 @@
                       <label for="text-name">收貨人姓名</label>
                     </div>
                     <!-- 收貨人手機號碼 -->
-                    <div class="form-floating mb-lg-6">
+                    <div class="form-floating mb-lg-6 mb-4">
                       <input
                         type="tel"
                         class="form-control"
@@ -680,19 +684,30 @@
                       />
                       <label for="tel-phone">收貨人手機號碼</label>
                     </div>
+                    <!-- 載具 -->
+                    <div class="form-floating mb-lg-6 mb-4">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="invoice"
+                        placeholder="請輸入電子載具"
+                      />
+                      <label for="invoice">電子載具(選填)</label>
+                    </div>
                   </div>
                 </div>
+                <!-- 右邊表單 -->
                 <div class="col-lg-6">
                   <div
                     class="bg-primary-50 rounded-40 border-2 border border-primary-200 p-lg-8 p-6 mb-6 mb-lg-0"
                   >
                     <!-- 付款方式 -->
-                    <div class="mb-lg-6">
-                      <h5 class="fs-lg-5 pb-lg-6 pb-4 border-bottom border-2">
+                    <div class="mb-lg-4">
+                      <h5 class="fs-lg-5 pb-lg-6 border-bottom border-2">
                         付款方式
                       </h5>
                       <form class="mb-4 mb-lg-0">
-                        <p class="text-primary-800 mt-6 mb-3 fs-7">付款方式</p>
+                        <p class="text-primary-800 mt-6 mb-2 fs-7">付款方式</p>
                         <div
                           class="form-check d-block d-lg-inline-block me-lg-6 mb-4 mb-lg-0"
                         >
@@ -737,7 +752,7 @@
                       </form>
                     </div>
                     <!-- 購物金折抵 -->
-                    <div class="mb-lg-6 mb-4">
+                    <div class="mb-4">
                       <label
                         for="shopping-paid"
                         class="form-label text-primary-800 fs-7 mb-1"
@@ -760,9 +775,10 @@
                       </div>
                     </div>
                     <!-- 優惠折扣 -->
-                    <div class="mb-lg-7">
+                    <div class="mb-lg-5">
                       <p class="text-primary-800 mb-1 fs-7 mb-1">優惠折扣</p>
-                      <div class="dropdown">
+                      <!-- 下拉式選單 -->
+                      <div class="dropdown mb-4">
                         <button
                           class="form-select text-start"
                           type="button"
@@ -794,19 +810,51 @@
                           </li>
                         </ul>
                       </div>
+                      <!-- 折扣項目 -->
+                      <div
+                        class="bg-primary-500 d-flex justify-content-between py-2 px-3 rounded-20 mb-2"
+                      >
+                        <p class="fs-7 text-neutral-0">新會員折抵</p>
+                        <p
+                          class="fs-7 text-neutral-0 d-flex align-items-md-center"
+                        >
+                          - NT$ 200
+                          <span
+                            class="material-symbols-outlined text-primary-100 ms-3"
+                          >
+                            cancel
+                          </span>
+                        </p>
+                      </div>
+                      <div
+                        class="bg-primary-500 d-flex justify-content-between py-2 px-3 rounded-20"
+                      >
+                        <p class="fs-7 text-neutral-0">方案體驗優惠</p>
+                        <p
+                          class="fs-7 text-neutral-0 d-flex align-items-md-center"
+                        >
+                          - NT$ 2,000
+                          <span
+                            class="material-symbols-outlined text-primary-100 ms-3"
+                          >
+                            cancel
+                          </span>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- 結帳區域 -->
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <div class="mb-lg-8">
                 <div class="pd-lg-6 pd-4 border-bottom border-2 mb-lg-6 mb-4">
                   <div class="d-flex justify-content-between mb-2">
                     <p class="text-neutral-700 fs-7 fs-lg-6">商品小計(含稅)</p>
-                    <p class="text-neutral-950 fs-6 fs-lg-5">NT$ 3,850</p>
+                    <p class="text-neutral-950 fs-6 fs-lg-5">NT$ 16,778</p>
                   </div>
                   <div class="d-flex justify-content-between mb-2">
                     <p class="text-neutral-700 fs-7 fs-lg-6">運費</p>
@@ -818,13 +866,21 @@
                     </p>
                     <p class="text-neutral-950 fs-6 fs-lg-5">-NT$ 60</p>
                   </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-neutral-700 fs-7 fs-lg-6">新會員折抵</p>
+                    <p class="text-neutral-950 fs-6 fs-lg-5">-NT$ 200</p>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <p class="text-neutral-700 fs-7 fs-lg-6">方案體驗優惠</p>
+                    <p class="text-neutral-950 fs-6 fs-lg-5">-NT$ 2,000</p>
+                  </div>
                 </div>
                 <div class="d-flex justify-content-between mb-lg-2 mb-6">
                   <p class="text-neutral-700 fs-7 fs-lg-6">總金額</p>
-                  <p class="text-secondary-600 fs-6 fs-lg-5">NT$ 3,850</p>
+                  <p class="text-secondary-600 fs-6 fs-lg-5">NT$ 14,578</p>
                 </div>
               </div>
-              <!-- 手機版 -->
+              <!-- 手機版按鈕 -->
               <div class="d-flex d-lg-none flex-column-reverse">
                 <button
                   type="button"
@@ -839,7 +895,7 @@
                   確認訂單，前往付款
                 </button>
               </div>
-              <!-- 桌機版 -->
+              <!-- 桌機版按鈕 -->
               <div class="d-none d-lg-flex justify-content-center">
                 <button
                   type="button"
