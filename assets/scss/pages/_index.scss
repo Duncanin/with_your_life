@@ -77,7 +77,9 @@
 }
 
 .service-item {
-  background: #F5F3EF;
+  background: url('/assets/photo/index/bg-wheelchair.png');
+  background-position: center;
+  background-color: #F5F3EF;
 
   .card {
     min-width: 320px;
@@ -91,7 +93,7 @@
 
 
   .tag {
-    top: 82px; left: -12px;
+    top: 80px; left: -12px;
     width: 80px;
     height: 80px;
   }
@@ -146,6 +148,10 @@ position: relative;
     background-position: center;
     pointer-events: none;
   }
+}
+
+.companionist .cta {
+  max-height: 280px;
 }
 
 .feedback .card {
@@ -209,16 +215,10 @@ position: relative;
     top: 72%;
   }
 
-  .service-item {
-    background: url('/assets/photo/index/bg-wheelchair.png');
-    background-position: center;
-    background-color: #F5F3EF;
-  }
-
   .service-item .tag {
     width: 240px;
-    height: 240px;
-    top: 40px;
+    height: 200px;
+    top: 60px;
     left: -175px;
   }
   

@@ -58,7 +58,7 @@
             伴你ㄟ日常，照顧路上幫你想得更周到
           </h2>
           <div class="overflow-x-auto">
-            <div class="d-md-flex gap-4 gap-md-6">
+            <div class="d-flex gap-4 gap-md-6">
               <% const cards = [
                 { img: '/assets/photo/index/service.svg', title: '輔具推薦', desc: '依不同需求推薦適合輔具' },
                 { img: '/assets/photo/index/service02.svg', title: '補助指南', desc: '清楚標示可申請政府補助的商品' },
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="tag position-absolute">
-            <img src="/assets/photo/index/tag.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
+            <img src="/assets/photo/index/tag.svg" alt="" class="d-block w-100 h-100 object-fit-cover">
           </div>
         </div>
       </div>
@@ -114,12 +114,10 @@
       <div class="container">
         <div class="py-10 py-md-14">
           <h2 class="fs-md-1 mb-6 mb-md-10 text-center">陪你找，最近的輔具好所在</h2>
-          <div class="mt-2 position-relative">
-            <input type="text" id="searchInput" placeholder="搜尋鄰近的輔具中心" class="form-control w-100 rounded-20 border-2 border-neutral-200 py-3 px-4 mx-auto" style="min-width: 350px; max-width: 416px;">
-            
-          </input>
-          <button onclick="searchLocation()" class="position-absolute end-0 top-50 translate-middle-y border-0 me-3 text-secondary-500" style="appearance: none; background: none;">
-            <span class="material-symbols-outlined mt-1">distance</span>
+          <div class="position-relative d-block mx-auto w-100" style="min-width: 350px; max-width: 416px;">
+            <input type="text" id="searchInput" placeholder="搜尋鄰近的輔具中心" class="form-control w-100 rounded-20 border-2 border-neutral-200 py-3 px-4"/>
+          <button onclick="searchLocation()" class="position-absolute top-50 translate-middle-y end-0 border-0 text-secondary-500 p-0 me-4" style="appearance: none; background: none; width: 24px; height: 24px;">
+            <span class="material-symbols-outlined align-bottom">distance</span>
           </button>
           </div>
           <div>
@@ -219,7 +217,7 @@
     
             <div class="cta d-flex flex-column flex-md-row gap-4 gap-md-6">
               <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4">
-                <div style="width: 35%;">
+                <div style="width: 35%; max-width: 107px;">
                   <img src="/assets/photo/index/companionist01.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
                 </div>
                 <h3 class="fs-5 fs-md-4 text-center">視力退化，不敢單獨出門怎麼辦？</h3>
@@ -230,7 +228,7 @@
               </div>
     
               <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4">
-                <div style="width: 35%;">
+                <div style="width: 35%; max-width: 107px;">
                   <img src="/assets/photo/index/companionist02.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
                 </div>
                 <h3 class="fs-5 fs-md-4 text-center">「剛確診新病症，完全聽不懂醫生在說什麼⋯」</h3>
