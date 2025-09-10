@@ -23,16 +23,24 @@
     <div class="banner d-flex">
       <div class="container d-flex position-relative">
 
-        <div class="position-absolute start-50 bottom-0 translate-middle-x w-50 mb-10 scroll-1">
-          <img src="/assets/photo/index/wheelchair-phone.svg" alt="bg-img" class="d-block mx-auto w-100 h-auto">
+        <div class="position-absolute start-50 bottom-0 translate-middle-x w-50 mb-10 scroll-1 d-block d-md-none">
+          <img src="/assets/photo/index/wheelchair-phone.svg" alt="bg-img" class="d-block d-md-none mx-auto w-100 h-auto">
         </div>
 
-        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 d-md-none scroll-2">
-          <img src="/assets/photo/index/02.png" alt="" class="h-100 w-auto d-block">
+        <div class="position-absolute start-50 bottom-0 translate-middle-x w-100 mb-14 scroll-1 d-none d-md-block">
+          <img src="/assets/photo/index/wheelchair.svg" alt="desk-img" class="d-block mx-auto w-100 h-auto">
+        </div>
+
+        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 d-md-none scroll-2 d-md-none">
+          <img src="/assets/photo/index/02.png" alt="phone-img" class="h-100 w-auto d-block">
           <div class="">
-            <img src="/assets/photo/index/01.png" alt="">
-            <img src="/assets/photo/index/03.png" alt="">
+            <img src="/assets/photo/index/01.png" alt="phone-img">
+            <img src="/assets/photo/index/03.png" alt="phone-img">
           </div>
+        </div>
+
+        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 scroll-2 d-none d-md-block">
+          <img src="/assets/photo/index/family.svg" alt="family-img" class="w-100 h-auto d-block">
         </div>
 
         <h1 class="fs-2 fs-md-0 m-auto title-shadow text-center position-absolute banner-title start-50 translate-middle">
@@ -57,6 +65,12 @@
 
     <script>
       gsap.registerPlugin(ScrollTrigger);
+      gsap.from(".banner", {
+        opacity: 0,
+        scale: 1.2,
+        duration: 5,
+        ease: "power2.out"
+      });
 
       const tl = gsap.timeline({
         scrollTrigger: {
