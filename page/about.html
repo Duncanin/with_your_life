@@ -186,24 +186,25 @@
       </section>
       <!-- section 2.4 訂單FAQ faq -->
       <section>
-        <div class="container bg-neutral-200">
+        <div class="container bg-neutral-400">
           <div class="row">
-            <div class="col-12">
-              <div class="faq-area d-flex flex-column align-items-center py-10">
-                <h3 class="faq-title fs-3 text-primary-900 mb-6 text-center">
+            <div class="col-12 col-lg-8 mx-auto">
+              <div
+                class="faq-area d-flex flex-column align-items-center py-10 py-lg-14"
+              >
+                <h3
+                  class="faq-title fs-3 text-primary-900 mb-6 mb-lg-10 text-center"
+                >
                   關於訂單，你可能想問ㄟ事
                 </h3>
 
                 <!-- 手風琴(使用always open範例去改) -->
                 <!--📌📌📌待調整padding -->
                 <div class="accordion" id="accordionPanelsStayOpenExample">
-                  <div class="accordion-item mb-4">
-                    <h6
-                      class="accordion-header fs-6"
-                      id="panelsStayOpen-headingOne"
-                    >
+                  <div class="accordion-item rounded-20 rounded-lg-40 mb-4">
+                    <h6 class="accordion-header" id="panelsStayOpen-headingOne">
                       <button
-                        class="accordion-button collapsed fw-semibold text-neutral-950"
+                        class="accordion-button collapsed fs-6 fs-lg-4 fw-semibold text-neutral-950"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseOne"
@@ -223,13 +224,10 @@
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item mb-4">
-                    <h6
-                      class="accordion-header fs-6"
-                      id="panelsStayOpen-headingTwo"
-                    >
+                  <div class="accordion-item rounded-20 rounded-lg-40 mb-4">
+                    <h4 class="accordion-header" id="panelsStayOpen-headingTwo">
                       <button
-                        class="accordion-button collapsed fw-semibold text-neutral-950"
+                        class="accordion-button collapsed fs-6 fs-lg-4 fw-semibold text-neutral-950"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseTwo"
@@ -238,7 +236,7 @@
                       >
                         有哪些付款方式？
                       </button>
-                    </h6>
+                    </h4>
                     <div
                       id="panelsStayOpen-collapseTwo"
                       class="accordion-collapse collapse"
@@ -247,13 +245,13 @@
                       <div class="accordion-body"><p>文字二</p></div>
                     </div>
                   </div>
-                  <div class="accordion-item mb-4">
+                  <div class="accordion-item rounded-20 rounded-lg-40 mb-4">
                     <h6
-                      class="accordion-header fs-6"
+                      class="accordion-header"
                       id="panelsStayOpen-headingFour"
                     >
                       <button
-                        class="accordion-button collapsed fw-semibold text-neutral-950"
+                        class="accordion-button collapsed fs-6 fs-lg-4 fw-semibold text-neutral-950"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseThree"
@@ -269,25 +267,35 @@
                       aria-labelledby="panelsStayOpen-headingThree"
                     >
                       <div class="accordion-body">
-                        <p class="fs-7 text-neutral-700 mb-3">
+                        <p class="fs-7 fs-lg-6 text-neutral-700 mb-3">
                           部分偏遠地區無法提供配送服務 或
                           需要額外加收運費，如有前述情況，訂單成立後出貨前，客服人員將會致電確認。造成不便敬請見諒。
                         </p>
-                        <img
-                          src="../assets/photo/about/about-brand-s4-1.png"
-                          class="img-fluid d-block mx-auto"
-                          alt="運費圖手機版"
-                        />
+                        <picture>
+                          <!-- 桌機版 lg 以上 -->
+                          <source
+                            srcset="
+                              ../assets/photo/about/about-brand-s4-1-lg.png
+                            "
+                            media="(min-width: 992px)"
+                          />
+                          <!-- 手機版預設 -->
+                          <img
+                            src="../assets/photo/about/about-brand-s4-1.png"
+                            class="img-fluid d-block mx-auto"
+                            alt="運費圖手機版"
+                          />
+                        </picture>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
+                  <div class="accordion-item rounded-20 rounded-lg-40">
                     <h6
-                      class="accordion-header fs-6"
+                      class="accordion-header"
                       id="panelsStayOpen-headingFour"
                     >
                       <button
-                        class="accordion-button collapsed fw-semibold text-neutral-950"
+                        class="accordion-button collapsed fs-6 fs-lg-4 fw-semibold text-neutral-950"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseFour"
