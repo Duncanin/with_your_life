@@ -13,6 +13,9 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
   </head>
   
   <body>
@@ -20,11 +23,12 @@
     <div class="banner d-flex">
       <div class="container d-flex position-relative">
 
-        <!-- <div class="position-absolute start-50 bottom-0 translate-middle-x" style="width: 75%; margin-bottom: 10%;">
-          <img src="/assets/photo/index/wheelchair-phone.svg" alt="" class="">
-        </div> -->
-        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 d-md-none">
-          <img src="/assets/photo/index/02.png" alt="" class="">
+        <div class="position-absolute start-50 bottom-0 translate-middle-x w-50 mb-10 scroll-1">
+          <img src="/assets/photo/index/wheelchair-phone.svg" alt="bg-img" class="d-block mx-auto w-100 h-auto">
+        </div>
+
+        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 d-md-none scroll-2">
+          <img src="/assets/photo/index/02.png" alt="" class="h-100 w-auto d-block">
           <div class="">
             <img src="/assets/photo/index/01.png" alt="">
             <img src="/assets/photo/index/03.png" alt="">
@@ -50,6 +54,35 @@
         </button>
       </div>
     </div>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".banner",
+          start: "top top",
+          end: "+=200%",
+          scrub: true,
+          pin: true,
+          markers: false
+        }
+      });
+
+      tl.from(".scroll-1", {
+        opacity: 0,
+        duration: 1
+      }).to(".scroll-1", {
+        opacity: 0,
+        duration: 1
+      }).from(".scroll-2", {
+        opacity: 0,
+        duration: 2
+      }, "<"); // "<" 表示與上一個動畫同時開始
+    </script>
+
+    <!-- 滾動空間區塊 -->
+    <div class="d-none" style="height: 200vh; background-color: #f0f0f0;"></div>
 
     <div class="service-item">
       <div class="container">
@@ -190,56 +223,53 @@
 
     <div class="companionist">
       <div class="container">
-        <div>
-          <div class="py-10 py-md-14">
-            <div class="text-center mb-6 mb-md-10">
-              <h2 class="fs-3 fs-md-1 mb-4 mb-md-6">伴你走過平凡ㄟ日常</h2>
-              <p class="fs-5 text-secondary-500">陪診師，那天的專屬夥伴，陪你走過每一段醫療旅程</p>
-            </div>
-            
-            <div class="desc bg-secondary-50 rounded-20 py-6 px-4 p-md-10 mb-4 d-md-flex gap-10">
-              <img src="/assets/photo/index/companionist.svg" alt="companionist" class="ratio-1x1 d-block mb-4">
-              <div class="d-flex gap-6 gap-md-10 flex-column my-md-auto">
-                <div>
-                  <h3 class="fs-5 fs-md-4 mb-3 mb-md-4">一人一師，專業陪診</h3>
-                  <p class="text-neutral-700 fs-6">預約掛號、排隊取藥、解讀醫囑，我們幫你打點。</p>
-                </div>
-                <div>
-                  <h3 class="fs-5 fs-md-4 mb-3 mb-md-4">有溫度的陪伴</h3>
-                  <p class="text-neutral-700 fs-6">會聽、會聊、會教，讓你安心踏進診間（沒有人會被留在門外）。</p>
-                </div>
-                <div>
-                  <h3 class="fs-5 fs-md-4 mb-3 mb-md-4">解除流程煩惱</h3>
-                  <p class="text-neutral-700 fs-6">訓練有素的小程序助理，掌握看診進度，隨時回報家人最新狀態。</p>
-                </div>
+        <div class="py-10 py-md-14">
+          <div class="text-center mb-6 mb-md-10">
+            <h2 class="fs-3 fs-md-1 mb-4 mb-md-6">伴你走過平凡ㄟ日常</h2>
+            <p class="fs-5 text-secondary-500">陪診師，那天的專屬夥伴，陪你走過每一段醫療旅程</p>
+          </div>
+          
+          <div class="desc bg-secondary-50 rounded-20 py-6 px-4 p-md-10 mb-4 d-md-flex gap-10">
+            <img src="/assets/photo/index/companionist.svg" alt="companionist" class="ratio-1x1 d-block mb-4">
+            <div class="d-flex gap-6 gap-md-10 flex-column my-md-auto">
+              <div>
+                <h3 class="fs-5 fs-md-4 mb-3 mb-md-4">一人一師，專業陪診</h3>
+                <p class="text-neutral-700 fs-6">預約掛號、排隊取藥、解讀醫囑，我們幫你打點。</p>
               </div>
-            </div>
-    
-            <div class="cta d-flex flex-column flex-md-row gap-4 gap-md-6">
-              <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4">
-                <div style="width: 35%; max-width: 107px;">
-                  <img src="/assets/photo/index/companionist01.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
-                </div>
-                <h3 class="fs-5 fs-md-4 text-center">視力退化，不敢單獨出門怎麼辦？</h3>
-                <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold">
-                  瞭解更多
-                  <span class="material-symbols-outlined align-bottom fs-6">arrow_forward</span>
-                </button>
+              <div>
+                <h3 class="fs-5 fs-md-4 mb-3 mb-md-4">有溫度的陪伴</h3>
+                <p class="text-neutral-700 fs-6">會聽、會聊、會教，讓你安心踏進診間（沒有人會被留在門外）。</p>
               </div>
-    
-              <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4">
-                <div style="width: 35%; max-width: 107px;">
-                  <img src="/assets/photo/index/companionist02.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
-                </div>
-                <h3 class="fs-5 fs-md-4 text-center">「剛確診新病症，完全聽不懂醫生在說什麼⋯」</h3>
-                <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold">
-                  瞭解更多
-                  <span class="material-symbols-outlined align-bottom fs-6">arrow_forward</span>
-                </button>
+              <div>
+                <h3 class="fs-5 fs-md-4 mb-3 mb-md-4">解除流程煩惱</h3>
+                <p class="text-neutral-700 fs-6">訓練有素的小程序助理，掌握看診進度，隨時回報家人最新狀態。</p>
               </div>
             </div>
           </div>
   
+          <div class="cta d-flex flex-column flex-md-row gap-4 gap-md-6">
+            <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4">
+              <div style="width: 35%; max-width: 107px;">
+                <img src="/assets/photo/index/companionist01.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
+              </div>
+              <h3 class="fs-5 fs-md-4 text-center">視力退化，不敢單獨出門怎麼辦？</h3>
+              <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold">
+                瞭解更多
+                <span class="material-symbols-outlined align-bottom fs-6">arrow_forward</span>
+              </button>
+            </div>
+  
+            <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4">
+              <div style="width: 35%; max-width: 107px;">
+                <img src="/assets/photo/index/companionist02.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
+              </div>
+              <h3 class="fs-5 fs-md-4 text-center">「剛確診新病症，完全聽不懂醫生在說什麼⋯」</h3>
+              <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold">
+                瞭解更多
+                <span class="material-symbols-outlined align-bottom fs-6">arrow_forward</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -364,5 +394,6 @@
 
     <script type="module" src="../main.js"></script>
     <%- include('./layout/footer'); -%>
+
   </body>
 </html>
