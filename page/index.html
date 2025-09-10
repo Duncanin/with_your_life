@@ -15,15 +15,16 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
   </head>
   
   <body>
     <%- include('./layout/header-loginOut'); -%>
     <div class="banner d-flex">
-      <div class="container d-flex position-relative">
+      <div class="container d-flex position-relative" id="scence">
 
-        <div class="position-absolute start-50 bottom-0 translate-middle-x w-50 mb-10 scroll-1 d-block d-md-none">
+        <div class="position-absolute start-50 bottom-0 translate-middle-x w-75 mb-12 scroll-1 d-block d-md-none">
           <img src="/assets/photo/index/wheelchair-phone.svg" alt="bg-img" class="d-block d-md-none mx-auto w-100 h-auto">
         </div>
 
@@ -39,16 +40,32 @@
           </div>
         </div>
 
-        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 scroll-2 d-none d-md-block">
+        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 scroll-2 d-none d-md-block mx-auto" style="margin: -15%;">
           <img src="/assets/photo/index/family.svg" alt="family-img" class="w-100 h-auto d-block">
         </div>
 
-        <h1 class="fs-2 fs-md-0 m-auto title-shadow text-center position-absolute banner-title start-50 translate-middle">
+        <h1 class="fs-2 fs-md-0 m-auto title-shadow text-center position-absolute banner-title start-50 translate-middle firsi-title">
           一個家，
           <span class="d-block text-nowrap mt-2">
             應該是什麼樣子？
           </span>
         </h1>
+        <h1 class="fs-2 fs-md-0 m-auto title-shadow text-center position-absolute banner-title start-50 translate-middle scroll-1">
+          <span class="text-nowrap">
+            一點一點，我們改變了
+          </span>
+          <span class="d-block d-sm-inline">這個家，</span>
+          <span class="d-block text-nowrap mt-2">
+            讓安心成為日常
+          </span>
+        </h1>
+        <h1 class="fs-2 fs-md-0 m-auto title-shadow text-center position-absolute banner-title start-50 translate-middle scroll-2 text-nowrap">
+          家，有貼心就完整了
+          <span class="d-block text-nowrap mt-2">
+            伴你在日常
+          </span>
+        </h1>
+
       </div>
       <div class="bottom bg-background">
         <button
@@ -83,7 +100,10 @@
         }
       });
 
-      tl.from(".scroll-1", {
+      tl.to(".firsi-title", {
+        opacity: 0,
+        duration: 0.5
+      }).from(".scroll-1", {
         opacity: 0,
         duration: 1
       }).to(".scroll-1", {
@@ -93,6 +113,29 @@
         opacity: 0,
         duration: 2
       }, "<"); // "<" 表示與上一個動畫同時開始
+
+      //  加入左右視差效果
+      gsap.to(".scroll-1", {
+        x: 30,  // 往右偏移一點點
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".banner",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+
+      gsap.to(".scroll-2", {
+        x: -20,  // 往左偏移一點點
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".banner",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
     </script>
 
     <!-- 滾動空間區塊 -->
