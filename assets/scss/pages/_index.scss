@@ -4,18 +4,18 @@
     // /* 右上 */ -1px 1px 0 white, /* 左下 */ 1px 1px 0 white; /* 右下 */
     -2px -2px 0 white,
     -1px -1px 0 white,
-     0px -1px 0 white,
-     1px -1px 0 white,
-     2px -2px 0 white,
+      0px -1px 0 white,
+      1px -1px 0 white,
+      2px -2px 0 white,
     -2px  0px 0 white,
     -1px  0px 0 white,
-     1px  0px 0 white,
-     2px  0px 0 white,
+      1px  0px 0 white,
+      2px  0px 0 white,
     -2px  2px 0 white,
     -1px  1px 0 white,
-     0px  1px 0 white,
-     1px  1px 0 white,
-     2px  2px 0 white;
+      0px  1px 0 white,
+      1px  1px 0 white,
+      2px  2px 0 white;
 }
 // body {
 //   background-color: #E8F3D8;
@@ -24,8 +24,8 @@
   // background-image: url(/assets/photo/index/bg-phone.png);
   background: linear-gradient(to bottom, transparent 50%, #F5F3EF 50%, #F5F3EF 100%), url('/assets/photo/index/bg-phone.png');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size:cover, 100% 100%;
+  background-position: center, left 55% center;
+  background-size: cover, 100% 100%;
   height: 100dvh;
   overflow: hidden;
   position: relative;
@@ -62,15 +62,15 @@
   &>img {
     margin-right: auto;
     margin-left: auto;
-    margin-top: 17%;
-    margin-bottom: -38%;
+    margin-bottom: -40%;
+    margin-top: 16%;
   }
   div {
     display: flex;
     justify-content: space-evenly;
   }
   div img {
-    height:62%;
+    height:64%;
     margin-top: 20%;
   }
 }
@@ -89,7 +89,6 @@
     background-color: var(--bs-primary-50);
     border-radius: 16px;
   }
-
 
   .tag {
     top: 80px; left: -12px;
@@ -205,13 +204,14 @@ position: relative;
 @media (min-width: 768px) {
   .banner {
     background: url('/assets/photo/index/bg-img.png');
+    background-color: #E9F3D9;
     background-repeat: no-repeat;
-    background-size: 150% 92%;
-    background-position: top;
+    background-size: 140% 92%;
+    background-position: right 58% center ;
   }
 
   .banner-title {
-    top: 72%;
+    top: 78%;
   }
 
   .service-item .tag {
