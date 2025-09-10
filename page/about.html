@@ -261,7 +261,7 @@
                         </p>
                         <img
                           src="../assets/photo/about/about-brand-s4-1.png"
-                          class="img-fluid"
+                          class="img-fluid d-block mx-auto"
                           alt="運費圖手機版"
                         />
                       </div>
@@ -325,21 +325,19 @@
                 <div class="contact-info">
                   <!-- 表單 -->
                   <div class="col-lg-6">
-                    <div class="bg-primary-50 rounded-40 p-6">
-                      <!-- 📌相關項目要用另一個下拉式選單 -->
-                      <!-- 優惠折扣 -->
-                      <div class="">
-                        <p class="text-primary-800 mb-1 fs-7 mb-1">相關項目</p>
-                        <!-- 下拉式選單 -->
+                    <div class="bg-primary-50 p-6">
+                      <!-- 相關項目 (從cart優惠折扣而來) -->
+                      <div class="issue-type">
+                        <!-- BS元件：下拉式選單 -->
                         <div class="dropdown mb-4">
                           <button
-                            class="form-select text-start"
+                            class="form-select text-start text-neutral-600"
                             type="button"
                             id="dropdownMenuButton1"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                           >
-                            請選擇相關項目
+                            請選擇問題類型
                           </button>
                           <ul
                             class="dropdown-menu w-100"
@@ -350,7 +348,7 @@
                                 href="#"
                                 class="d-flex justify-content-between"
                               >
-                                <p class="text-neutral-950">我有訂單相關問題</p>
+                                <p class="text-neutral-600">我有訂單相關問題</p>
                               </a>
                             </li>
                             <li class="dropdown-item py-3 px-4">
@@ -358,9 +356,7 @@
                                 href="#"
                                 class="d-flex justify-content-between"
                               >
-                                <p class="text-neutral-950">
-                                  我有其他問題想詢問
-                                </p>
+                                <p class="text-neutral-600">我有其他相關問題</p>
                               </a>
                             </li>
                           </ul>
@@ -372,7 +368,6 @@
                           type="text"
                           class="form-control"
                           id="about-name"
-                          placeholder="請輸入姓名"
                         />
                         <label for="about-name">姓名</label>
                       </div>
@@ -390,14 +385,16 @@
                       <div class="form-floating mb-4">
                         <textarea
                           type="textarea"
-                          class="form-control"
+                          class="form-control mb-1"
                           id="about-content"
                           style="border-radius: 24px; height: 200px"
+                          maxlength="250"
                           placeholder="如果有訂單編號，請一併附上，將會加速客服進度，感謝您的協助。"
                         ></textarea>
                         <label for="about-content"
                           >問題內容（請附訂單編號）
                         </label>
+                        <p class="fs-7 text-neutral-700">0/250</p>
                       </div>
                       <button
                         type="button"
