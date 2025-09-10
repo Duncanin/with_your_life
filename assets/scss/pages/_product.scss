@@ -147,3 +147,53 @@
   align-items: center;
   justify-content: center;
 }
+
+
+// sticky內容-貼心提醒
+.alert-reminder {
+  border: 1px solid #F5C43D;             /* 黃色邊框 */
+  border-radius: 16px;                   /* 圓角 */
+  box-shadow: 0 0 20px rgba(245,196,61,.2); /* 黃色光暈 */
+  background-color: #fff;                /* 白底 */
+}
+
+
+
+// sticky內容-tabs
+.nav-tabs {
+  border-bottom: none;   /* 移除整條底線 */
+  background: transparent;
+}
+
+.nav-tabs .nav-link {
+  border: none;          /* 移除每個 tab 預設邊框 */
+  background: transparent;
+  position: relative;
+
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+  font-weight: 600;                 /* 粗體，像設計稿 */
+  color: #314B33 !important; /* 強制覆蓋 BS 的 text-* 類別 */
+  background: transparent;
+}
+
+.nav-tabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0em;                /* 與文字距離 */
+  left: 50%;                         /* 基準點在文字中間 */
+  transform: translateX(-50%);       /* 往左移自身 50%，達到置中 */
+  width: 64px;                 
+  height: 7px;
+  background: url("/assets/photo/product/image-botton.svg") no-repeat center;
+  background-size: contain;    /* 保持比例縮放 */
+}
+
+
+/* sticky內容-選單-展開時按鈕變色 */
+.dropdown-toggle.show {
+  background-color: #E3EAE1;
+  color: #527752;
+}
