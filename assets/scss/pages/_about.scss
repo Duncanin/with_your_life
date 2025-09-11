@@ -1,4 +1,4 @@
-// section 2.2 團隊成員
+//📌📌📌section 2.2 團隊成員
 .card-w-320 {
   max-width: 320px;
 }
@@ -10,7 +10,7 @@
   display: block; /* 讓圖片可以正確置中 */
 }
 
-// section 2.3 陪診師服務
+//📌📌📌section 2.3 陪診師服務
 .bg-yellow {
   background: yellow;
 }
@@ -19,7 +19,7 @@
   border-radius: 5px;
 }
 
-// section 2.4 訂單FAQ
+//📌📌📌section 2.4 訂單FAQ
 
 .faq-title {
   max-width: 240px;
@@ -76,4 +76,19 @@
 
 .accordion-body {
   padding: var(--bs-accordion-padding-y) var(--bs-accordion-padding-x);
+}
+
+//📌📌📌section 2.5 聯絡我們
+
+@media (min-width: 992px) {
+  .w-lg-400 {
+    max-width: 400px;
+  }
+
+  .contact-info {
+    flex: 1; //讓它自動填滿剩下的空間
+  }
+  .w-lg-556 {
+    max-width: 556px;
+  }
 }
