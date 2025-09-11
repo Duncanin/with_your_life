@@ -16,39 +16,48 @@
     <%- include('./layout/header-loginOut'); -%>
     <main class="main">
       <!-- 佔位用 -->
-      <div class="bg-background">
-        <div style="height: 100px"></div>
+      <div class="bg-neutral-300" style="height: 120px">
+        <div></div>
       </div>
       <!-- section 2.1 品牌介紹/價值 -->
       <section class="bg-neutral-200">
         <div class="py-10">
           <h2>關於<img src="../assets/photo/header/Logo.svg" /></h2>
           <p>
-            我們原是一間深耕在地多年的輔具品牌，長期陪伴無數家庭走過生活的轉變。隨著時代推進與網路普及，我們看見越來越多人對輔具的需求，也發現許多顧客在選購時面臨資訊不足、選擇困難的情況。
+            我們原是一間深耕在地多年的輔具品牌，長期陪伴無數家庭走過生活的轉變。
+          </p>
+          <p>
+            隨著時代推進與網路普及，我們看見越來越多人對輔具的需求，也發現許多顧客在選購時面臨資訊不足、選擇困難的情況。
           </p>
           <p>
             因此，我們決定將專業經驗帶到線上，打造這個電商平台。不只是讓選擇更便利，我們更希望透過這個平台，將更多實用、貼心的好產品帶給有需要的您與您的家人。
           </p>
           <h3>我們堅信有我們陪伴，每個人的日常，都能更輕鬆、更自在。</h3>
         </div>
-        <div>
-          <img src="../assets/photo/about/about-brand-s1-3-angle.png" />
+        <div
+          class="brand-img text-center d-flex flex-column justify-content-center p-4"
+        >
+          <h2 class="fs-6 fs-lg-2 mb-5">信義門市，隨時歡迎您的到來。</h2>
+          <p class="fs-5 fs-lg-5">- With Your Life -</p>
         </div>
       </section>
+
       <!-- section 2.2 團隊成員 -->
-      <section class="bg-neutral-300">
+      <section>
         <div class="container">
           <div class="py-10 py-lg-14">
-            <h3 class="fs-3 fs-lg-1 text-primary-900 text-center">
+            <h3 class="fs-3 fs-lg-1 text-primary-900 text-center mb-lg-10">
               我們ㄟ團隊
             </h3>
             <!-- 卡片群組層 -->
-            <div class="overflow-auto overflow-x-hidden">
+            <div class="overflow-auto overflow-x-lg-hidden">
               <div class="row flex-nowrap flex-lg-wrap gx-3 gx-lg-6">
                 <!-- 卡片1 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div class="card position-relative rounded-20">
+                    <div
+                      class="card position-relative rounded-20 rounded-lg-40 border-0"
+                    >
                       <img
                         src="../assets/photo/about/about-brand-s2-1.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
@@ -76,7 +85,9 @@
                 <!-- 卡片2 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div class="card position-relative rounded-20">
+                    <div
+                      class="card position-relative rounded-20 rounded-lg-40 border-0"
+                    >
                       <img
                         src="../assets/photo/about/about-brand-s2-2.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
@@ -104,7 +115,9 @@
                 <!-- 卡片3 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div class="card position-relative rounded-20">
+                    <div
+                      class="card position-relative rounded-20 rounded-lg-40 border-0"
+                    >
                       <img
                         src="../assets/photo/about/about-brand-s2-3.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
