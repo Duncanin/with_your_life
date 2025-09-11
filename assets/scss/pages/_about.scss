@@ -3,6 +3,18 @@
   padding-top: 100px;
 }
 
+@media (min-width: 992px) {
+  .w-lg-416 {
+    max-width: 416px;
+  }
+}
+
+@media (min-width: 992px) {
+  .overflow-x-hidden {
+    overflow-x: hidden; /* 桌機版不要滾動 */
+  }
+}
+
 //📌📌📌section 2.3 陪診師服務
 @media (min-width: 992px) {
   .me-lg-80 {
