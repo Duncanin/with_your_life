@@ -1328,6 +1328,7 @@
       document.addEventListener("DOMContentLoaded", function () {
         console.log("Navbar script loaded");
 
+        // 處理 dropdown item 點擊
         const dropdownItems = document.querySelectorAll(
           ".nav-user .dropdown-item"
         );
@@ -1372,7 +1373,7 @@
 
         // 切換 Tab 的函數
         function switchToTab(targetId) {
-          console.log("Switching to tab:", targetId);
+          console.log("switchToTab called with:", targetId);
 
           // 清除所有 tab 的 active 狀態
           document.querySelectorAll(".nav-link").forEach((tab) => {
@@ -1387,6 +1388,14 @@
           // 激活目標 Tab
           const targetTabButton = document.getElementById(`${targetId}-tab`);
           const targetTabPane = document.getElementById(targetId);
+
+          console.log(
+            "Looking for button:",
+            `${targetId}-tab`,
+            "=>",
+            targetTabButton
+          );
+          console.log("Looking for pane:", targetId, "=>", targetTabPane);
 
           if (targetTabButton && targetTabPane) {
             console.log("Activating tab:", targetId);
@@ -1406,6 +1415,21 @@
           } else {
             console.error("Could not find tab elements for:", targetId);
           }
+        }
+
+        // 🚩 頁面載入後：處理 URL hash
+        if (window.location.hash) {
+          const targetIdFromHash = window.location.hash.substring(1); // 去掉 "#"
+          console.log("Found hash on load:", targetIdFromHash);
+          switchToTab(targetIdFromHash);
+        }
+
+        // 🚩 頁面載入後：處理 localStorage 儲存的 tab
+        const savedTabId = localStorage.getItem("activeTabId");
+        if (savedTabId) {
+          console.log("Found savedTabId in localStorage:", savedTabId);
+          switchToTab(savedTabId);
+          localStorage.removeItem("activeTabId");
         }
       });
     </script>
