@@ -19,8 +19,7 @@
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
 />
-    <script type="module" crossorigin src="/with_your_life/assets/user-Z_lOQxAt.js"></script>
-    <link rel="modulepreload" crossorigin href="/with_your_life/assets/main-RMtwI8aM.js">
+    <script type="module" crossorigin src="/with_your_life/assets/main-RMtwI8aM.js"></script>
     <link rel="stylesheet" crossorigin href="/with_your_life/assets/main-Bah2nJ5h.css">
   </head>
   <body class="bg-background">
@@ -1325,5 +1324,90 @@
   </div>
 </footer>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("Navbar script loaded");
+
+        const dropdownItems = document.querySelectorAll(
+          ".nav-user .dropdown-item"
+        );
+        console.log("Found dropdown items:", dropdownItems.length);
+
+        dropdownItems.forEach((item, index) => {
+          item.addEventListener("click", function (e) {
+            console.log(`Clicked item ${index}:`, this.getAttribute("href"));
+
+            const href = this.getAttribute("href");
+
+            // 跳過沒有 href、href 為 # 或沒有 hash 的項目
+            if (!href || href === "#" || !href.includes("#")) {
+              console.log("Skipping item without valid hash");
+              return;
+            }
+
+            const targetId = href.split("#")[1];
+            console.log("Extracted targetId:", targetId);
+
+            // 檢查是否在 user.html 頁面
+            const isOnUserPage = window.location.pathname.includes("user.html");
+
+            if (isOnUserPage) {
+              // 如果已經在 user.html 頁面，阻止默認跳轉行為
+              e.preventDefault();
+
+              // 直接在當前頁面切換 Tab
+              switchToTab(targetId);
+
+              // 更新 URL hash（但不觸發頁面跳轉）
+              history.pushState(null, null, `#${targetId}`);
+            } else {
+              // 如果不在 user.html 頁面，保存到 localStorage 讓目標頁面讀取
+              if (targetId) {
+                localStorage.setItem("activeTabId", targetId);
+                console.log("Saved to localStorage:", targetId);
+              }
+            }
+          });
+        });
+
+        // 切換 Tab 的函數
+        function switchToTab(targetId) {
+          console.log("Switching to tab:", targetId);
+
+          // 清除所有 tab 的 active 狀態
+          document.querySelectorAll(".nav-link").forEach((tab) => {
+            tab.classList.remove("active");
+            tab.setAttribute("aria-selected", "false");
+          });
+
+          document.querySelectorAll(".tab-pane").forEach((pane) => {
+            pane.classList.remove("show", "active");
+          });
+
+          // 激活目標 Tab
+          const targetTabButton = document.getElementById(`${targetId}-tab`);
+          const targetTabPane = document.getElementById(targetId);
+
+          if (targetTabButton && targetTabPane) {
+            console.log("Activating tab:", targetId);
+
+            // 激活按鈕
+            targetTabButton.classList.add("active");
+            targetTabButton.setAttribute("aria-selected", "true");
+
+            // 激活內容區域
+            targetTabPane.classList.add("show", "active");
+
+            // 使用 Bootstrap 的 Tab 功能
+            if (typeof bootstrap !== "undefined" && bootstrap.Tab) {
+              const bsTab = new bootstrap.Tab(targetTabButton);
+              bsTab.show();
+            }
+          } else {
+            console.error("Could not find tab elements for:", targetId);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
