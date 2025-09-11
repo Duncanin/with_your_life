@@ -1,0 +1,1 @@
+import"./main-DrYl3HOo.js";document.addEventListener("DOMContentLoaded",function(){const t=localStorage.getItem("activeTabId");if(t){localStorage.removeItem("activeTabId");const e=document.getElementById(t+"-tab");e?new bootstrap.Tab(e).show():console.warn(`Tab button with ID "${t}-tab" not found.`)}});
