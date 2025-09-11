@@ -1,29 +1,9 @@
+// vite.config.js
 import { defineConfig } from "vite";
-import { ViteEjsPlugin } from "vite-plugin-ejs";
-import { fileURLToPath } from "node:url";
-import path from "node:path";
-import { glob } from "glob";
-
-import liveReload from "vite-plugin-live-reload";
-
-function moveOutputPlugin() {
-  return {
-    name: "move-output",
-    enforce: "post",
-    apply: "build",
-    async generateBundle(options, bundle) {
-      for (const fileName in bundle) {
-        if (fileName.startsWith("page/")) {
-          const newFileName = fileName.slice("page/".length);
-          bundle[fileName].fileName = newFileName;
-        }
-      }
-    },
-  };
-}
+// ... 其他 import
 
 export default defineConfig({
-  // base: 必須跟 repo 名稱相同
+  // ...
   base: "/with_your_life/",
   plugins: [
     liveReload(["./layout/**/*.ejs", "./page/**/*.ejs", "./page/*.html"]),
@@ -31,7 +11,8 @@ export default defineConfig({
     moveOutputPlugin(),
   ],
   server: {
-    open: "page/index.html",
+    // 這是最關鍵的修正：讓 dev server 在啟動時，就正確地導向到 base 路徑下的 index.html
+    open: "/with_your_life/page/index.html",
   },
   build: {
     rollupOptions: {

@@ -10,3 +10,16 @@ document.addEventListener("click", function (e) {
     icon.classList.toggle("text-danger");
   }
 });
+
+//navbar 會員中心連接到各個tab的頁面
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownItems = document.querySelectorAll(".nav-user .dropdown-item");
+  dropdownItems.forEach((item) => {
+    item.addEventListener("click", function (event) {
+      const targetId = this.getAttribute("href").split("#")[1];
+      if (targetId) {
+        localStorage.setItem("activeTabId", targetId);
+      }
+    });
+  });
+});
