@@ -31,9 +31,13 @@
   }
 }
 
+.team-overflow {
+  overflow-x: auto; /* 手機可滑動 */
+}
+
 @media (min-width: 992px) {
-  .overflow-x-lg-hidden {
-    overflow-x: hidden; /* 桌機版不要滾動 */
+  .team-overflow {
+    overflow-x: hidden; /* 桌機不要滾動 */
   }
 }
 
