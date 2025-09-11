@@ -29,7 +29,7 @@
                 <!-- 重要訊息 -->
                 <button
                   class="fs-lg-5 fs-7 fw-semibold nav-link active p-3"
-                  id="information-tab"
+                  id="information-item-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#information-item"
                   type="button"
@@ -41,7 +41,7 @@
                 <!-- 我的收藏 -->
                 <button
                   class="fs-lg-5 fs-7 fw-semibold nav-link p-3"
-                  id="collection-tab"
+                  id="collection-item-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#collection-item"
                   type="button"
@@ -53,7 +53,7 @@
                 <!-- 訂單紀錄 -->
                 <button
                   class="fs-lg-5 fs-7 fw-semibold nav-link p-3"
-                  id="booking-tab"
+                  id="booking-item-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#booking-item"
                   type="button"
@@ -65,7 +65,7 @@
                 <!-- 會員資料 -->
                 <button
                   class="fs-lg-5 fs-7 fw-semibold nav-link"
-                  id="user-info-tab"
+                  id="user-info-item-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#user-info-item"
                   type="button"
@@ -856,22 +856,85 @@
     <script type="module" src="../main.js"></script>
     <script type="module">
       document.addEventListener("DOMContentLoaded", function () {
-        const activeTabId = localStorage.getItem("activeTabId");
+        console.log("Navbar script loaded");
 
-        if (activeTabId) {
-          // 移除 localStorage 中的 ID，避免下次載入時重複觸發
-          localStorage.removeItem("activeTabId");
+        const dropdownItems = document.querySelectorAll(
+          ".nav-user .dropdown-item"
+        );
+        console.log("Found dropdown items:", dropdownItems.length);
 
-          // 尋找對應的 Tab 按鈕
-          // 你的 Tab 按鈕 ID 是 'information-tab', 'collection-tab' 等，對應內容 ID 是 'information-item'
-          const targetTabButton = document.getElementById(activeTabId + "-tab");
+        dropdownItems.forEach((item, index) => {
+          item.addEventListener("click", function (e) {
+            console.log(`Clicked item ${index}:`, this.getAttribute("href"));
 
-          if (targetTabButton) {
-            // 創建 Bootstrap Tab 實例並顯示
-            const tab = new bootstrap.Tab(targetTabButton);
-            tab.show();
+            const href = this.getAttribute("href");
+
+            // 跳過沒有 href、href 為 # 或沒有 hash 的項目
+            if (!href || href === "#" || !href.includes("#")) {
+              console.log("Skipping item without valid hash");
+              return;
+            }
+
+            const targetId = href.split("#")[1];
+            console.log("Extracted targetId:", targetId);
+
+            // 檢查是否在 user.html 頁面
+            const isOnUserPage = window.location.pathname.includes("user.html");
+
+            if (isOnUserPage) {
+              // 如果已經在 user.html 頁面，阻止默認跳轉行為
+              e.preventDefault();
+
+              // 直接在當前頁面切換 Tab
+              switchToTab(targetId);
+
+              // 更新 URL hash（但不觸發頁面跳轉）
+              history.pushState(null, null, `#${targetId}`);
+            } else {
+              // 如果不在 user.html 頁面，保存到 localStorage 讓目標頁面讀取
+              if (targetId) {
+                localStorage.setItem("activeTabId", targetId);
+                console.log("Saved to localStorage:", targetId);
+              }
+            }
+          });
+        });
+
+        // 切換 Tab 的函數
+        function switchToTab(targetId) {
+          console.log("Switching to tab:", targetId);
+
+          // 清除所有 tab 的 active 狀態
+          document.querySelectorAll(".nav-link").forEach((tab) => {
+            tab.classList.remove("active");
+            tab.setAttribute("aria-selected", "false");
+          });
+
+          document.querySelectorAll(".tab-pane").forEach((pane) => {
+            pane.classList.remove("show", "active");
+          });
+
+          // 激活目標 Tab
+          const targetTabButton = document.getElementById(`${targetId}-tab`);
+          const targetTabPane = document.getElementById(targetId);
+
+          if (targetTabButton && targetTabPane) {
+            console.log("Activating tab:", targetId);
+
+            // 激活按鈕
+            targetTabButton.classList.add("active");
+            targetTabButton.setAttribute("aria-selected", "true");
+
+            // 激活內容區域
+            targetTabPane.classList.add("show", "active");
+
+            // 使用 Bootstrap 的 Tab 功能
+            if (typeof bootstrap !== "undefined" && bootstrap.Tab) {
+              const bsTab = new bootstrap.Tab(targetTabButton);
+              bsTab.show();
+            }
           } else {
-            console.warn(`Tab button with ID "${activeTabId}-tab" not found.`);
+            console.error("Could not find tab elements for:", targetId);
           }
         }
       });

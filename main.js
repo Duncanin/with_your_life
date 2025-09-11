@@ -13,12 +13,29 @@ document.addEventListener("click", function (e) {
 
 //navbar 會員中心連接到各個tab的頁面
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("Navbar script loaded");
+
   const dropdownItems = document.querySelectorAll(".nav-user .dropdown-item");
-  dropdownItems.forEach((item) => {
-    item.addEventListener("click", function (event) {
-      const targetId = this.getAttribute("href").split("#")[1];
+  console.log("Found dropdown items:", dropdownItems.length);
+
+  dropdownItems.forEach((item, index) => {
+    item.addEventListener("click", function (e) {
+      console.log(`Clicked item ${index}:`, this.getAttribute("href"));
+
+      const href = this.getAttribute("href");
+
+      // 跳過沒有 href、href 為 # 或沒有 hash 的項目
+      if (!href || href === "#" || !href.includes("#")) {
+        console.log("Skipping item without valid hash");
+        return;
+      }
+
+      const targetId = href.split("#")[1];
+      console.log("Extracted targetId:", targetId);
+
       if (targetId) {
         localStorage.setItem("activeTabId", targetId);
+        console.log("Saved to localStorage:", targetId);
       }
     });
   });
