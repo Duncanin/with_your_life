@@ -11,12 +11,10 @@
 }
 
 //📌📌📌section 2.3 陪診師服務
-.bg-yellow {
-  background: yellow;
-}
-
-.b-radius-5 {
-  border-radius: 5px;
+@media (min-width: 992px) {
+  .me-lg-80 {
+    margin-right: 80px;
+  }
 }
 
 //📌📌📌section 2.4 訂單FAQ
