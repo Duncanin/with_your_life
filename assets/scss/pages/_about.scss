@@ -1,40 +1,104 @@
-// section 2.2 團隊成員
-.card-w-320 {
-  max-width: 320px;
+// 要修路徑，gh-pages看不太到
+
+//📌📌📌section 2.1 品牌介紹/價值
+
+@media (min-width: 992px) {
+  .before-img,
+  .after-img {
+    max-width: 600px;
+  }
 }
 
-.member-img {
-  height: 100px;
-  width: 100px;
-  object-fit: cover; /* 讓圖片不變形且填滿容器 */
-  display: block; /* 讓圖片可以正確置中 */
+//舊門市圖片
+.before-img {
+  width: 100%;
+  height: 300px; /* 固定框高 */
+  background-position: center;
+  background-size: cover;
+  background-image: 
+  /* 遮罩層加亮 */ linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("../assets/photo/about/about-brand-s1-1.png");
 }
 
-// section 2.3 陪診師服務
-.bg-yellow {
-  background: yellow;
+//新門市圖片
+.after-img {
+  width: 100%;
+  height: 300px; /* 固定框高 */
+  background-position: center;
+  background-size: cover;
+  background-image: 
+  /* 遮罩層加亮 */ linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    /* 四周 */
+      radial-gradient(circle, transparent 70%, rgba(200, 170, 120, 0.7) 100%),
+    url("../assets/photo/about/about-brand-s1-2.png");
+}
+// 滿版圖片
+.banner-img {
+  color: white;
+  letter-spacing: 4px;
+  width: 100%;
+  height: 400px; /* 固定框高 */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: 
+    /* 四周 */ radial-gradient(
+      circle,
+      transparent 70%,
+      rgba(200, 170, 120, 0.9) 100%
+    ),
+    /* 整體暗 */
+      linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+    url("../assets/photo/about/about-brand-s1-3-angle.png");
 }
 
-.b-radius-5 {
-  border-radius: 5px;
+//📌📌📌section 2.2 團隊成員
+.pt-100 {
+  padding-top: 100px;
 }
 
-// section 2.4 訂單FAQ
+@media (min-width: 992px) {
+  .w-lg-416 {
+    max-width: 416px;
+  }
+}
+
+.team-overflow {
+  overflow-x: auto; /* 手機可滑動 */
+}
+
+@media (min-width: 992px) {
+  .team-overflow {
+    overflow-x: hidden; /* 桌機不要滾動 */
+  }
+}
+
+//📌📌📌section 2.3 陪診師服務
+@media (min-width: 992px) {
+  .me-lg-80 {
+    margin-right: 80px;
+  }
+}
+
+//📌📌📌section 2.4 訂單FAQ
+
 .faq-title {
   max-width: 240px;
 }
-// 📌消除手風琴預設樣式
-// 消除手風琴圓角
-.accordion .accordion-item {
-  border-radius: 0;
+
+@media (min-width: 992px) {
+  .faq-title {
+    max-width: 100%;
+  }
 }
 
-// 消除手風琴預設圓角（包括展開時）
-.accordion .accordion-button,
-.accordion .accordion-button:not(.collapsed) {
-  border-radius: 0 !important;
-}
-
+// 📌消除手風琴 accordion 預設樣式
 // 消除手風琴點擊 outlined 預設
 .accordion-button:focus,
 .accordion-button:active {
@@ -44,14 +108,54 @@
 
 // 展開時的 hover 效果
 .accordion .accordion-button:not(.collapsed) {
-  background: #d1d1d1; // Tailwind bg-neutral-200 的顏色
+  background: transparent;
   box-shadow: none;
-
-  &:hover {
-    background: #d1d1d1;
-  }
 }
 
 .faq-area .accordion {
   width: 100%; /* 保持手風琴撐滿父容器 */
+}
+
+// 🎯 自訂圓角，覆蓋BS5原本手風琴變數
+:root {
+  --bs-accordion-border-radius: 1.25rem; // 手機版 20px
+  --bs-accordion-padding-y: 0.75rem; /* 12px */
+  --bs-accordion-padding-x: 1rem; /* 16px */
+}
+@media (min-width: 992px) {
+  // lg 以上桌機圓角跟padding
+  :root {
+    --bs-accordion-border-radius: 2.5rem; // 桌機版 40px
+    --bs-accordion-padding-y: 1.5rem; /* 24px */
+    --bs-accordion-padding-x: 2rem; /* 32px */
+  }
+}
+
+.accordion-item {
+  border-radius: var(--bs-accordion-border-radius);
+  overflow: hidden; // 確保內部內容不溢出圓角
+}
+
+.accordion-button {
+  border-radius: var(--bs-accordion-border-radius);
+  padding: var(--bs-accordion-padding-y) var(--bs-accordion-padding-x);
+}
+
+.accordion-body {
+  padding: var(--bs-accordion-padding-y) var(--bs-accordion-padding-x);
+}
+
+//📌📌📌section 2.5 聯絡我們
+
+@media (min-width: 992px) {
+  .w-lg-400 {
+    max-width: 400px;
+  }
+
+  .contact-info {
+    flex: 1; //讓它自動填滿剩下的空間
+  }
+  .w-lg-556 {
+    max-width: 556px;
+  }
 }
