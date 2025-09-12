@@ -1,7 +1,43 @@
 //📌📌📌section 2.1 品牌介紹/價值
 
+@media (min-width: 992px) {
+  .before-img,
+  .after-img {
+    max-width: 600px;
+  }
+}
+
+//舊門市圖片
+.before-img {
+  width: 100%;
+  height: 300px; /* 固定框高 */
+  background-position: center;
+  background-size: cover;
+  background-image: 
+  /* 遮罩層加亮 */ linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("../assets/photo/about/about-brand-s1-1.png");
+}
+
+//新門市圖片
+.after-img {
+  width: 100%;
+  height: 300px; /* 固定框高 */
+  background-position: center;
+  background-size: cover;
+  background-image: 
+  /* 遮罩層加亮 */ linear-gradient(
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    /* 四周 */
+      radial-gradient(circle, transparent 70%, rgba(200, 170, 120, 0.7) 100%),
+    url("../assets/photo/about/about-brand-s1-2.png");
+}
 // 滿版圖片
-.brand-img {
+.banner-img {
   color: white;
   letter-spacing: 4px;
   width: 100%;
