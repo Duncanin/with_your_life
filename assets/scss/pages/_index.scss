@@ -210,6 +210,10 @@ position: relative;
     background-position: right 58% center ;
   }
 
+  .bg-scroll {
+    min-height: 50%;
+  }
+
   .banner-title {
     top: 78%;
   }
@@ -250,6 +254,7 @@ position: relative;
 
   .feedback .card {
     gap: 24px;
+    width: 320px;
   }
 
   .feedback {
