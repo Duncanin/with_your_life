@@ -226,13 +226,13 @@
     
     <div class="feedback">
       <div class="container">
-        <div class="pt-10 pb-13 pt-md-14 pb-md-16 position-relative">
-          <h2 class="fs-3 fs-md-1 mb-6 mb-md-10 text-center">陪你ㄟ日常，聽聽他們說</h2>
+        <div class="py-10 py-md-14 position-relative">
+          <h2 class="fs-3 fs-md-1 text-center">陪你ㄟ日常，聽聽他們說</h2>
           
           <div id="feedbackIndicators" class="carousel-indicators justify-content-center mb-10 mb-md-12"></div>
           
           <div class="position-relative">
-            <div class="d-flex overflow-auto gap-4 scroll-smooth px-3" id="feedbackScrollTrack"></div>
+            <div class="d-flex overflow-auto gap-4 scroll-smooth px-3 py-6 py-md-10" id="feedbackScrollTrack"></div>
 
             <button
             type="button"
@@ -424,7 +424,7 @@
 
       feedbackList.forEach(item => {
         const card = document.createElement('div');
-        card.className = 'card bg-background px-4 py-6 p-md-8 flex-shrink-0 gap-4 d-flex flex-column gap-4 gap-md-6';
+        card.className = 'card bg-background-02 px-4 py-6 p-md-8 flex-shrink-0 gap-4 d-flex flex-column gap-4 gap-md-6';
         card.innerHTML = `
           <img src="${item.img}" class="rounded-circle mx-auto" alt="${item.alt}">
           <div>
