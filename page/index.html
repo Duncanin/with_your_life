@@ -15,6 +15,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
   </head>
   
@@ -22,33 +23,52 @@
     <%- include('./layout/header-loginOut'); -%>
     <div class="banner d-flex">
       <div class="container d-flex position-relative">
+        <div class="">
 
-        <div class="position-absolute start-50 bottom-0 translate-middle-x w-50 mb-10 scroll-1 d-block d-md-none">
-          <img src="/assets/photo/index/wheelchair-phone.svg" alt="bg-img" class="d-block d-md-none mx-auto w-100 h-auto">
-        </div>
-
-        <div class="position-absolute start-50 bottom-0 translate-middle-x w-100 mb-14 scroll-1 d-none d-md-block">
-          <img src="/assets/photo/index/wheelchair.svg" alt="desk-img" class="d-block mx-auto w-100 h-auto">
-        </div>
-
-        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 d-md-none scroll-2 d-md-none">
-          <img src="/assets/photo/index/02.png" alt="phone-img" class="h-100 w-auto d-block">
-          <div class="">
-            <img src="/assets/photo/index/01.png" alt="phone-img">
-            <img src="/assets/photo/index/03.png" alt="phone-img">
+          <div class="position-absolute start-50 bottom-0 translate-middle-x w-75 mb-12 scroll-1 d-block d-md-none">
+            <img src="/assets/photo/index/wheelchair-phone.svg" alt="bg-img" class="d-block d-md-none mx-auto w-100 h-auto">
           </div>
+  
+          <div class="position-absolute start-50 bottom-0 translate-middle-x w-100 mb-14 scroll-1 d-none d-md-block">
+            <img src="/assets/photo/index/wheelchair.svg" alt="desk-img" class="d-block mx-auto w-100 h-auto">
+          </div>
+  
+          <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 d-md-none scroll-2 d-md-none">
+            <img src="/assets/photo/index/02.png" alt="phone-img" class="h-100 w-auto d-block">
+            <div>
+              <img src="/assets/photo/index/01.png" alt="phone-img">
+              <img src="/assets/photo/index/03.png" alt="phone-img">
+            </div>
+          </div>
+  
+          <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 h-auto scroll-2 d-none d-md-inline-block mx-auto mb-12">
+            <img src="/assets/photo/index/family.svg" alt="family-img" class="w-100 h-100 d-block m-0">
+          </div>
+  
+          <h1 class="fs-2 fs-md-0 title-shadow text-center position-absolute banner-title start-50 translate-middle firsi-title">
+            一個家，
+            <span class="d-block text-nowrap mt-2">
+              應該是什麼樣子？
+            </span>
+          </h1>
+          <h1 class="fs-2 fs-md-0 title-shadow text-center position-absolute banner-title start-50 translate-middle scroll-1">
+            <span class="text-nowrap">
+              一點一滴，
+              <span class="d-block d-md-inline text-nowrap mt-2">我們改變了這個家，</span>
+            </span>
+            <span class="d-block text-nowrap mt-2">
+              讓安心成為日常
+            </span>
+          </h1>
+          <h1 class="fs-2 fs-md-0 title-shadow text-center position-absolute banner-title start-50 translate-middle scroll-2 text-nowrap">
+            家，有貼心就完整了
+            <span class="d-block text-nowrap mt-2">
+              伴你在日常
+            </span>
+          </h1>
         </div>
 
-        <div class="position-absolute start-0 bottom-0 d-flex flex-column bg-scroll w-100 scroll-2 d-none d-md-block">
-          <img src="/assets/photo/index/family.svg" alt="family-img" class="w-100 h-auto d-block">
-        </div>
 
-        <h1 class="fs-2 fs-md-0 m-auto title-shadow text-center position-absolute banner-title start-50 translate-middle">
-          一個家，
-          <span class="d-block text-nowrap mt-2">
-            應該是什麼樣子？
-          </span>
-        </h1>
       </div>
       <div class="bottom bg-background">
         <button
@@ -61,40 +81,8 @@
           >
         </button>
       </div>
+      
     </div>
-
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.from(".banner", {
-        opacity: 0,
-        scale: 1.2,
-        duration: 5,
-        ease: "power2.out"
-      });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".banner",
-          start: "top top",
-          end: "+=200%",
-          scrub: true,
-          pin: true,
-          markers: false
-        }
-      });
-
-      tl.from(".scroll-1", {
-        opacity: 0,
-        duration: 1
-      }).to(".scroll-1", {
-        opacity: 0,
-        duration: 1
-      }).from(".scroll-2", {
-        opacity: 0,
-        duration: 2
-      }, "<"); // "<" 表示與上一個動畫同時開始
-    </script>
-
     <!-- 滾動空間區塊 -->
     <div class="d-none" style="height: 200vh; background-color: #f0f0f0;"></div>
 
@@ -177,59 +165,6 @@
             </div>
             <div id="map" style="height: 400px;" class="rounded-20 border border-2 border-background"></div>
 
-            <script>
-              const regionData = {
-                north: { coords: [25.033964, 121.564468], name: "台北101" },
-                central: { coords: [24.147736, 120.673648], name: "台中火車站" },
-                south: { coords: [22.627278, 120.301435], name: "高雄85大樓" },
-                east: { coords: [23.973875, 121.600801], name: "花蓮" },
-                island: { coords: [23.101013, 121.36566], name: "綠島" }
-              };
-
-              const map = L.map('map').setView(regionData.north.coords, 13);
-              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors'
-              }).addTo(map);
-              let marker = L.marker(regionData.north.coords).addTo(map).bindPopup(regionData.north.name).openPopup();
-
-              function updateMapLocation(region) {
-                const { coords, name } = regionData[region];
-                map.setView(coords, 13);
-                marker.setLatLng(coords).setPopupContent(name).openPopup();
-              }
-
-              function searchLocation() {
-                const query = document.getElementById('searchInput').value;
-                if (!query) return;
-
-                fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
-                  .then(response => response.json())
-                  .then(data => {
-                    if (data.length === 0) {
-                      alert('找不到地點');
-                      return;
-                    }
-                    const { lat, lon, display_name } = data[0];
-                    const coords = [parseFloat(lat), parseFloat(lon)];
-                    map.setView(coords, 13);
-                    marker.setLatLng(coords).setPopupContent(display_name).openPopup();
-                  })
-                  .catch(error => {
-                    console.error('地點搜尋錯誤：', error);
-                    alert('搜尋失敗，請稍後再試。');
-                  });
-              }
-
-              function selectRegion(button) {
-                document.querySelectorAll('.region-tabs button').forEach(btn => {
-                  btn.classList.remove('active', 'text-dark-emphasis');
-                  btn.classList.add('text-secondary');
-                });
-                button.classList.add('active', 'text-dark-emphasis');
-                button.classList.remove('text-secondary');
-                updateMapLocation(button.dataset.region);
-              }
-            </script>
           </div>
         </div>
       </div>
@@ -291,123 +226,291 @@
     
     <div class="feedback">
       <div class="container">
-        <div class="pt-10 pb-13 pt-md-14 pb-md-16 position-relative">
-          <h2 class="fs-3 fs-md-1 mb-6 mb-md-10 text-center">陪你ㄟ日常，聽聽他們說</h2>
+        <div class="py-10 py-md-14 position-relative">
+          <h2 class="fs-3 fs-md-1 text-center">陪你ㄟ日常，聽聽他們說</h2>
           
           <div id="feedbackIndicators" class="carousel-indicators justify-content-center mb-10 mb-md-12"></div>
           
-          <div class="d-flex overflow-auto gap-4 scroll-smooth px-3" id="feedbackScrollTrack"></div>
-          <script type="module">
-            // feedbackList 資料
-            const feedbackList = [
-              {
-                img: new URL('../assets/photo/index/feedback/feedback1.svg', import.meta.url).href,
-                alt: '蔡小姐',
-                role: '居家照顧員',
-                name: '蔡小姐｜35歲',
-                text: '我每天跑很多個案，家屬第一次照顧常手忙腳亂。我都推薦他們這個網站，分類清楚、說明簡單，還有補助資訊，幫助減少很多問題，讓照顧更有力量。'
-              },
-              {
-                img: new URL('../assets/photo/index/feedback/feedback2.svg', import.meta.url).href,
-                alt: '林小姐',
-                role: '照顧者',
-                name: '林小姐｜52歲',
-                text: '媽媽中風後，我幾乎一手包辦她的生活起居——上網找資訊時，常常看不懂，後來朋友推薦這個網站，分類清楚又好懂。這是我第一次覺得，買輔具不是一個人的戰鬥。'
-              },
-              {
-                img: new URL('../assets/photo/index/feedback/feedback3.svg', import.meta.url).href,
-                alt: '周伯伯',
-                role: '自行選購',
-                name: '周伯伯｜68歲',
-                text: '膝蓋退化，走路越來越不穩，連出門都會感到害怕——想找助行器，卻被許多專業網站搞得看不懂。這個平台讓我安心，分類清晰，說明簡單明瞭，還會告訴我適合的使用情境。'
-              },
-              {
-                img: new URL('../assets/photo/index/feedback/feedback1.svg', import.meta.url).href,
-                alt: '蔡小姐',
-                role: '居家照顧員',
-                name: '蔡小姐｜35歲',
-                text: '我每天跑很多個案，家屬第一次照顧常手忙腳亂。我都推薦他們這個網站，分類清楚、說明簡單，還有補助資訊，幫助減少很多問題，讓照顧更有力量。'
-              },
-              {
-                img: new URL('../assets/photo/index/feedback/feedback2.svg', import.meta.url).href,
-                alt: '林小姐',
-                role: '照顧者',
-                name: '林小姐｜52歲',
-                text: '媽媽中風後，我幾乎一手包辦她的生活起居——上網找資訊時，常常看不懂，後來朋友推薦這個網站，分類清楚又好懂。這是我第一次覺得，買輔具不是一個人的戰鬥。'
-              },
-              {
-                img: new URL('../assets/photo/index/feedback/feedback3.svg', import.meta.url).href,
-                alt: '周伯伯',
-                role: '自行選購',
-                name: '周伯伯｜68歲',
-                text: '膝蓋退化，走路越來越不穩，連出門都會感到害怕——想找助行器，卻被許多專業網站搞得看不懂。這個平台讓我安心，分類清晰，說明簡單明瞭，還會告訴我適合的使用情境。'
-              },
-            ];
-            const track = document.getElementById('feedbackScrollTrack');
-            feedbackList.forEach((item, index) => {
-              const card = document.createElement('div');
-              card.className = 'card bg-background px-4 py-6 p-md-8 flex-shrink-0 gap-4 d-flex flex-column gap-4 gap-md-6';
-              card.style.width = '320px';
-              card.innerHTML = `
-                <img src="${item.img}" class="rounded-circle mx-auto" alt="${item.alt}">
-                <div>
-                  <h4 class="fs-6 fs-md-5 text-primary-500 text-center mb-3">${item.role}</h4>
-                  <h3 class="fs-5 fs-md-4 text-center mb-2">${item.name}</h3>
-                </div>
-                <p class="fs-7 fs-md-6 text-center text-neutral-700">${item.text}</p>
-              `;
-              track.appendChild(card);
-            });
-            // 指標
-            const indicators = document.getElementById('feedbackIndicators');
-            const cards = track.querySelectorAll('.card');
-            cards.forEach((_, i) => {
-              const indicator = document.createElement('span');
-              indicator.className = 'indicator-dot';
-              if (i === 0) indicator.classList.add('active');
-              indicator.addEventListener('click', () => {
-                track.scrollTo({ left: i * 336, behavior: 'smooth' });
-              });
-              indicators.appendChild(indicator);
-            });
-            track.addEventListener('scroll', () => {
-              const scrollLeft = track.scrollLeft;
-              const index = Math.round(scrollLeft / 336);
-              indicators.querySelectorAll('span').forEach((el, i) => {
-                el.classList.toggle('active', i === index);
-              });
-            });
+          <div class="position-relative">
+            <div class="d-flex overflow-auto gap-4 scroll-smooth px-3 py-6 py-md-10" id="feedbackScrollTrack"></div>
 
-            // 1. 複製所有卡片，並接在尾端
-            cards.forEach(card => {
-              const clone = card.cloneNode(true);
-              track.appendChild(clone);
-            });
+            <button
+            type="button"
+            class="btn btn-primary-50 d-block p-2 border-0 position-absolute top-50 translate-middle-y start-0 invisible"
+            id="prevBtn"
+            >
+              <span class="material-symbols-outlined align-bottom fs-4"
+                >arrow_left</span
+              >
+            </button>
+            <button
+            type="button"
+            class="btn btn-primary-50 d-block p-2 border-0 position-absolute top-50 translate-middle-y end-0 invisible"
+            id="nextBtn"
+            >
+              <span class="material-symbols-outlined align-bottom fs-4"
+                >arrow_right</span
+              >
+            </button>
 
-            // 2. 滾動自動判斷是否達尾端並重置位置
-            track.addEventListener('scroll', () => {
-              const scrollLeft = track.scrollLeft;
-              const maxScroll = track.scrollWidth - track.clientWidth;
+          </div>
 
-              // 判斷滾到快結尾時（原卡片寬度 * 卡片數）
-              if (scrollLeft >= maxScroll - (cards.length * 336)) {
-                // 瞬間跳回開頭
-                track.scrollLeft = 0;
-              }
-
-              // 更新指標
-              const index = Math.round(scrollLeft / 336) % cards.length;
-              indicators.querySelectorAll('span').forEach((el, i) => {
-                el.classList.toggle('active', i === index);
-              });
-            });
-          </script>
         </div>
       </div>
     </div>
 
-    <script type="module" src="../main.js"></script>
     <%- include('./layout/footer'); -%>
+    
+    <script type="module" src="../main.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from(".banner", {
+        opacity: 0,
+        scale: 1.2,
+        duration: 5,
+        ease: "power2.out"
+      });
 
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".banner",
+          start: "top top",
+          end: "+=200%",
+          scrub: true,
+          pin: true,
+          markers: false
+        }
+      });
+
+      tl.to(".firsi-title", {
+        opacity: 0,
+        duration: 0.5
+      }).from(".scroll-1", {
+        opacity: 0,
+        duration: 1
+      }).to(".scroll-1", {
+        opacity: 0,
+        duration: 1
+      }).from(".scroll-2", {
+        opacity: 0,
+        duration: 2
+      }, "<"); // "<" 表示與上一個動畫同時開始
+
+      gsap.to(".scroll-1", {
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".banner",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+
+      gsap.to(".scroll-2", {
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".banner",
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+
+
+      const regionData = {
+        north: { coords: [25.033964, 121.564468], name: "台北101" },
+        central: { coords: [24.147736, 120.673648], name: "台中火車站" },
+        south: { coords: [22.627278, 120.301435], name: "高雄85大樓" },
+        east: { coords: [23.973875, 121.600801], name: "花蓮" },
+        island: { coords: [23.101013, 121.36566], name: "綠島" }
+      };
+
+      const map = L.map('map').setView(regionData.north.coords, 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+      let marker = L.marker(regionData.north.coords).addTo(map).bindPopup(regionData.north.name).openPopup();
+
+      function updateMapLocation(region) {
+        const { coords, name } = regionData[region];
+        map.setView(coords, 13);
+        marker.setLatLng(coords).setPopupContent(name).openPopup();
+      }
+
+      function searchLocation() {
+        const query = document.getElementById('searchInput').value;
+        if (!query) return;
+
+        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
+          .then(response => response.json())
+          .then(data => {
+            if (data.length === 0) {
+              alert('找不到地點');
+              return;
+            }
+            const { lat, lon, display_name } = data[0];
+            const coords = [parseFloat(lat), parseFloat(lon)];
+            map.setView(coords, 13);
+            marker.setLatLng(coords).setPopupContent(display_name).openPopup();
+          })
+          .catch(error => {
+            console.error('地點搜尋錯誤：', error);
+            alert('搜尋失敗，請稍後再試。');
+          });
+      }
+
+      function selectRegion(button) {
+        document.querySelectorAll('.region-tabs button').forEach(btn => {
+          btn.classList.remove('active', 'text-dark-emphasis');
+          btn.classList.add('text-secondary');
+        });
+        button.classList.add('active', 'text-dark-emphasis');
+        button.classList.remove('text-secondary');
+        updateMapLocation(button.dataset.region);
+      }
+    
+    </script>
+
+    <script type="module">
+      const feedbackList = [
+        {
+          img: new URL('../assets/photo/index/feedback/feedback1.svg', import.meta.url).href,
+          alt: '蔡小姐',
+          role: '居家照顧員',
+          name: '蔡小姐｜35歲',
+          text: '我每天跑很多個案，家屬第一次照顧常手忙腳亂。我都推薦他們這個網站，分類清楚、說明簡單，還有補助資訊，幫助減少很多問題，讓照顧更有力量。'
+        },
+        {
+          img: new URL('../assets/photo/index/feedback/feedback2.svg', import.meta.url).href,
+          alt: '林小姐',
+          role: '照顧者',
+          name: '林小姐｜52歲',
+          text: '媽媽中風後，我幾乎一手包辦她的生活起居——上網找資訊時，常常看不懂，後來朋友推薦這個網站，分類清楚又好懂。這是我第一次覺得，買輔具不是一個人的戰鬥。'
+        },
+        {
+          img: new URL('../assets/photo/index/feedback/feedback3.svg', import.meta.url).href,
+          alt: '周伯伯',
+          role: '自行選購',
+          name: '周伯伯｜68歲',
+          text: '膝蓋退化，走路越來越不穩，連出門都會感到害怕——想找助行器，卻被許多專業網站搞得看不懂。這個平台讓我安心，分類清晰，說明簡單明瞭，還會告訴我適合的使用情境。'
+        },
+        {
+          img: new URL('../assets/photo/index/feedback/feedback1.svg', import.meta.url).href,
+          alt: '蔡小姐',
+          role: '居家照顧員',
+          name: '蔡小姐｜35歲',
+          text: '我每天跑很多個案，家屬第一次照顧常手忙腳亂。我都推薦他們這個網站，分類清楚、說明簡單，還有補助資訊，幫助減少很多問題，讓照顧更有力量。'
+        },
+        {
+          img: new URL('../assets/photo/index/feedback/feedback2.svg', import.meta.url).href,
+          alt: '林小姐',
+          role: '照顧者',
+          name: '林小姐｜52歲',
+          text: '媽媽中風後，我幾乎一手包辦她的生活起居——上網找資訊時，常常看不懂，後來朋友推薦這個網站，分類清楚又好懂。這是我第一次覺得，買輔具不是一個人的戰鬥。'
+        },
+        {
+          img: new URL('../assets/photo/index/feedback/feedback3.svg', import.meta.url).href,
+          alt: '周伯伯',
+          role: '自行選購',
+          name: '周伯伯｜68歲',
+          text: '膝蓋退化，走路越來越不穩，連出門都會感到害怕——想找助行器，卻被許多專業網站搞得看不懂。這個平台讓我安心，分類清晰，說明簡單明瞭，還會告訴我適合的使用情境。'
+        },
+      ];
+      
+      const track = document.getElementById('feedbackScrollTrack');
+      const indicators = document.getElementById('feedbackIndicators');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      feedbackList.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card bg-background-02 px-4 py-6 p-md-8 flex-shrink-0 gap-4 d-flex flex-column gap-4 gap-md-6';
+        card.innerHTML = `
+          <img src="${item.img}" class="rounded-circle mx-auto" alt="${item.alt}">
+          <div>
+            <h4 class="fs-6 fs-md-5 text-primary-500 text-center mb-3">${item.role}</h4>
+            <h3 class="fs-5 fs-md-4 text-center mb-2">${item.name}</h3>
+          </div>
+          <p class="fs-7 fs-md-6 text-center text-neutral-700">${item.text}</p>
+        `;
+        track.appendChild(card);
+      });
+
+      // 初始化
+      let cardWidth;
+      let currentIndex = 0;
+
+      const initCarousel = () => {
+        const originalCards = [...track.children];
+        cardWidth = originalCards[0].offsetWidth + 16;
+        originalCards.forEach(card => {
+          const clone = card.cloneNode(true);
+          track.appendChild(clone);
+        });
+      };
+
+      // 指標
+      const createIndicators = () => {
+        feedbackList.forEach((_, i) => {
+          const indicator = document.createElement('span');
+          indicator.className = 'indicator-dot';
+          if (i === 0) indicator.classList.add('active');
+          indicator.addEventListener('click', () => {
+            scrollToIndex(i);
+          });
+          indicators.appendChild(indicator);
+        });
+      };
+
+      // 滾動到指定 index
+      const scrollToIndex = (index) => {
+        track.scrollTo({
+          left: index * cardWidth,
+          behavior: 'smooth'
+        });
+        currentIndex = index;
+        updateIndicators(index);
+      };
+
+      // 更新指標樣式
+      const updateIndicators = (index) => {
+        const dots = indicators.querySelectorAll('span');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index % feedbackList.length);
+        });
+      };
+
+      // 下一張
+      nextBtn.addEventListener('click', () => {
+        currentIndex++;
+        scrollToIndex(currentIndex);
+      });
+
+      // 上一張
+      prevBtn.addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+          track.scrollLeft = feedbackList.length * cardWidth;
+          currentIndex = feedbackList.length - 1;
+        }
+        scrollToIndex(currentIndex);
+      });
+
+      // loop
+      track.addEventListener('scroll', () => {
+        const maxScroll = feedbackList.length * cardWidth;
+        if (track.scrollLeft >= maxScroll) {
+          track.scrollLeft = 0;
+          currentIndex = 0;
+        }
+        const index = Math.round(track.scrollLeft / cardWidth);
+        currentIndex = index;
+        updateIndicators(index);
+      });
+
+      // 初始化
+      initCarousel();
+      createIndicators();
+    </script>
   </body>
 </html>
