@@ -20,7 +20,7 @@
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.1)
     ),
-    url("../assets/photo/about/about-brand-s1-1.png");
+    url("/assets/photo/about/about-brand-s1-1.png");
 }
 
 //新門市圖片
@@ -36,7 +36,7 @@
     ),
     /* 四周 */
       radial-gradient(circle, transparent 70%, rgba(200, 170, 120, 0.7) 100%),
-    url("../assets/photo/about/about-brand-s1-2.png");
+    url("/assets/photo/about/about-brand-s1-2.png");
 }
 // 滿版圖片
 .banner-img {
@@ -55,7 +55,7 @@
     ),
     /* 整體暗 */
       linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-    url("../assets/photo/about/about-brand-s1-3-angle.png");
+    url("/assets/photo/about/about-brand-s1-3-angle.png");
 }
 
 //📌📌📌section 2.2 團隊成員
@@ -158,4 +158,9 @@
   .w-lg-556 {
     max-width: 556px;
   }
+}
+
+.form-textarea {
+  resize: none; /* 禁止使用者改變大小 */
+  overflow-y: auto;
 }
