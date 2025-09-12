@@ -117,24 +117,64 @@
 
             <!-- 商品導覽 -->
             <div class="overflow-x-auto mb-4 mb-lg-6">
-              <ul class="nav category-nav flex-nowrap d-flex ">
-                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4 active"
-                    style="width:96px;">總覽</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
-                    style="width:100px;">最新商品</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
-                    style="width:100px;">行動協助</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
-                    style="width:100px;">用餐照護</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
-                    style="width:100px;">如廁便利</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
-                    style="width:100px;">洗浴安全</a></li>
-                <li class="nav-item"><a href="#" class="nav-link fs-6 text-primary-300 py-3 px-4"
-                    style="width:100px;">補助專區</a></li>
-
+              <ul class="nav category-nav flex-nowrap d-flex">
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link fs-6 text-primary-300 py-3 px-4 active"
+                    style="width: 96px"
+                    >總覽</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width: 100px"
+                    >最新商品</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width: 100px"
+                    >行動協助</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width: 100px"
+                    >用餐照護</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width: 100px"
+                    >如廁便利</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width: 100px"
+                    >洗浴安全</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link fs-6 text-primary-300 py-3 px-4"
+                    style="width: 100px"
+                    >補助專區</a
+                  >
+                </li>
               </ul>
-
             </div>
 
             <!-- 搜尋框+排序 -->
@@ -480,23 +520,22 @@
               </ul>
 
               <!-- 頁碼 -->
-              <div style="max-width: 351px; margin: 0 auto; overflow-x: hidden;">
+              <div style="max-width: 351px; margin: 0 auto; overflow-x: hidden">
                 <nav aria-label="Page navigation">
-                  <ul class="d-flex justify-content-center align-items-center gap-4 list-unstyled my-pagination">
-
+                  <ul
+                    class="d-flex justify-content-center align-items-center gap-4 list-unstyled my-pagination"
+                  >
                     <li>
                       <a href="#" class="disabled">
                         <i class="bi bi-caret-left-fill"></i>
                       </a>
                     </li>
 
-
                     <li><a href="#" class="active">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
                     <li><span class="dots">…</span></li>
                     <li><a href="#">10</a></li>
-
 
                     <li>
                       <a href="#" class="circle">
@@ -506,8 +545,6 @@
                   </ul>
                 </nav>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -538,10 +575,9 @@
     </style>
 
     <!-- 畫布 Offcanvas -->
-    <div class="offcanvas offcanvas-end p-2 p-lg-10" tabindex="-1" id="offcanvasExample"
-      aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title fs-5 fs-lg-3 text-primary-900" id="offcanvasExampleLabel">輔具也能補助喔!</h5>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">輔具也能補助喔!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -806,11 +842,8 @@
     </div>
     </div>
 
-
-
     <%- include('./layout/footer'); -%>
 
-      <script type="module" src="../main.js"></script>
-</body>
-
+    <script type="module" src="../main.js"></script>
+  </body>
 </html>
