@@ -14,12 +14,9 @@
   color: $Secondary-500 !important;
 }
 
-/* 移除 hover 背景 */
-.navbar .nav-link:hover,
-.navbar .dropdown-toggle:hover,
+/* 移除 focus 背景 */
 .navbar .dropdown-toggle:focus {
   background-color: transparent !important;
-  color: inherit !important; /* 保持原本的文字顏色 */
 }
 //讓 線上商城 dropdown 掉到 navbar 外面
 .navbar .nav-online {
