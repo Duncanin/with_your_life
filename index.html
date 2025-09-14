@@ -26,9 +26,9 @@
     <script src="https://unpkg.com/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
-    <script type="module" crossorigin src="/with_your_life/assets/index-BGQ2z8ad.js"></script>
-    <link rel="modulepreload" crossorigin href="/with_your_life/assets/main-CPfgZ-bh.js">
-    <link rel="stylesheet" crossorigin href="/with_your_life/assets/main-mZdaAUNB.css">
+    <script type="module" crossorigin src="/with_your_life/assets/index-MBGQxuKj.js"></script>
+    <link rel="modulepreload" crossorigin href="/with_your_life/assets/main-BaM-vhpH.js">
+    <link rel="stylesheet" crossorigin href="/with_your_life/assets/main-AdtQ-tCC.css">
   </head>
   
   <body>
@@ -166,6 +166,8 @@
         <button
           type="button"
           class="btn btn-outline-primary-500 btn-sm bg-neutral-0 text-primary-500 fw-semibold btn d-lg-none"
+          data-bs-toggle="modal"
+          data-bs-target="#login"
         >
           登入/註冊
         </button>
@@ -173,6 +175,8 @@
         <button
           type="button"
           class="btn btn-outline-primary-500 bg-neutral-0 text-primary-500 fw-semibold btn d-none d-lg-block text-nowrap"
+          data-bs-toggle="modal"
+          data-bs-target="#login"
         >
           登入/註冊
         </button>
@@ -296,6 +300,262 @@
     </div>
   </div>
 </nav>
+<!-- 登入Modal -->
+<div
+  class="modal fade rounded-header-modal shadow-header border-0"
+  id="login"
+  tabindex="-1"
+  aria-labelledby="login"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content overflow-hidden">
+      <div class="modal-body p-0 d-flex">
+        <!-- 左邊圖片 -->
+        <div class="w-800 d-none d-lg-block">
+          <img
+            src="/with_your_life/assets/login-K1aNoHTT.svg"
+            alt="登入"
+            class="img-fluid object-fit-cover"
+            style="height: 800px"
+          />
+        </div>
+        <!-- 右邊文字 -->
+        <div class="position-relative w-400">
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-7"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="px-8">
+            <h2 class="h2 mt-8 text-center fw-bold mb-8">登入</h2>
+            <div class="border-bottom pb-5">
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 mb-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M37.5%2020C37.5%2029.66%2029.6687%2037.5%2020%2037.5C10.3312%2037.5%202.5%2029.66%202.5%2020C2.5%2010.3312%2010.3312%202.5%2020%202.5C29.6687%202.5%2037.5%2010.3312%2037.5%2020Z'%20fill='%23283544'/%3e%3cpath%20d='M28.2026%2015.5717C28.1071%2015.6274%2025.8338%2016.8031%2025.8338%2019.4098C25.941%2022.3826%2028.7026%2023.4252%2028.75%2023.4252C28.7026%2023.4809%2028.3331%2024.8454%2027.2383%2026.2757C26.3696%2027.5078%2025.4053%2028.75%2023.941%2028.75C22.5481%2028.75%2022.0481%2027.9288%2020.441%2027.9288C18.715%2027.9288%2018.2267%2028.75%2016.9052%2028.75C15.441%2028.75%2014.4052%2027.4412%2013.4891%2026.2207C12.2989%2024.6232%2011.2872%2022.1164%2011.2515%2019.7093C11.2274%2018.4338%2011.4899%2017.18%2012.156%2016.1151C13.0962%2014.6283%2014.7748%2013.619%2016.6079%2013.5858C18.0124%2013.5416%2019.2624%2014.4843%2020.1195%2014.4843C20.941%2014.4843%2022.4767%2013.5858%2024.2143%2013.5858C24.9643%2013.5865%2026.9643%2013.797%2028.2026%2015.5717ZM20.0008%2013.3311C19.7508%2012.1663%2020.441%2011.0015%2021.0838%2010.2585C21.9053%209.3599%2023.2026%208.75%2024.3214%208.75C24.3928%209.91481%2023.9402%2011.0572%2023.1312%2011.8892C22.4053%2012.7878%2021.1553%2013.4642%2020.0008%2013.3311Z'%20fill='white'/%3e%3c/svg%3e"
+                  alt="apple"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Apple
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 mb-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M37.5022%2020.3883C37.5022%2018.9494%2037.3831%2017.8994%2037.1252%2016.8105H20.3594V23.3049H30.2006C30.0022%2024.9189%2028.9308%2027.3494%2026.5498%2028.9827L26.5164%2029.2001L31.8175%2033.2246L32.1847%2033.2605C35.5577%2030.2077%2037.5022%2025.716%2037.5022%2020.3883Z'%20fill='%234285F4'/%3e%3cpath%20d='M20.3586%2037.5C25.18%2037.5%2029.2275%2035.9443%2032.1839%2033.261L26.549%2028.9831C25.0411%2030.0137%2023.0173%2030.7331%2020.3586%2030.7331C15.6364%2030.7331%2011.6285%2027.6804%2010.1998%2023.4609L9.99043%2023.4784L4.47833%2027.659L4.40625%2027.8554C7.34272%2033.572%2013.3745%2037.5%2020.3586%2037.5Z'%20fill='%2334A853'/%3e%3cpath%20d='M10.1983%2023.4614C9.82135%2022.3726%209.60318%2021.2058%209.60318%2020.0003C9.60318%2018.7947%209.82135%2017.6281%2010.1785%2016.5392L10.1685%2016.3073L4.58732%2012.0596L4.40471%2012.1447C3.19445%2014.5169%202.5%2017.1809%202.5%2020.0003C2.5%2022.8198%203.19445%2025.4836%204.40471%2027.8558L10.1983%2023.4614Z'%20fill='%23FBBC05'/%3e%3cpath%20d='M20.3587%209.26662C23.7118%209.26662%2025.9737%2010.6861%2027.2634%2011.8723L32.3031%207.05C29.208%204.23056%2025.1801%202.5%2020.3587%202.5C13.3745%202.5%207.34273%206.42775%204.40625%2012.1444L10.18%2016.5389C11.6286%2012.3194%2015.6365%209.26662%2020.3587%209.26662Z'%20fill='%23EB4335'/%3e%3c/svg%3e"
+                  alt="google"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Google
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cellipse%20cx='20'%20cy='18.4004'%20rx='17.5'%20ry='17.5'%20fill='url(%23paint0_linear_8557_64091)'/%3e%3cpath%20d='M26.5171%2025.3519L27.2945%2020.4126H22.4315V17.2087C22.4315%2015.8571%2023.1096%2014.5388%2025.2877%2014.5388H27.5V10.3337C27.5%2010.3337%2025.4931%2010%2023.5753%2010C19.5685%2010%2016.9521%2012.3662%2016.9521%2016.6481V20.4126H12.5V25.3519H16.9521V37.2931C17.8459%2037.4299%2018.7603%2037.5%2019.6918%2037.5C20.6233%2037.5%2021.5377%2037.4299%2022.4315%2037.2931V25.3519H26.5171Z'%20fill='white'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_8557_64091'%20x1='20'%20y1='0.900391'%20x2='20'%20y2='35.7966'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2318ACFE'/%3e%3cstop%20offset='1'%20stop-color='%230163E0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"
+                  alt="facebook"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Facebook
+              </a>
+            </div>
+            <div class="form-floating mt-5 mb-4">
+              <input
+                type="email"
+                class="form-control"
+                id="loginEmail"
+                placeholder="帳號"
+              />
+              <label for="loginEmail" class="text-black">帳號</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="loginPassword"
+                placeholder="密碼"
+              />
+              <label for="loginPassword" class="text-black">密碼</label>
+              <a
+                href="#"
+                class="d-block form-text mt-4 text-end text-natural-50"
+              >
+                忘記密碼
+              </a>
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary-500 w-100 mt-4 d-flex align-items-center justify-content-center"
+              data-bs-dismiss="modal"
+            >
+              登入<span class="material-symbols-outlined ms-1">
+                chevron_right
+              </span>
+            </button>
+            <p class="mt-8 text-natural-50 text-center fw-medium mb-lg-0 mb-10">
+              不是會員？
+              <a
+                href="#"
+                class="link-primary-500 text-decoration-underline"
+                data-bs-target="#register"
+                data-bs-toggle="modal"
+                >快速註冊</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 註冊Modal -->
+<div
+  class="modal fade rounded-header-modal shadow-header border-0"
+  id="register"
+  tabindex="-1"
+  aria-labelledby="login-enroll"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content overflow-hidden">
+      <div class="modal-body p-0 d-flex h-100">
+        <!-- 左邊文字 -->
+        <div class="position-relative w-400">
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-5"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="px-8">
+            <h2 class="h2 mt-8 text-center fw-bold mb-8">註冊</h2>
+            <div class="border-bottom pb-5">
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 mb-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M37.5%2020C37.5%2029.66%2029.6687%2037.5%2020%2037.5C10.3312%2037.5%202.5%2029.66%202.5%2020C2.5%2010.3312%2010.3312%202.5%2020%202.5C29.6687%202.5%2037.5%2010.3312%2037.5%2020Z'%20fill='%23283544'/%3e%3cpath%20d='M28.2026%2015.5717C28.1071%2015.6274%2025.8338%2016.8031%2025.8338%2019.4098C25.941%2022.3826%2028.7026%2023.4252%2028.75%2023.4252C28.7026%2023.4809%2028.3331%2024.8454%2027.2383%2026.2757C26.3696%2027.5078%2025.4053%2028.75%2023.941%2028.75C22.5481%2028.75%2022.0481%2027.9288%2020.441%2027.9288C18.715%2027.9288%2018.2267%2028.75%2016.9052%2028.75C15.441%2028.75%2014.4052%2027.4412%2013.4891%2026.2207C12.2989%2024.6232%2011.2872%2022.1164%2011.2515%2019.7093C11.2274%2018.4338%2011.4899%2017.18%2012.156%2016.1151C13.0962%2014.6283%2014.7748%2013.619%2016.6079%2013.5858C18.0124%2013.5416%2019.2624%2014.4843%2020.1195%2014.4843C20.941%2014.4843%2022.4767%2013.5858%2024.2143%2013.5858C24.9643%2013.5865%2026.9643%2013.797%2028.2026%2015.5717ZM20.0008%2013.3311C19.7508%2012.1663%2020.441%2011.0015%2021.0838%2010.2585C21.9053%209.3599%2023.2026%208.75%2024.3214%208.75C24.3928%209.91481%2023.9402%2011.0572%2023.1312%2011.8892C22.4053%2012.7878%2021.1553%2013.4642%2020.0008%2013.3311Z'%20fill='white'/%3e%3c/svg%3e"
+                  alt="apple"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Apple
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 mb-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M37.5022%2020.3883C37.5022%2018.9494%2037.3831%2017.8994%2037.1252%2016.8105H20.3594V23.3049H30.2006C30.0022%2024.9189%2028.9308%2027.3494%2026.5498%2028.9827L26.5164%2029.2001L31.8175%2033.2246L32.1847%2033.2605C35.5577%2030.2077%2037.5022%2025.716%2037.5022%2020.3883Z'%20fill='%234285F4'/%3e%3cpath%20d='M20.3586%2037.5C25.18%2037.5%2029.2275%2035.9443%2032.1839%2033.261L26.549%2028.9831C25.0411%2030.0137%2023.0173%2030.7331%2020.3586%2030.7331C15.6364%2030.7331%2011.6285%2027.6804%2010.1998%2023.4609L9.99043%2023.4784L4.47833%2027.659L4.40625%2027.8554C7.34272%2033.572%2013.3745%2037.5%2020.3586%2037.5Z'%20fill='%2334A853'/%3e%3cpath%20d='M10.1983%2023.4614C9.82135%2022.3726%209.60318%2021.2058%209.60318%2020.0003C9.60318%2018.7947%209.82135%2017.6281%2010.1785%2016.5392L10.1685%2016.3073L4.58732%2012.0596L4.40471%2012.1447C3.19445%2014.5169%202.5%2017.1809%202.5%2020.0003C2.5%2022.8198%203.19445%2025.4836%204.40471%2027.8558L10.1983%2023.4614Z'%20fill='%23FBBC05'/%3e%3cpath%20d='M20.3587%209.26662C23.7118%209.26662%2025.9737%2010.6861%2027.2634%2011.8723L32.3031%207.05C29.208%204.23056%2025.1801%202.5%2020.3587%202.5C13.3745%202.5%207.34273%206.42775%204.40625%2012.1444L10.18%2016.5389C11.6286%2012.3194%2015.6365%209.26662%2020.3587%209.26662Z'%20fill='%23EB4335'/%3e%3c/svg%3e"
+                  alt="google"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Google
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cellipse%20cx='20'%20cy='18.4004'%20rx='17.5'%20ry='17.5'%20fill='url(%23paint0_linear_8557_64091)'/%3e%3cpath%20d='M26.5171%2025.3519L27.2945%2020.4126H22.4315V17.2087C22.4315%2015.8571%2023.1096%2014.5388%2025.2877%2014.5388H27.5V10.3337C27.5%2010.3337%2025.4931%2010%2023.5753%2010C19.5685%2010%2016.9521%2012.3662%2016.9521%2016.6481V20.4126H12.5V25.3519H16.9521V37.2931C17.8459%2037.4299%2018.7603%2037.5%2019.6918%2037.5C20.6233%2037.5%2021.5377%2037.4299%2022.4315%2037.2931V25.3519H26.5171Z'%20fill='white'/%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_8557_64091'%20x1='20'%20y1='0.900391'%20x2='20'%20y2='35.7966'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%2318ACFE'/%3e%3cstop%20offset='1'%20stop-color='%230163E0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"
+                  alt="facebook"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Facebook
+              </a>
+            </div>
+            <div class="form-floating mt-5 mb-4">
+              <input
+                type="email"
+                class="form-control"
+                id="registerEmail"
+                placeholder="帳號"
+              />
+              <label for="registerEmail" class="text-black">帳號</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                type="password"
+                class="form-control"
+                id="registerPassword1"
+                placeholder="密碼"
+              />
+              <label for="registerPassword1" class="text-black">密碼</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                type="password"
+                class="form-control"
+                id="registerPassword2"
+                placeholder="確認密碼"
+              />
+              <label for="registerPassword2" class="text-black">確認密碼</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="iAgree"
+              />
+              <label class="form-check-label" for="iAgree">
+                我同意
+                <a href="#" class="link-primary-400 text-decoration-underline"
+                  >服務條款</a
+                >
+                和
+                <a href="#" class="link-primary-400 text-decoration-underline"
+                  >隱私政策</a
+                >
+              </label>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary-500 w-100 mt-4 d-flex align-items-center justify-content-center"
+              data-bs-dismiss="modal"
+            >
+              註冊<span class="material-symbols-outlined ms-1">
+                chevron_right
+              </span>
+            </button>
+            <p class="mt-8 text-natural-50 text-center fw-medium mb-xl-0 mb-10">
+              已經會員？
+              <a
+                href="#"
+                class="link-primary-500 text-decoration-underline"
+                data-bs-target="#login"
+                data-bs-toggle="modal"
+                >直接登入</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- 右邊圖片 -->
+        <div class="w-800 d-none d-lg-block">
+          <img
+            src="/with_your_life/assets/register-DoDyOHYC.svg"
+            alt="註冊"
+            class="img-fluid object-fit-cover"
+            style="height: 800px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     <div class="banner d-flex">
       <div class="container d-flex position-relative">
         <div class="">
