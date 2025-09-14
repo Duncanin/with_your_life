@@ -68,3 +68,16 @@
   overflow-y: auto; //超過高度就出現垂直滾動條
   -webkit-overflow-scrolling: touch; //手機滑順滾動
 }
+
+//modal寬度
+.w-800 {
+  width: 800px;
+}
+.w-400 {
+  width: 400px;
+}
+
+//modal圓角
+.rounded-header-modal {
+  --bs-modal-border-radius: 24px;
+}
