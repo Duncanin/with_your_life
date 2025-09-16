@@ -1,11 +1,15 @@
-// footer blur 設定
-.background-blur-8 {
-  backdrop-filter: blur(8px);
+.footer-img {
+  background-image: url("/assets/photo/footer/footer-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-// 當尺寸是lg 時，li字體變成 fs-6
 @media (min-width: 992px) {
-  .fs-lg-6 {
-    font-size: 16px;
+  .footer-img {
+    background-image: url("/assets/photo/footer/footer-lg-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
