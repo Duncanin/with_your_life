@@ -96,53 +96,43 @@
     max-width: 100%;
   }
 }
+//💠替換手風琴 active 背景色
+.accordion {
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-border-radius: 0; //消除預設圓角
+  --bs-accordion-inner-border-radius: 0; //消除內側預設圓角
+  --bs-accordion-btn-focus-box-shadow: none; //消除BS5預設灰底
+}
 
-// 📌消除手風琴 accordion 預設樣式
-// 消除手風琴點擊 outlined 預設
-.accordion-button:focus,
-.accordion-button:active {
+.accordion-button:focus {
+  box-shadow: none; //把 focus 預設藍框消掉
+}
+
+//💠替換 BS5 手風琴預設 icon
+.accordion-button::after {
+  background-image: url("/assets/photo/about/arrow-drop-down.svg");
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("/assets/photo/about/arrow-drop-up.svg");
+}
+
+.accordion-button:not(.collapsed) {
   box-shadow: none;
-  outline: none;
-}
-
-// 展開時的 hover 效果
-.accordion .accordion-button:not(.collapsed) {
-  background: transparent;
-  box-shadow: none;
-}
-
-.faq-area .accordion {
-  width: 100%; /* 保持手風琴撐滿父容器 */
-}
-
-// 🎯 自訂圓角，覆蓋BS5原本手風琴變數
-:root {
-  --bs-accordion-border-radius: 1.25rem; // 手機版 20px
-  --bs-accordion-padding-y: 0.75rem; /* 12px */
-  --bs-accordion-padding-x: 1rem; /* 16px */
-}
-@media (min-width: 992px) {
-  // lg 以上桌機圓角跟padding
-  :root {
-    --bs-accordion-border-radius: 2.5rem; // 桌機版 40px
-    --bs-accordion-padding-y: 1.5rem; /* 24px */
-    --bs-accordion-padding-x: 2rem; /* 32px */
-  }
 }
 
 .accordion-item {
-  border-radius: var(--bs-accordion-border-radius);
-  overflow: hidden; // 確保內部內容不溢出圓角
+  border: none;
 }
 
-.accordion-button {
-  border-radius: var(--bs-accordion-border-radius);
-  padding: var(--bs-accordion-padding-y) var(--bs-accordion-padding-x);
-}
+//💠檢查 BS5 手風琴預設 框線 用
+// .accordion-item {
+//   border: 3px solid lightcoral;
+// }
 
-.accordion-body {
-  padding: var(--bs-accordion-padding-y) var(--bs-accordion-padding-x);
-}
+// .accordion-button {
+//   border: 3px solid rgba(51, 0, 0, 0.3);
+// }
 
 //📌📌📌section 2.5 聯絡我們
 
