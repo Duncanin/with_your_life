@@ -20,7 +20,6 @@
 //   background-color: #E8F3D8;
 // }
 .banner {
-  // background-image: url(/assets/photo/index/bg-phone.png);
   background: linear-gradient(to bottom, transparent 50%, #F5F3EF 50%, #F5F3EF 100%), url('/assets/photo/index/bg-phone.png');
   background-repeat: no-repeat;
   background-position: center, left 55% center;
@@ -247,8 +246,8 @@
     background: url('/assets/photo/index/bg-img.png');
     background-color: #E9F3D9;
     background-repeat: no-repeat;
-    background-size: 140% 92%;
-    background-position: right 58% center ;
+    background-size: 140% 90%;
+    background-position: right 58% top 40% ;
   }
 
   .bg-scroll {
@@ -256,7 +255,7 @@
   }
 
   .banner-title {
-    top: 80%;
+    top: 78%;
   }
 
   .service-item .tag {
