@@ -1,21 +1,34 @@
-// 要修路徑，gh-pages看不太到
 //📌📌📌section 2.1 品牌介紹/價值
+@media (min-width: 992px) {
+  .about-logo {
+    max-width: 280px;
+    width: 100%;
+  }
+}
+
+.about-logo {
+  max-width: 280px;
+  width: 100%;
+}
 
 @media (min-width: 992px) {
-  .before-img,
+  .before-img {
+    max-width: 400px;
+  }
   .after-img {
-    max-width: 600px;
+    max-width: 425px;
   }
 }
 
 //舊門市圖片
 .before-img {
   width: 100%;
-  height: 300px; /* 固定框高 */
+  height: 320px;
+  /* 固定框高 */
   background-position: center;
-  background-size: cover;
-  background-image: 
-  /* 遮罩層加亮 */ linear-gradient(
+  background-size: 125% auto;
+  background-image:
+    /* 遮罩層加亮 */ linear-gradient(
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.1)
     ),
@@ -25,11 +38,12 @@
 //新門市圖片
 .after-img {
   width: 100%;
-  height: 300px; /* 固定框高 */
+  height: 340px;
+  /* 固定框高 */
   background-position: center;
-  background-size: cover;
-  background-image: 
-  /* 遮罩層加亮 */ linear-gradient(
+  background-size: 125% auto;
+  background-image:
+    /* 遮罩層加亮 */ linear-gradient(
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.1)
     ),
@@ -37,16 +51,50 @@
       radial-gradient(circle, transparent 70%, rgba(200, 170, 120, 0.7) 100%),
     url("/assets/photo/about/about-brand-s1-2.png");
 }
-// 滿版圖片
+
+//💠定位
+// 舊門市圖片往上80px
+.before-img-layer {
+  top: 40px;
+  right: 80px;
+}
+
+.after-img-layer {
+  top: 224px;
+  right: 420px;
+}
+
+.brand-footprint {
+  width: 280px; /* 調整寬度 */
+  height: auto;
+  top: 260px;
+  right: 150px;
+  transform: rotate(140deg);
+}
+
+.brand-smile {
+  width: 100px; /* 調整寬度 */
+  height: auto;
+  top: 770px;
+  right: 160px;
+}
+
+.brand-slogan {
+  top: 640px;
+  right: 240px;
+}
+
+// 📌📌📌滿版圖片
 .banner-img {
   color: white;
   letter-spacing: 4px;
   width: 100%;
-  height: 400px; /* 固定框高 */
+  height: 400px;
+  /* 固定框高 */
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-image: 
+  background-image:
     /* 四周 */ radial-gradient(
       circle,
       transparent 70%,
@@ -69,12 +117,14 @@
 }
 
 .team-overflow {
-  overflow-x: auto; /* 手機可滑動 */
+  overflow-x: auto;
+  /* 手機可滑動 */
 }
 
 @media (min-width: 992px) {
   .team-overflow {
-    overflow-x: hidden; /* 桌機不要滾動 */
+    overflow-x: hidden;
+    /* 桌機不要滾動 */
   }
 }
 
@@ -96,6 +146,7 @@
     max-width: 100%;
   }
 }
+
 //💠替換手風琴 active 背景色
 .accordion {
   --bs-accordion-active-bg: transparent;
@@ -144,12 +195,14 @@
   .contact-info {
     flex: 1; //讓它自動填滿剩下的空間
   }
+
   .w-lg-556 {
     max-width: 556px;
   }
 }
 
 .form-textarea {
-  resize: none; /* 禁止使用者改變大小 */
+  resize: none;
+  /* 禁止使用者改變大小 */
   overflow-y: auto;
 }
