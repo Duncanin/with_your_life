@@ -23,12 +23,12 @@
 
 @media (min-width: 992px) {
   .before-img {
-    max-width: 400px;
-    height: 320px; /* 固定框高 */
+    max-width: 360px;
+    height: 288px; /* 固定框高 */
   }
   .after-img {
-    max-width: 425px;
-    height: 340px; /* 固定框高 */
+    max-width: 400px;
+    height: 320px; /* 固定框高 */
   }
 }
 
@@ -64,19 +64,19 @@
 // 舊門市圖片往上80px
 .before-img-layer {
   top: 40px;
-  right: 80px;
+  right: 0px;
 }
 
 .after-img-layer {
-  top: 224px;
-  right: 420px;
+  top: 220px;
+  right: 330px;
 }
 
 .brand-footprint {
   width: 280px; /* 調整寬度 */
   height: auto;
-  top: 260px;
-  right: 150px;
+  top: 230px;
+  right: 50px;
   transform: rotate(140deg);
   opacity: 0.7;
 }
@@ -90,15 +90,15 @@
 
 @media (min-width: 992px) {
   .brand-smile {
-    width: 100px; /* 調整寬度 */
+    width: 120px; /* 調整寬度 */
     height: auto;
-    top: 770px;
-    right: 155px;
+    top: 732px;
+    right: 90px;
   }
 
   .brand-slogan {
-    top: 640px;
-    right: 240px;
+    top: 600px;
+    right: 200px;
   }
 }
 
