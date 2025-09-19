@@ -7,24 +7,34 @@
 }
 
 .about-logo {
-  max-width: 280px;
+  max-width: 216px;
   width: 100%;
+}
+
+//調整桌機、手機版圖片大小
+.before-img {
+  max-width: 360px;
+  height: 200px;
+}
+.after-img {
+  max-width: 360px;
+  height: 200px;
 }
 
 @media (min-width: 992px) {
   .before-img {
     max-width: 400px;
+    height: 320px; /* 固定框高 */
   }
   .after-img {
     max-width: 425px;
+    height: 340px; /* 固定框高 */
   }
 }
 
 //舊門市圖片
 .before-img {
   width: 100%;
-  height: 320px;
-  /* 固定框高 */
   background-position: center;
   background-size: 125% auto;
   background-image:
@@ -38,8 +48,6 @@
 //新門市圖片
 .after-img {
   width: 100%;
-  height: 340px;
-  /* 固定框高 */
   background-position: center;
   background-size: 125% auto;
   background-image:
@@ -70,18 +78,28 @@
   top: 260px;
   right: 150px;
   transform: rotate(140deg);
+  opacity: 0.7;
 }
 
 .brand-smile {
   width: 100px; /* 調整寬度 */
   height: auto;
-  top: 770px;
-  right: 160px;
+  top: 145px;
+  right: 15px;
 }
 
-.brand-slogan {
-  top: 640px;
-  right: 240px;
+@media (min-width: 992px) {
+  .brand-smile {
+    width: 100px; /* 調整寬度 */
+    height: auto;
+    top: 770px;
+    right: 155px;
+  }
+
+  .brand-slogan {
+    top: 640px;
+    right: 240px;
+  }
 }
 
 // 📌📌📌滿版圖片
