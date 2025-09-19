@@ -132,6 +132,8 @@
         <button
           type="button"
           class="btn btn-outline-primary-500 btn-sm bg-neutral-0 text-primary-500 fw-semibold btn d-lg-none"
+          data-bs-toggle="modal"
+          data-bs-target="#login"
         >
           登入/註冊
         </button>
@@ -139,6 +141,8 @@
         <button
           type="button"
           class="btn btn-outline-primary-500 bg-neutral-0 text-primary-500 fw-semibold btn d-none d-lg-block text-nowrap"
+          data-bs-toggle="modal"
+          data-bs-target="#login"
         >
           登入/註冊
         </button>
@@ -157,11 +161,11 @@
     </div>
   </div>
   <!--  響應式選單內容 -->
-  <div
-    class="w-100 py-4 px-3 m-2 bg-background collapse hamburger-menu shadow-header rounded-40 overflow-x-hidden"
-    id="nav-collapse"
-  >
-    <div>
+  <div class="container">
+    <div
+      class="w-100 py-4 px-3 m-2 bg-background collapse hamburger-menu shadow-header rounded-40 overflow-x-hidden"
+      id="nav-collapse"
+    >
       <div>
         <!-- 搜尋欄 -->
         <form class="position-relative mb-6">
@@ -262,3 +266,259 @@
     </div>
   </div>
 </nav>
+<!-- 登入Modal -->
+<div
+  class="modal fade rounded-header-modal shadow-header border-0"
+  id="login"
+  tabindex="-1"
+  aria-labelledby="login"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content overflow-hidden">
+      <div class="modal-body p-0 d-flex">
+        <!-- 左邊圖片 -->
+        <div class="w-800 d-none d-lg-block">
+          <img
+            src="/assets/photo/header/login.svg"
+            alt="登入"
+            class="img-fluid object-fit-cover"
+            style="height: 800px"
+          />
+        </div>
+        <!-- 右邊文字 -->
+        <div class="position-relative w-400">
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-7"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="px-8">
+            <h2 class="h2 mt-8 text-center fw-bold mb-8">登入</h2>
+            <div class="border-bottom pb-5">
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 mb-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="/assets/photo/header/apple.svg"
+                  alt="apple"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Apple
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 mb-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="/assets/photo/header/google.svg"
+                  alt="google"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Google
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="/assets/photo/header/facebook.svg"
+                  alt="facebook"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Facebook
+              </a>
+            </div>
+            <div class="form-floating mt-5 mb-4">
+              <input
+                type="email"
+                class="form-control"
+                id="loginEmail"
+                placeholder="帳號"
+              />
+              <label for="loginEmail" class="text-black">帳號</label>
+            </div>
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="loginPassword"
+                placeholder="密碼"
+              />
+              <label for="loginPassword" class="text-black">密碼</label>
+              <a
+                href="#"
+                class="d-block form-text mt-4 text-end text-natural-50"
+              >
+                忘記密碼
+              </a>
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary-500 w-100 mt-4 d-flex align-items-center justify-content-center"
+              data-bs-dismiss="modal"
+            >
+              登入<span class="material-symbols-outlined ms-1">
+                chevron_right
+              </span>
+            </button>
+            <p class="mt-8 text-natural-50 text-center fw-medium mb-lg-0 mb-10">
+              不是會員？
+              <a
+                href="#"
+                class="link-primary-500 text-decoration-underline"
+                data-bs-target="#register"
+                data-bs-toggle="modal"
+                >快速註冊</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 註冊Modal -->
+<div
+  class="modal fade rounded-header-modal shadow-header border-0"
+  id="register"
+  tabindex="-1"
+  aria-labelledby="login-enroll"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content overflow-hidden">
+      <div class="modal-body p-0 d-flex h-100">
+        <!-- 左邊文字 -->
+        <div class="position-relative w-400">
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-5"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="px-8">
+            <h2 class="h2 mt-8 text-center fw-bold mb-8">註冊</h2>
+            <div class="border-bottom pb-5">
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 mb-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="/assets/photo/header/apple.svg"
+                  alt="apple"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Apple
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 mb-4 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="/assets/photo/header/google.svg"
+                  alt="google"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Google
+              </a>
+              <a
+                href="#"
+                type="button"
+                class="btn btn-whihe border w-100 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="/assets/photo/header/facebook.svg"
+                  alt="facebook"
+                  class="me-1"
+                  style="width: 24px; width: 24px"
+                />Facebook
+              </a>
+            </div>
+            <div class="form-floating mt-5 mb-4">
+              <input
+                type="email"
+                class="form-control"
+                id="registerEmail"
+                placeholder="帳號"
+              />
+              <label for="registerEmail" class="text-black">帳號</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                type="password"
+                class="form-control"
+                id="registerPassword1"
+                placeholder="密碼"
+              />
+              <label for="registerPassword1" class="text-black">密碼</label>
+            </div>
+            <div class="form-floating mb-4">
+              <input
+                type="password"
+                class="form-control"
+                id="registerPassword2"
+                placeholder="確認密碼"
+              />
+              <label for="registerPassword2" class="text-black">確認密碼</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="iAgree"
+              />
+              <label class="form-check-label" for="iAgree">
+                我同意
+                <a href="#" class="link-primary-400 text-decoration-underline"
+                  >服務條款</a
+                >
+                和
+                <a href="#" class="link-primary-400 text-decoration-underline"
+                  >隱私政策</a
+                >
+              </label>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary-500 w-100 mt-4 d-flex align-items-center justify-content-center"
+              data-bs-dismiss="modal"
+            >
+              註冊<span class="material-symbols-outlined ms-1">
+                chevron_right
+              </span>
+            </button>
+            <p class="mt-8 text-natural-50 text-center fw-medium mb-xl-0 mb-10">
+              已經會員？
+              <a
+                href="#"
+                class="link-primary-500 text-decoration-underline"
+                data-bs-target="#login"
+                data-bs-toggle="modal"
+                >直接登入</a
+              >
+            </p>
+          </div>
+        </div>
+        <!-- 右邊圖片 -->
+        <div class="w-800 d-none d-lg-block">
+          <img
+            src="/assets/photo/header/register.svg"
+            alt="註冊"
+            class="img-fluid object-fit-cover"
+            style="height: 800px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

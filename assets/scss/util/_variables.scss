@@ -456,7 +456,7 @@ $escaped-characters: (
 $enable-caret: true !default;
 $enable-rounded: true !default;
 $enable-shadows: false !default;
-$enable-gradients: false !default;
+$enable-gradients: true; //false !default;
 $enable-transitions: true !default;
 $enable-reduced-motion: true !default;
 $enable-smooth-scroll: true !default;
@@ -785,7 +785,7 @@ $display-font-sizes: (
   // 3: 4rem,
   // 4: 3.5rem,
   // 5: 3rem,
-  // 6: 2.5rem,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  // 6: 2.5rem,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ) !default;
 
 $display-font-family: null !default;
