@@ -14,12 +14,9 @@
   color: $Secondary-500 !important;
 }
 
-/* 移除 hover 背景 */
-.navbar .nav-link:hover,
-.navbar .dropdown-toggle:hover,
+/* 移除 focus 背景 */
 .navbar .dropdown-toggle:focus {
   background-color: transparent !important;
-  color: inherit !important; /* 保持原本的文字顏色 */
 }
 //讓 線上商城 dropdown 掉到 navbar 外面
 .navbar .nav-online {
@@ -67,4 +64,17 @@
   max-height: 80vh; //整個漢堡選單最多占螢幕 80% 高度
   overflow-y: auto; //超過高度就出現垂直滾動條
   -webkit-overflow-scrolling: touch; //手機滑順滾動
+}
+
+//modal寬度
+.w-800 {
+  width: 800px;
+}
+.w-400 {
+  width: 400px;
+}
+
+//modal圓角
+.rounded-header-modal {
+  --bs-modal-border-radius: 24px;
 }

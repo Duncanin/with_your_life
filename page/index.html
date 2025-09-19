@@ -22,7 +22,7 @@
   <body>
     <%- include('./layout/header-loginOut'); -%>
     <div class="banner d-flex">
-      <div class="container d-flex position-relative">
+      <div class="container d-flex position-relative overflow-hidden">
         <div class="">
 
           <div class="position-absolute start-50 bottom-0 translate-middle-x w-75 mb-12 scroll-1 d-block d-md-none">
@@ -92,7 +92,7 @@
           <h2 class="fs-3 fs-md-1 text-center mb-6 mb-md-10">
             伴你ㄟ日常，照顧路上幫你想得更周到
           </h2>
-          <div class="overflow-x-auto">
+          <div class="overflow-x-auto" style="scrollbar-width: none;">
             <div class="d-flex gap-4 gap-md-6">
               <% const cards = [
                 { img: '/assets/photo/index/service.svg', title: '輔具推薦', desc: '依不同需求推薦適合輔具' },
@@ -112,7 +112,7 @@
             </div>
           </div>
           <div class="tag position-absolute">
-            <img src="/assets/photo/index/tag.svg" alt="" class="d-block w-100 h-100 object-fit-cover">
+            <img src="/assets/photo/index/tag.svg" alt="tag" class="d-block w-100 h-100 object-fit-cover">
           </div>
         </div>
       </div>
@@ -148,7 +148,7 @@
     <div class="map">
       <div class="container">
         <div class="py-10 py-md-14">
-          <h2 class="fs-md-1 mb-6 mb-md-10 text-center">陪你找，最近的輔具好所在</h2>
+          <h2 class="fs-3 fs-md-1 mb-6 mb-md-10 text-center">陪你找，最近的輔具好所在</h2>
           <div class="position-relative d-block mx-auto w-100" style="min-width: 350px; max-width: 416px;">
             <input type="text" id="searchInput" placeholder="搜尋鄰近的輔具中心" class="form-control w-100 rounded-20 border-2 border-neutral-200 py-3 px-4"/>
           <button onclick="searchLocation()" class="position-absolute top-50 translate-middle-y end-0 border-0 text-secondary-500 p-0 me-4" style="appearance: none; background: none; width: 24px; height: 24px;">
@@ -232,7 +232,7 @@
           <div id="feedbackIndicators" class="carousel-indicators justify-content-center mb-10 mb-md-12"></div>
           
           <div class="position-relative">
-            <div class="d-flex overflow-auto gap-4 scroll-smooth px-3 py-6 py-md-10" id="feedbackScrollTrack"></div>
+            <div class="d-flex overflow-auto gap-4 scroll-smooth px-3 py-6 py-md-10" id="feedbackScrollTrack" style="scrollbar-width: none;"></div>
 
             <button
             type="button"
@@ -316,6 +316,19 @@
         }
       });
 
+      gsap.from(".service-item .card", {
+        x: 50,
+        y: -50,         // 從左方滑入
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.6,
+        ease: "elastic.out(1, 0.5)",
+        scrollTrigger: {
+          trigger: ".service-item",
+          start: "top 30%",
+          toggleActions: "play none none reverse"
+        }
+      });
 
       const regionData = {
         north: { coords: [25.033964, 121.564468], name: "台北101" },
@@ -511,6 +524,9 @@
       // 初始化
       initCarousel();
       createIndicators();
+
+
+
     </script>
   </body>
 </html>
