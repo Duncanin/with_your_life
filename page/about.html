@@ -115,10 +115,11 @@
       <!-- section 2.2 團隊成員 -->
       <section>
         <div class="container">
-          <div class="py-10 py-lg-14">
+          <div class="py-10 py-lg-14 position-relative">
             <h3 class="fs-3 fs-lg-1 text-primary-900 text-center mb-lg-10">
               我們ㄟ團隊
             </h3>
+            <img src="/assets/photo/about/member-icon.svg" class="member-icon position-absolute img-fluid d-lg-block d-none z-1" alt="成員插圖">
             <!-- 卡片群組層 -->
             <div class="team-overflow">
               <div class="row flex-nowrap flex-lg-wrap gx-3 gx-lg-6">
@@ -200,11 +201,11 @@
       <!-- section 2.3 陪診師服務 service -->
       <section>
         <div class="container">
-          <div class="row">
-            <div class="col-12 mx-auto">
+          <div class="row ">
+            <div class="col-12 mx-auto ">
               <!-- 定位容器 -->
               <div class="service-area d-lg-flex align-items-lg-center py-10 py-lg-14">
-                <div class="service-img mb-6 position-relative col-lg-6 me-lg-80">
+                <div class="service-img mb-6 position-relative col-lg-6 me-lg-80 ">
                   <img src="../assets/photo/about/about-brand-s3-1.png" class="img-fluid rounded-20" alt="陪診師服務圖" />
                   <!-- 黑色漸層遮罩 -->
                   <div class="position-absolute top-0 start-0 w-100 h-100 rounded-20" style="
@@ -214,14 +215,18 @@
                         transparent
                       );
                     "></div>
-                  <div class="position-absolute" style="left: 20px; bottom: 20px">
+                  <div class="position-absolute mb-lg-5 ms-lg-5" style="left: 20px; bottom: 20px">
                     <h4 class="fs-4 fs-lg-2 mb-3">
                       <span class="text-neutral-0">陪診師服務</span>
                     </h4>
-                    <p class="fs-6 text-neutral-0">
+                    <p class="fs-6 fs-lg-4 text-neutral-0">
                       不只是照護，更是生活中的陪伴。
                     </p>
                   </div>
+                  <!-- 花朵插圖定位 -->
+                  <img src="/assets/photo/about/flower.svg"
+                    class="img-fluid position-absolute service-flower d-lg-block d-md-none bottom-0 end-0 " alt="花朵插圖">
+
                 </div>
                 <div class="service-info">
                   <div class="service-title text-center mb-6 mb-lg-8">
@@ -246,7 +251,6 @@
                   <h4 class="fs-4 fs-lg-3 text-center text-primary-500 mb-6 mb-lg-8">
                     有我們陪你，就不再孤單。
                   </h4>
-
                   <button type="button"
                     class="btn btn-outline-primary-500 fw-semibold w-100 d-flex justify-content-center">
                     <span class="material-symbols-outlined me-1"> call </span>
@@ -255,6 +259,7 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -264,11 +269,15 @@
           <div class="row">
             <div class="col-12 col-lg-8 mx-auto">
               <div class="faq-area py-10 py-lg-14">
-                <h3 class="faq-title fs-3 text-primary-900 mb-6 mb-lg-10 text-center mx-auto">
-                  關於訂單，你可能想問ㄟ事
-                </h3>
+                <div class="position-relative">
+                  <h3 class="faq-title fs-3 text-primary-900 mb-6 mb-lg-10 text-center mx-auto">
+                    關於訂單，你可能想問ㄟ事
+                  </h3>
+                  <!-- faq插圖定位 -->
+                  <img src="/assets/photo/about/faq-icon.svg"
+                    class="faq-icon img-fluid position-absolute d-lg-block d-none z-1" alt="faq插圖">
+                </div>
                 <!-- 手風琴(使用always open範例去改) -->
-                <!--📌📌📌0916調整padding -->
                 <div class="accordion" id="accordionPanelsStayOpenExample">
                   <div class="accordion-item rounded-20 rounded-lg-40 mb-6">
                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -336,7 +345,6 @@
                         </picture>
                       </div>
                     </div>
-                    <!--手風琴結束 -->
                   </div>
                   <div class="accordion-item rounded-20 rounded-lg-40 mb-6">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFour">
@@ -356,6 +364,7 @@
                       </div>
                     </div>
                   </div>
+                  <!--手風琴結束 -->
                 </div>
               </div>
             </div>
