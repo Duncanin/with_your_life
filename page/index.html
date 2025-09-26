@@ -73,7 +73,7 @@
       <div class="bottom bg-background">
         <button
           type="button"
-          class="btn btn-secondary-500 fs-6 text-white fw-semibold d-block mx-auto px-5"
+          class="btn btn-secondary-500 fs-6 text-white fw-semibold d-block mx-auto px-5"  onclick="window.location.href='product.html'"
         >
           立即了解
           <span class="material-symbols-outlined align-bottom fs-5"
@@ -116,7 +116,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="sorted bg-background">
@@ -124,19 +123,19 @@
         <div class="py-10 py-md-14">
           <h2 class="fs-3 fs-md-1 text-center mb-6 mb-md-10">先從分類逛起，陪你一步步找適合的</h2>
           <% const categories = [
-            { img: '/assets/photo/index/sorted/wheelchair.svg', text: '行動協助' },
-            { img: '/assets/photo/index/sorted/meal.svg', text: '用餐照護' },
-            { img: '/assets/photo/index/sorted/toilet.svg', text: '如廁便利' },
-            { img: '/assets/photo/index/sorted/bath.svg', text: '洗浴安全' },
-            { img: '/assets/photo/index/sorted/welfare.svg', text: '補助專區' },
-            { img: '/assets/photo/index/sorted/allClass.svg', text: '全部分類' }
+            { img: '/assets/photo/index/sorted/wheelchair.svg', text: '行動協助', url:'http://localhost:5173/with_your_life/page/product.html#list3' },
+            { img: '/assets/photo/index/sorted/meal.svg', text: '用餐照護', url:'http://localhost:5173/with_your_life/page/product.html#list4' },
+            { img: '/assets/photo/index/sorted/toilet.svg', text: '如廁便利', url:'http://localhost:5173/with_your_life/page/product.html#list5' },
+            { img: '/assets/photo/index/sorted/bath.svg', text: '洗浴安全', url:'http://localhost:5173/with_your_life/page/product.html#list6' },
+            { img: '/assets/photo/index/sorted/welfare.svg', text: '補助專區', url:'http://localhost:5173/with_your_life/page/product.html#list7' },
+            { img: '/assets/photo/index/sorted/allClass.svg', text: '全部分類', url:'http://localhost:5173/with_your_life/page/product.html#list' }
           ]; %>
           <div class="d-grid gap-4 gap-md-6 sorted-grid mx-auto">
             <% categories.forEach(category => { %>
-              <div class="text-center bg-white sorted-item">
+              <a href="<%= category.url %>" class="text-center bg-white sorted-item">
                 <img src="<%= category.img %>" alt="<%= category.text %>" class="d-block w-50 h-auto object-fit-cover" />
                 <p class="fs-5 fs-md-4 fw-semibold lh-sm"><%= category.text %></p>
-              </div>
+              </a>
             <% }); %>
           </div>
 
@@ -197,26 +196,90 @@
           </div>
   
           <div class="cta d-flex flex-column flex-md-row gap-4 gap-md-6">
-            <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4">
+            <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4 shadow-sm">
               <div style="width: 35%; max-width: 107px;">
                 <img src="/assets/photo/index/companionist01.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
               </div>
               <h3 class="fs-5 fs-md-4 text-center">視力退化，不敢單獨出門怎麼辦？</h3>
-              <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold">
+              <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
                 瞭解更多
                 <span class="material-symbols-outlined align-bottom fs-6">arrow_forward</span>
               </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenteredScrollable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content rounded-1 bg-neutral-200 p-5">
+                    <div class="modal-header border-0">
+                      <h5 class="fs-3 modal-title text-primary-500" id="exampleModalLabel">家人年長視力退化，不敢單獨出門
+                      </h5>
+                      <!-- <button type="button" class="btn-close align-bottom" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                    <div class="modal-body text-neutral-950" style="font-size: 18px;">
+                      年長者視力退化、行動遲緩，
+                      <br>常讓日常就醫與外出變得困難又焦慮。
+                      <br>別讓看病成為壓力，讓我們的陪診師協助接送、導引與醫囑轉述，
+                      為長輩打造一段安心又有尊嚴的就醫旅程。
+                    </div>
+                    <div class="modal-footer border-0">
+                      <button type="button" class="btn btn-outline-primary-500 fw-semibold w-100">
+                        查看完整服務方案
+                        <span class="material-symbols-outlined align-bottom fs-4"
+                          >arrow_right</span
+                        >
+                      </button>
+                      <button type="button" class="btn btn-outline-primary-500 fw-semibold w-100">
+                        30 天體驗計劃
+                        <span class="material-symbols-outlined align-bottom fs-4"
+                          >arrow_right</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
   
-            <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4">
+            <div class="bg-primary-50 rounded-20 d-flex flex-column justify-content-center align-items-center gap-3 py-6 py-md-10 px-4 shadow-sm">
               <div style="width: 35%; max-width: 107px;">
                 <img src="/assets/photo/index/companionist02.svg" alt="" class="d-block w-100 h-auto object-fit-cover">
               </div>
               <h3 class="fs-5 fs-md-4 text-center">「剛確診新病症，完全聽不懂醫生在說什麼⋯」</h3>
-              <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold">
+
+              <button type="button" class="btn btn-outline-primary-500 py-2 px-4 d-flex justify-content-center align-items-center gap-1 fs-7 fw-semibold" data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable2">
                 瞭解更多
                 <span class="material-symbols-outlined align-bottom fs-6">arrow_forward</span>
               </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenteredScrollable2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content rounded-1 bg-neutral-200 p-5">
+                    <div class="modal-header border-0">
+                      <h5 class="fs-3 modal-title text-primary-500" id="exampleModalLabel2">家人剛診斷新疾病，聽不懂醫生說什麼？</h5>
+                      <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                    <div class="modal-body text-neutral-950" style="font-size: 18px;">
+                      剛確診慢性病、罕病或複雜病症，常常一場門診就讓全家愣住？我們提供專業的就醫陪同與醫囑筆記服務，協助釐清重點、轉述衛教、事後還能一對一講解，就醫不再霧煞煞，照顧更有信心。
+                    </div>
+                    <div class="modal-footer border-0">
+                      <button type="button" class="btn btn-outline-primary-500 fw-semibold w-100">
+                        查看完整服務方案
+                        <span class="material-symbols-outlined align-bottom fs-4"
+                          >arrow_right</span
+                        >
+                      </button>
+                      <button type="button" class="btn btn-outline-primary-500 fw-semibold w-100">
+                        30 天體驗計劃
+                        <span class="material-symbols-outlined align-bottom fs-4"
+                          >arrow_right</span
+                        >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -316,6 +379,7 @@
         }
       });
 
+      // service-item animate
       gsap.from(".service-item .card", {
         x: 50,
         y: -50,         // 從左方滑入
@@ -330,22 +394,42 @@
         }
       });
 
+
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.location.hash) {
+          const hash = window.location.hash;
+          const tabTriggerEl = document.querySelector(`button[data-bs-target='${hash}']`);
+          if (tabTriggerEl) {
+            tabTriggerEl.click();
+          }
+        }
+      });
+    </script>
+
+    <script>
+
       const regionData = {
-        north: { coords: [25.033964, 121.564468], name: "台北101" },
-        central: { coords: [24.147736, 120.673648], name: "台中火車站" },
-        south: { coords: [22.627278, 120.301435], name: "高雄85大樓" },
-        east: { coords: [23.973875, 121.600801], name: "花蓮" },
-        island: { coords: [23.101013, 121.36566], name: "綠島" }
+        north: [
+          { coords: [25.070356497881487, 121.52172188854425], name: "臺北市合宜輔具中心" },
+          { coords: [25.12096370891595, 121.52348429510553], name: "衛生福利部社會及家庭署多功能輔具資源整合推廣中心" },
+        ],
+        central: [{ coords: [24.25156061250066, 120.52986002394148], name: "臺中市梧棲區文化路一段88號" },],
+        south: [{ coords: [22.799746520263437, 120.29074661300886], name: "高雄市北區輔具資源中心 - 總站" },],
+        east: [{ coords: [22.773491533873834, 121.13264852208987], name: "臺東縣輔具暨生活重建中心" },],
+        island: [{ coords: [24.452843930330555, 118.38095536441799], name: "金門縣輔具資源中心" }],
       };
 
-      const map = L.map('map').setView(regionData.north.coords, 13);
+      const map = L.map('map').setView(regionData.north[0].coords, 13);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
-      let marker = L.marker(regionData.north.coords).addTo(map).bindPopup(regionData.north.name).openPopup();
+      let marker = L.marker(regionData.north[0].coords).addTo(map).bindPopup(regionData.north[0].name).openPopup();
 
-      function updateMapLocation(region) {
-        const { coords, name } = regionData[region];
+      function updateMapLocation(region, index=0) {
+        const { coords, name } = regionData[region][index];
         map.setView(coords, 13);
         marker.setLatLng(coords).setPopupContent(name).openPopup();
       }
@@ -379,7 +463,8 @@
         });
         button.classList.add('active', 'text-dark-emphasis');
         button.classList.remove('text-secondary');
-        updateMapLocation(button.dataset.region);
+        // 支援有多個地點可以擴充為選第 0 個：
+        updateMapLocation(button.dataset.region, 0);
       }
     
     </script>
@@ -453,6 +538,7 @@
         const card = document.createElement('div');
         card.className = 'card bg-background-02 px-4 py-6 p-md-8 flex-shrink-0 gap-4 d-flex flex-column gap-4 gap-md-6';
         card.innerHTML = `
+          <div class="glow-dot"></div>
           <img src="${item.img}" class="rounded-circle mx-auto" alt="${item.alt}">
           <div>
             <h4 class="fs-6 fs-md-5 text-primary-500 text-center mb-3">${item.role}</h4>
@@ -460,6 +546,28 @@
           </div>
           <p class="fs-7 fs-md-6 text-center text-neutral-700">${item.text}</p>
         `;
+
+        // 加 GSAP hover 事件監聽
+        // card.addEventListener('mouseenter', () => {
+        //   gsap.to(card, {
+        //     boxShadow: "0 0 40px 16px #5fa8ff88",
+        //     borderColor: "#5fa8ff",
+        //     duration: 0.5
+        //   });
+        // });
+        // card.addEventListener('mouseleave', () => {
+        //   gsap.to(card, {
+        //     boxShadow: "0 0 0px 0px #0000",
+        //     borderColor: "#eee",
+        //     duration: 0.5
+        //   });
+        // });
+          gsap.to(".glow-dot", {
+            rotate: 360,
+            duration: 2.4,
+            repeat: -1,
+            ease: "linear"
+          });
         track.appendChild(card);
       });
 
