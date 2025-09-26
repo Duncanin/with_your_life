@@ -311,12 +311,13 @@ position: relative;
     width: 50%;
       box-shadow: 5px 0 5px 3px var(--bs-primary-200);
     transition: transform 0.5s ease-in;
-    &:first-child:hover {
-      transform: scale(1.8) translateX(25%);
-    }
-    &:last-child:hover {
-      transform: scale(1.8) translateX(-25%);
-    }
+  }
+
+  body:not(.modal-open) .cta > div:first-child:hover {
+    transform: scale(1.8) translateX(25%) translateY(-65px);
+  }
+  body:not(.modal-open) .cta > div:last-child:hover {
+    transform: scale(1.8) translateX(-25%) translateY(-65px);
   }
 
   .feedback .card {
