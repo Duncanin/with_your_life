@@ -314,10 +314,10 @@ position: relative;
   }
 
   body:not(.modal-open) .cta > div:first-child:hover {
-    transform: scale(1.8) translateX(25%) translateY(-65px);
+    transform: scale(1.6) translateX(30%) translateY(-65px);
   }
   body:not(.modal-open) .cta > div:last-child:hover {
-    transform: scale(1.8) translateX(-25%) translateY(-65px);
+    transform: scale(1.6) translateX(-30%) translateY(-65px);
   }
 
   .feedback .card {
