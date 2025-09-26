@@ -1,105 +1,138 @@
+<!-- 0912 已經merge好第一版，應該會看到 有陰影的header -->
 <!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="../assets/photo/logo-icon/logo-lcon.svg"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>伴你在日常｜關於我們</title>
-    <%- include('./layout/link-icon'); -%>
-  </head>
 
-  <body>
-    <%- include('./layout/header-loginOut'); -%>
-    <main class="main">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="../assets/photo/logo-icon/logo-lcon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>伴你在日常｜關於我們</title>
+  <%- include('./layout/link-icon'); -%>
+</head>
+
+<body class="bg-background">
+  <%- include('./layout/header-loginOut'); -%>
+    <main>
       <!-- 佔位用 -->
-      <div style="height: 110px">
-        <div></div>
+      <div style="height: 100px">
       </div>
       <!-- section 2.1 品牌介紹/價值 -->
       <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-10 mx-auto">
-              <div class="py-10 py-lg-14">
-                <div
-                  class="before-area d-lg-flex flex-lg-row-reverse align-items-center"
-                >
-                  <div class="before-img mb-6"></div>
-                  <div class="before-texts mb-6 p-lg-8">
-                    <!-- 要調整logo大小 -->
-                    <h2 class="fs-3 text-center mb-4">
-                      關於<img src="../assets/photo/header/Logo.svg" />
-                    </h2>
-                    <p class="fs-6 text-neutral-700 mb-4">
-                      我們原是一間深耕在地多年的輔具品牌，長期陪伴無數家庭走過生活的轉變。
-                    </p>
-                    <p class="fs-6 text-neutral-700">
-                      隨著時代推進與網路普及，我們看見越來越多人對輔具的需求，也發現許多顧客在選購時面臨資訊不足、選擇困難的情況。
-                    </p>
+        <div class="container position-relative">
+          <div class="py-10 py-lg-14">
+            <div class="row">
+              <div class="col-12 col-lg-11 mx-auto">
+                <!-- 第一欄：文字區塊 -->
+                <div class="row">
+                  <div class="col-12 col-lg-5 ">
+                    <div class="before-texts mb-4">
+                      <h1 class="d-flex align-items-center justify-content-center mt-lg-4 mb-6 mb-lg-10">
+                        <span class="fs-3 fs-lg-1 me-2 me-lg-3">關於</span>
+                        <img src="../assets/photo/header/Logo.svg" class="about-logo" alt="logo標題" />
+                      </h1>
+                      <p class="fs-lg-4 text-neutral-700 mb-4 mb-lg-7">
+                        我們是一個深耕在地多年的輔具品牌，長期陪伴無數家庭，一路見證他們生活的點滴與轉變。
+                      </p>
+                      <p class="fs-lg-4 text-neutral-700 mb-lg-7">
+                        隨著時代推進和網路普及，我們看見越來越多人對輔具的需求，也發現許多顧客在選購時，經常面臨資訊不足、選擇困難的情況。
+                      </p>
+                    </div>
                   </div>
+                  <!-- 舊門市圖片區塊 -->
+                  <div class="col-12 d-lg-none">
+                    <div class="before-img rounded-20 rounded-lg-40 mb-6"></div>
+                  </div>
+
                 </div>
-                <div class="after-area d-lg-flex align-items-center">
-                  <div class="after-img mb-6"></div>
-                  <div class="after-texts p-lg-8">
-                    <p class="fs-6 text-neutral-700 mb-6 mb-lg-10">
-                      因此，我們決定將專業經驗帶到線上，打造這個電商平台。不只是讓選擇更便利，我們更希望透過這個平台，將更多實用、貼心的好產品帶給有需要的您與您的家人。
-                    </p>
-                    <div class="after-area-slogan text-center">
-                      <h2 class="fs-4 fs-lg-5 mb-4 text-primary-600">
-                        我們堅信有我們陪伴，
-                      </h2>
-                      <h2 class="fs-4 fs-lg-5 mb-4 text-primary-600">
-                        每個人的日常，
-                      </h2>
-                      <h2 class="fs-4 fs-lg-5 mb-4 text-primary-600">
-                        都能更輕鬆、更自在。
-                      </h2>
+                <!-- 第二欄：文字區塊 -->
+                <div class="row">
+                  <div class="col-12 col-lg-5">
+                    <div class="after-texts">
+                      <p class="fs-lg-4 text-neutral-700 mb-4 mb-lg-7">
+                        因此，我們決定將專業經驗帶到線上，打造這個電商平台。
+                      </p>
+                      <p class="fs-lg-4 text-neutral-700 mb-4 mb-lg-7">
+                        不只讓選擇更便利，我們更希望透過這個平台，將更多實用、貼心的好產品帶給有需要的您與您的家人。
+                      </p>
+                    </div>
+                  </div>
+                  <!-- 新門市圖片區塊-->
+                  <div class="col-12 d-lg-none">
+                    <div class="after-img rounded-20 rounded-lg-40 mb-6"></div>
+                  </div>
+                  <!-- slogan：手機版 -->
+                  <div class="col-12 d-lg-none text-center p-8 position-relative">
+                    <h2 class="fs-4 fs-lg-2 mb-4 text-primary-600">
+                      我們堅信有我們陪伴，
+                    </h2>
+                    <h2 class="fs-4 fs-lg-2 mb-4 text-primary-600">
+                      每個人的日常，
+                    </h2>
+                    <h2 class="fs-4 fs-lg-2 mb-4 text-primary-600">
+                      都能更輕鬆、更自在。
+                    </h2>
+                    <div class="">
+                      <img src="/assets/photo/about/brand-smile.svg" class="brand-smile position-absolute" alt="笑臉插圖">
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <!--新、舊門市圖片區塊：桌機版--定位排版，脫離row -->
+            <div class="d-none d-lg-block">
+              <div class="before-img before-img-layer rounded-20 position-absolute z-1"></div>
+            </div>
+            <div class="d-none d-lg-block">
+              <div class="after-img after-img-layer rounded-20 position-absolute z-2"></div>
+            </div>
+            <!--足跡 -->
+            <div class="d-none d-lg-block">
+              <img src="/assets/photo/about/brand-footprint.svg" class="brand-footprint position-absolute" alt="足跡插圖">
+            </div>
+            <!--笑臉 -->
+            <div class="d-none d-lg-block">
+              <img src="/assets/photo/about/brand-smile.svg" class="brand-smile position-absolute" alt="笑臉插圖">
+            </div>
+            <div class="d-none d-lg-block brand-slogan text-lg-end position-absolute">
+              <h2 class="fs-4 fs-lg-2 mb-lg-4 text-primary-600">
+                我們堅信有我們陪伴，
+              </h2>
+              <h2 class="fs-4 fs-lg-2 mb-lg-4 text-primary-600">
+                每個人的日常，
+              </h2>
+              <h2 class="fs-4 fs-lg-2 mb-lg-4 text-primary-600">
+                都能更輕鬆、更自在。
+              </h2>
+            </div>
           </div>
         </div>
       </section>
       <!-- 滿版圖片 -->
-      <div
-        class="banner-img text-center d-flex flex-column justify-content-center p-4"
-      >
-        <h2 class="fs-7 fs-lg-6 mb-2">信義門市，隨時歡迎您的到來。</h2>
-        <p class="fs-7 fs-lg-6">- With Your Life -</p>
+      <div class="banner-img text-center d-flex flex-column justify-content-center p-4 my-lg-10">
+        <h2 class="fs-6 fs-lg-3 mb-4 mb-lg-6">信義門市，隨時歡迎您的到來。</h2>
+        <p class="fs-4 fs-lg-3 fw-semibold">- With Your Life -</p>
       </div>
       <!-- section 2.2 團隊成員 -->
       <section>
         <div class="container">
-          <div class="py-10 py-lg-14">
+          <div class="py-10 py-lg-14 position-relative">
             <h3 class="fs-3 fs-lg-1 text-primary-900 text-center mb-lg-10">
               我們ㄟ團隊
             </h3>
+            <img src="/assets/photo/about/member-icon.svg" class="member-icon position-absolute img-fluid d-lg-block d-none z-1" alt="成員插圖">
             <!-- 卡片群組層 -->
-            <div class="team-overflow">
+            <div class="team-overflow pb-6">
               <div class="row flex-nowrap flex-lg-wrap gx-3 gx-lg-6">
                 <!-- 卡片1 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div
-                      class="card position-relative rounded-20 rounded-lg-40 border-0"
-                    >
-                      <img
-                        src="../assets/photo/about/about-brand-s2-1.png"
+                    <div class="card position-relative rounded-20 rounded-lg-40 border-0 bg-neutural-0 shadow">
+                      <img src="../assets/photo/about/about-brand-s2-1.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
-                        style="width: 150px; height: 150px; object-fit: cover"
-                        alt="專業復健科醫生圖片"
-                      />
+                        style="width: 150px; height: 150px; object-fit: cover" alt="專業復健科醫生圖片" />
                       <div class="card-body text-center pt-13 pb-11 px-lg-8">
                         <div class="card-title my-4 my-lg-6">
-                          <h6
-                            class="card-subject fs-6 fs-lg-5 text-primary-500 mb-3"
-                          >
+                          <h6 class="card-subject fs-6 fs-lg-5 text-primary-500 mb-3">
                             復健科專業
                           </h6>
                           <h5 class="card-name fs-5 fs-lg-4 text-neutral-950">
@@ -116,20 +149,13 @@
                 <!-- 卡片2 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div
-                      class="card position-relative rounded-20 rounded-lg-40 border-0"
-                    >
-                      <img
-                        src="../assets/photo/about/about-brand-s2-2.png"
+                    <div class="card position-relative rounded-20 rounded-lg-40 border-0 bg-neutural-0 shadow">
+                      <img src="../assets/photo/about/about-brand-s2-2.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
-                        style="width: 150px; height: 150px; object-fit: cover"
-                        alt="輔具研發團隊圖片"
-                      />
+                        style="width: 150px; height: 150px; object-fit: cover" alt="輔具研發團隊圖片" />
                       <div class="card-body text-center pt-13 pb-11 px-lg-8">
                         <div class="card-title my-4 my-lg-6">
-                          <h6
-                            class="card-subject fs-6 fs-lg-5 text-primary-500 mb-3"
-                          >
+                          <h6 class="card-subject fs-6 fs-lg-5 text-primary-500 mb-3">
                             輔具研發團隊
                           </h6>
                           <h5 class="card-name fs-5 fs-lg-4 text-neutral-950">
@@ -146,20 +172,13 @@
                 <!-- 卡片3 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div
-                      class="card position-relative rounded-20 rounded-lg-40 border-0"
-                    >
-                      <img
-                        src="../assets/photo/about/about-brand-s2-3.png"
+                    <div class="card position-relative rounded-20 rounded-lg-40 border-0 bg-neutural-0 shadow">
+                      <img src="../assets/photo/about/about-brand-s2-3.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
-                        style="width: 150px; height: 150px; object-fit: cover"
-                        alt="臨床護理師圖片"
-                      />
+                        style="width: 150px; height: 150px; object-fit: cover" alt="臨床護理師圖片" />
                       <div class="card-body text-center pt-13 pb-11 px-lg-8">
                         <div class="card-title my-4 my-lg-6">
-                          <h6
-                            class="card-subject fs-6 fs-lg-5 text-primary-500 mb-3"
-                          >
+                          <h6 class="card-subject fs-6 fs-lg-5 text-primary-500 mb-3">
                             臨床護理師
                           </h6>
                           <h5 class="card-name fs-5 fs-lg-4 text-neutral-950">
@@ -182,42 +201,32 @@
       <!-- section 2.3 陪診師服務 service -->
       <section>
         <div class="container">
-          <div class="row">
-            <div class="col-12 mx-auto">
+          <div class="row ">
+            <div class="col-12 mx-auto ">
               <!-- 定位容器 -->
-              <div
-                class="service-area d-lg-flex align-items-lg-center py-10 py-lg-14"
-              >
-                <div
-                  class="service-img mb-6 position-relative col-lg-6 me-lg-80"
-                >
-                  <img
-                    src="../assets/photo/about/about-brand-s3-1.png"
-                    class="img-fluid rounded-20"
-                    alt="陪診師服務圖"
-                  />
+              <div class="service-area d-lg-flex align-items-lg-center py-10 py-lg-14">
+                <div class="service-img mb-6 position-relative col-lg-6 me-lg-80 ">
+                  <img src="../assets/photo/about/about-brand-s3-1.png" class="img-fluid rounded-20" alt="陪診師服務圖" />
                   <!-- 黑色漸層遮罩 -->
-                  <div
-                    class="position-absolute top-0 start-0 w-100 h-100 rounded-20"
-                    style="
+                  <div class="position-absolute top-0 start-0 w-100 h-100 rounded-20" style="
                       background: linear-gradient(
                         to top,
                         rgba(0, 0, 0, 0.5),
                         transparent
                       );
-                    "
-                  ></div>
-                  <div
-                    class="position-absolute"
-                    style="left: 20px; bottom: 20px"
-                  >
+                    "></div>
+                  <div class="position-absolute mb-lg-5 ms-lg-5" style="left: 20px; bottom: 20px">
                     <h4 class="fs-4 fs-lg-2 mb-3">
                       <span class="text-neutral-0">陪診師服務</span>
                     </h4>
-                    <p class="fs-6 text-neutral-0">
+                    <p class="fs-6 fs-lg-4 text-neutral-0">
                       不只是照護，更是生活中的陪伴。
                     </p>
                   </div>
+                  <!-- 花朵插圖定位 -->
+                  <img src="/assets/photo/about/flower.svg"
+                    class="img-fluid position-absolute service-flower d-lg-block d-md-none bottom-0 end-0 " alt="花朵插圖">
+
                 </div>
                 <div class="service-info">
                   <div class="service-title text-center mb-6 mb-lg-8">
@@ -228,9 +237,7 @@
                       「伴你ㄟ日常」的陪診師，不只是照護人員，更是你生活中的安心夥伴
                     </p>
                   </div>
-                  <div
-                    class="service-texts bg-neutral-0 rounded-20 rounded-lg-40 p-4 p-lg-6 mb-6 mb-lg-8"
-                  >
+                  <div class="service-texts bg-neutral-0 rounded-20 rounded-lg-40 p-4 p-lg-6 mb-6 mb-lg-8">
                     <p class="fs-7 fs-lg-6 mb-3 mb-lg-5">
                       有時候出門，不一定是為了看醫生，也可能只是拿藥、回診、買東西，或是想散散步。
                     </p>
@@ -241,22 +248,18 @@
                       我們的陪診師，不只懂健康，更懂生活。比起「照護」，我們相信「陪伴」才是最溫柔的照顧方式。
                     </p>
                   </div>
-                  <h4
-                    class="fs-4 fs-lg-3 text-center text-primary-500 mb-6 mb-lg-8"
-                  >
+                  <h4 class="fs-4 fs-lg-3 text-center text-primary-500 mb-6 mb-lg-8">
                     有我們陪你，就不再孤單。
                   </h4>
-
-                  <button
-                    type="button"
-                    class="btn btn-outline-primary-500 fw-semibold w-100 d-flex justify-content-center"
-                  >
+                  <button type="button"
+                    class="btn btn-outline-primary-500 fw-semibold w-100 d-flex justify-content-center">
                     <span class="material-symbols-outlined me-1"> call </span>
                     諮詢專線：(02) 8590-6666
                   </button>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -265,161 +268,123 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-8 mx-auto">
-              <div
-                class="faq-area d-flex flex-column align-items-center py-10 py-lg-14"
-              >
-                <h3
-                  class="faq-title fs-3 text-primary-900 mb-6 mb-lg-10 text-center"
-                >
-                  關於訂單，你可能想問ㄟ事
-                </h3>
-
+              <div class="faq-area py-10 py-lg-14">
+                <div class="position-relative">
+                  <h3 class="faq-title fs-3 text-primary-900 mb-6 mb-lg-10 text-center mx-auto">
+                    關於訂單，你可能想問ㄟ事
+                  </h3>
+                  <!-- faq插圖定位 -->
+                  <img src="/assets/photo/about/faq-icon.svg"
+                    class="faq-icon img-fluid position-absolute d-lg-block d-none z-1" alt="faq插圖">
+                </div>
                 <!-- 手風琴(使用always open範例去改) -->
-                <!--📌📌📌待調整padding -->
                 <div class="accordion" id="accordionPanelsStayOpenExample">
-                  <div class="accordion-item rounded-20 rounded-lg-40 mb-4">
-                    <h6 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <div class="accordion-item rounded-20 rounded-lg-40 mb-6">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                       <button
-                        class="accordion-button collapsed fs-6 fs-lg-4 fw-semibold text-neutral-950"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseOne"
-                        aria-expanded="true"
-                        aria-controls="panelsStayOpen-collapseOne"
-                      >
+                        class="accordion-button rounded-20 rounded-lg-40 text-neutral-950 fs-lg-4 fw-semibold px-lg-8 py-lg-6"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                         如何購物？
                       </button>
-                    </h6>
-                    <div
-                      id="panelsStayOpen-collapseOne"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="panelsStayOpen-headingOne"
-                    >
-                      <div class="accordion-body">
-                        <p>文字一</p>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                      aria-labelledby="panelsStayOpen-headingOne">
+                      <div class="accordion-body px-lg-8 py-lg-6">
+                        <p class="fs-7 fs-lg-6 text-neutral-700">您需要<strong>先註冊成為會員</strong>才能購物並成立訂單，請點此連結註冊。</p>
+                        <p class="fs-7 fs-lg-6 text-neutral-700">購物流程：選購商品 → 加入購物車 → 選擇支付、運送方式 → 確認結帳 → 訂單成立！</p>
+                        <p class="fs-7 fs-lg-6 text-neutral-700">訂單成立後，您可到<strong>個人主頁</strong>確認訂單狀態。</p>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item rounded-20 rounded-lg-40 mb-4">
-                    <h4 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <div class="accordion-item rounded-20 rounded-lg-40 mb-6">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                       <button
-                        class="accordion-button collapsed fs-6 fs-lg-4 fw-semibold text-neutral-950"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseTwo"
-                      >
+                        class="accordion-button collapsed rounded-20 rounded-lg-40 text-neutral-950 fs-lg-4 fw-semibold px-lg-8 py-lg-6"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                        aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                         有哪些付款方式？
                       </button>
-                    </h4>
-                    <div
-                      id="panelsStayOpen-collapseTwo"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="panelsStayOpen-headingTwo"
-                    >
-                      <div class="accordion-body">
-                        <p>文字二</p>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                      aria-labelledby="panelsStayOpen-headingTwo">
+                      <div class="accordion-body px-lg-8 py-lg-6">
+                        <p class="fs-7 fs-lg-6 text-neutral-700">目前提供<strong>轉帳匯款</strong>和<strong>信用卡付款</strong>兩種方式：
+                        </p>
+                        <ul>
+                          <li>轉帳匯款：匯款完成後，請回覆您的帳號末五碼、金額，以便客服人員協助對帳</li>
+                          <li>信用卡付款：支援 Visa / Mastercard / JCB，包括國內外信用卡</li>
+                        </ul>
+                        <p>為提供更穩定安全的購物環境，本系統是透過某某銀行與國際刷卡組織直接串接，採取更高標準的作業流程。刷卡過程您的卡號全程加密，相關卡號資訊也不會留存在本網站資料庫，以確保您的交易安全。
+                        </p>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item rounded-20 rounded-lg-40 mb-4">
-                    <h6
-                      class="accordion-header"
-                      id="panelsStayOpen-headingFour"
-                    >
+                  <div class="accordion-item rounded-20 rounded-lg-40 mb-6">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                       <button
-                        class="accordion-button collapsed fs-6 fs-lg-4 fw-semibold text-neutral-950"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseThree"
-                        aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseThree"
-                      >
+                        class="accordion-button collapsed rounded-20 rounded-lg-40 text-neutral-950 fs-lg-4 fw-semibold px-lg-8 py-lg-6"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                        aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                         運費怎麼計算？
                       </button>
-                    </h6>
-                    <div
-                      id="panelsStayOpen-collapseThree"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="panelsStayOpen-headingThree"
-                    >
-                      <div class="accordion-body">
-                        <p class="fs-7 fs-lg-6 text-neutral-700 mb-3">
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                      aria-labelledby="panelsStayOpen-headingThree">
+                      <div class="accordion-body px-lg-8 py-lg-6">
+                        <p class="fs-7 fs-lg-6 text-neutral-700 mb-3 mb-lg-4">
                           部分偏遠地區無法提供配送服務 或
                           需要額外加收運費，如有前述情況，訂單成立後出貨前，客服人員將會致電確認。造成不便敬請見諒。
                         </p>
                         <picture>
                           <!-- 桌機版 lg 以上 -->
-                          <source
-                            srcset="
-                              ../assets/photo/about/about-brand-s4-1-lg.png
-                            "
-                            media="(min-width: 992px)"
-                          />
+                          <source srcset="../assets/photo/about/about-brand-s4-1-lg.png" media="(min-width: 992px)" />
                           <!-- 手機版預設 -->
-                          <img
-                            src="../assets/photo/about/about-brand-s4-1.png"
-                            class="img-fluid d-block mx-auto"
-                            alt="運費圖手機版"
-                          />
+                          <img src="../assets/photo/about/about-brand-s4-1.png" class="img-fluid d-block mx-auto"
+                            alt="運費圖手機版" />
                         </picture>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item rounded-20 rounded-lg-40">
-                    <h6
-                      class="accordion-header"
-                      id="panelsStayOpen-headingFour"
-                    >
+                  <div class="accordion-item rounded-20 rounded-lg-40 mb-6">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                       <button
-                        class="accordion-button collapsed fs-6 fs-lg-4 fw-semibold text-neutral-950"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseFour"
-                        aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseFour"
-                      >
+                        class="accordion-button collapsed rounded-20 rounded-lg-40 text-neutral-950 fs-lg-4 fw-semibold px-lg-8 py-lg-6"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                        aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                         退貨流程？
                       </button>
-                    </h6>
-                    <div
-                      id="panelsStayOpen-collapseFour"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="panelsStayOpen-headingFour"
-                    >
-                      <div class="accordion-body">
-                        <p>文字四</p>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                      aria-labelledby="panelsStayOpen-headingFour">
+                      <div class="accordion-body px-lg-8 py-lg-6">
+                        <p class="fs-7 fs-lg-6 text-neutral-700 mb-3 mb-lg-4">相關流程請參考附圖：</p>
+                        <img src="/assets/photo/about/refund-process-s4-2.png" class="img-fluid d-block mx-auto"
+                          alt="退款流程圖">
                       </div>
                     </div>
                   </div>
+                  <!--手風琴結束 -->
                 </div>
-                <!--手風琴結束 -->
               </div>
             </div>
           </div>
-        </div>
       </section>
       <!--section 2.5 聯絡我們 contact -->
       <section>
         <div class="container">
           <div class="row">
-            <div class="col-12 col-lg-10 mx-auto py-lg-14">
+            <div class="col-12 col-lg-10 mx-auto pb-lg-14">
               <div
-                class="contact-area d-lg-flex align-items-lg-center p-lg-10 border border-2 border-primary-200 rounded-20 my-10 px-4 py-6"
-              >
-                <div class="contact-header bg-neutral-50 w-lg-400 me-lg-10">
+                class="contact-area d-lg-flex align-items-lg-center p-lg-10 border border-2 border-primary-200 bg-primary-50 rounded-20 my-10 px-4 py-6">
+                <div class="contact-header bg-primary-50 w-lg-400 me-lg-10">
                   <div class="contact-title text-center mb-4">
                     <h3 class="fs-3 text-primary-900 mb-4">
                       咱在這裡，隨時等你
                     </h3>
                     <p class="fs-5 text-secondary-500">我們可以怎麼幫助您？</p>
                   </div>
-                  <img
-                    src="../assets/photo/about/about-brand-s5-1.png"
-                    class="img-fluid contact-img"
-                    alt="聯絡我們圖片"
-                  />
+                  <img src="../assets/photo/about/about-brand-s5-1.png" class="img-fluid contact-img" alt="聯絡我們圖片" />
                 </div>
                 <div class="contact-info w-lg-556">
                   <!-- 表單 -->
@@ -429,32 +394,18 @@
                       <div class="issue-type">
                         <!-- BS元件：下拉式選單 -->
                         <div class="dropdown mb-4">
-                          <button
-                            class="form-select text-start text-neutral-600"
-                            type="button"
-                            id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                          >
+                          <button class="form-select text-start text-neutral-600" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             請選擇問題類型
                           </button>
-                          <ul
-                            class="dropdown-menu w-100"
-                            aria-labelledby="dropdownMenuButton1"
-                          >
+                          <ul class="dropdown-menu w-100 p-3" aria-labelledby="dropdownMenuButton1">
                             <li class="dropdown-item py-3 px-4">
-                              <a
-                                href="#"
-                                class="d-flex justify-content-between"
-                              >
+                              <a href="#" class="d-flex justify-content-between">
                                 <p class="text-neutral-600">我有訂單相關問題</p>
                               </a>
                             </li>
                             <li class="dropdown-item py-3 px-4">
-                              <a
-                                href="#"
-                                class="d-flex justify-content-between"
-                              >
+                              <a href="#" class="d-flex justify-content-between">
                                 <p class="text-neutral-600">我有其他相關問題</p>
                               </a>
                             </li>
@@ -463,43 +414,24 @@
                       </div>
                       <!-- 姓名 -->
                       <div class="form-floating mb-4">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="about-name"
-                          placeholder="請輸入姓名"
-                        />
+                        <input type="text" class="form-control" id="about-name" placeholder="請輸入姓名" />
                         <label for="about-name">姓名</label>
                       </div>
                       <!-- 電子信箱 -->
                       <div class="form-floating mb-4">
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="about-email"
-                          placeholder="請輸入電子信箱"
-                        />
+                        <input type="email" class="form-control" id="about-email" placeholder="請輸入電子信箱" />
                         <label for="about-email">電子信箱</label>
                       </div>
                       <!-- 問題內容 -->
                       <div class="form-floating mb-4">
-                        <textarea
-                          type="textarea"
-                          class="form-control mb-1"
-                          id="about-content"
-                          style="border-radius: 24px; height: 200px"
-                          maxlength="250"
-                          placeholder="如果有訂單編號，請一併附上，將會加速客服進度，感謝您的協助。"
-                        ></textarea>
-                        <label for="about-content"
-                          >問題內容（請附訂單編號）
+                        <textarea type="textarea" class="form-control form-textarea mb-1" id="about-content"
+                          style="border-radius: 24px; height: 200px" maxlength="250"
+                          placeholder="如果有訂單編號，請一併附上，將會加速客服進度，感謝您的協助。"></textarea>
+                        <label for="about-content">問題內容（請附訂單編號）
                         </label>
                         <p class="fs-7 text-neutral-700">0/250</p>
                       </div>
-                      <button
-                        type="button"
-                        class="btn btn-secondary-500 text-neutral-0 fw-semibold w-100"
-                      >
+                      <button type="button" class="btn btn-secondary-500 text-neutral-0 fw-semibold w-100">
                         送出
                       </button>
                     </div>
@@ -512,6 +444,7 @@
       </section>
     </main>
     <%- include('./layout/footer'); -%>
-    <script type="module" src="../main.js"></script>
-  </body>
+      <script type="module" src="../main.js"></script>
+</body>
+
 </html>
