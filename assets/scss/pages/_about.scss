@@ -16,6 +16,7 @@
   max-width: 360px;
   height: 200px;
 }
+
 .after-img {
   max-width: 360px;
   height: 200px;
@@ -24,11 +25,14 @@
 @media (min-width: 992px) {
   .before-img {
     max-width: 360px;
-    height: 288px; /* 固定框高 */
+    height: 288px;
+    /* 固定框高 */
   }
+
   .after-img {
     max-width: 400px;
-    height: 320px; /* 固定框高 */
+    height: 320px;
+    /* 固定框高 */
   }
 }
 
@@ -73,7 +77,8 @@
 }
 
 .brand-footprint {
-  width: 280px; /* 調整寬度 */
+  width: 280px;
+  /* 調整寬度 */
   height: auto;
   top: 230px;
   right: 50px;
@@ -82,7 +87,8 @@
 }
 
 .brand-smile {
-  width: 100px; /* 調整寬度 */
+  width: 100px;
+  /* 調整寬度 */
   height: auto;
   top: 145px;
   right: 15px;
@@ -90,7 +96,8 @@
 
 @media (min-width: 992px) {
   .brand-smile {
-    width: 120px; /* 調整寬度 */
+    width: 120px;
+    /* 調整寬度 */
     height: auto;
     top: 732px;
     right: 90px;
@@ -124,6 +131,15 @@
 }
 
 //📌📌📌section 2.2 團隊成員
+// 成員插圖
+@media (min-width: 992px) {
+  .member-icon {
+    max-width: 10%;
+    top: 25px;
+    left: 420px;
+  }
+}
+
 .pt-100 {
   padding-top: 100px;
 }
@@ -146,6 +162,11 @@
   }
 }
 
+// 卡片 hover
+.team-overflow .card:hover {
+  transform: translateY(-4px);
+}
+
 //📌📌📌section 2.3 陪診師服務
 @media (min-width: 992px) {
   .me-lg-80 {
@@ -153,7 +174,30 @@
   }
 }
 
+// 花朵插圖
+.service-flower {
+  max-width: 100px;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+@media (min-width: 992px) {
+  .service-flower {
+    max-width: 100%;
+    top: 408px;
+    left: -168px;
+    transform: scaleX(-1);
+  }
+}
+
 //📌📌📌section 2.4 訂單FAQ
+// faq插圖
+@media (min-width: 992px) {
+  .faq-icon {
+    left: 560px;
+    top: -150px;
+  }
+}
 
 .faq-title {
   max-width: 240px;

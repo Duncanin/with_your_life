@@ -10,7 +10,7 @@
   <%- include('./layout/link-icon'); -%>
 </head>
 
-<body>
+<body class="bg-background">
   <%- include('./layout/header-loginOut'); -%>
     <main>
       <!-- 佔位用 -->
@@ -115,17 +115,18 @@
       <!-- section 2.2 團隊成員 -->
       <section>
         <div class="container">
-          <div class="py-10 py-lg-14">
+          <div class="py-10 py-lg-14 position-relative">
             <h3 class="fs-3 fs-lg-1 text-primary-900 text-center mb-lg-10">
               我們ㄟ團隊
             </h3>
+            <img src="/assets/photo/about/member-icon.svg" class="member-icon position-absolute img-fluid d-lg-block d-none z-1" alt="成員插圖">
             <!-- 卡片群組層 -->
-            <div class="team-overflow">
+            <div class="team-overflow pb-6">
               <div class="row flex-nowrap flex-lg-wrap gx-3 gx-lg-6">
                 <!-- 卡片1 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div class="card position-relative rounded-20 rounded-lg-40 border-0">
+                    <div class="card position-relative rounded-20 rounded-lg-40 border-0 bg-neutural-0 shadow">
                       <img src="../assets/photo/about/about-brand-s2-1.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
                         style="width: 150px; height: 150px; object-fit: cover" alt="專業復健科醫生圖片" />
@@ -148,7 +149,7 @@
                 <!-- 卡片2 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div class="card position-relative rounded-20 rounded-lg-40 border-0">
+                    <div class="card position-relative rounded-20 rounded-lg-40 border-0 bg-neutural-0 shadow">
                       <img src="../assets/photo/about/about-brand-s2-2.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
                         style="width: 150px; height: 150px; object-fit: cover" alt="輔具研發團隊圖片" />
@@ -171,7 +172,7 @@
                 <!-- 卡片3 -->
                 <div class="col-12 col-lg-4">
                   <div class="pt-100">
-                    <div class="card position-relative rounded-20 rounded-lg-40 border-0">
+                    <div class="card position-relative rounded-20 rounded-lg-40 border-0 bg-neutural-0 shadow">
                       <img src="../assets/photo/about/about-brand-s2-3.png"
                         class="img-fluid rounded-circle card-img-top mb-4 mx-auto position-absolute translate-middle top-0 start-50"
                         style="width: 150px; height: 150px; object-fit: cover" alt="臨床護理師圖片" />
@@ -200,11 +201,11 @@
       <!-- section 2.3 陪診師服務 service -->
       <section>
         <div class="container">
-          <div class="row">
-            <div class="col-12 mx-auto">
+          <div class="row ">
+            <div class="col-12 mx-auto ">
               <!-- 定位容器 -->
               <div class="service-area d-lg-flex align-items-lg-center py-10 py-lg-14">
-                <div class="service-img mb-6 position-relative col-lg-6 me-lg-80">
+                <div class="service-img mb-6 position-relative col-lg-6 me-lg-80 ">
                   <img src="../assets/photo/about/about-brand-s3-1.png" class="img-fluid rounded-20" alt="陪診師服務圖" />
                   <!-- 黑色漸層遮罩 -->
                   <div class="position-absolute top-0 start-0 w-100 h-100 rounded-20" style="
@@ -214,14 +215,18 @@
                         transparent
                       );
                     "></div>
-                  <div class="position-absolute" style="left: 20px; bottom: 20px">
+                  <div class="position-absolute mb-lg-5 ms-lg-5" style="left: 20px; bottom: 20px">
                     <h4 class="fs-4 fs-lg-2 mb-3">
                       <span class="text-neutral-0">陪診師服務</span>
                     </h4>
-                    <p class="fs-6 text-neutral-0">
+                    <p class="fs-6 fs-lg-4 text-neutral-0">
                       不只是照護，更是生活中的陪伴。
                     </p>
                   </div>
+                  <!-- 花朵插圖定位 -->
+                  <img src="/assets/photo/about/flower.svg"
+                    class="img-fluid position-absolute service-flower d-lg-block d-md-none bottom-0 end-0 " alt="花朵插圖">
+
                 </div>
                 <div class="service-info">
                   <div class="service-title text-center mb-6 mb-lg-8">
@@ -246,7 +251,6 @@
                   <h4 class="fs-4 fs-lg-3 text-center text-primary-500 mb-6 mb-lg-8">
                     有我們陪你，就不再孤單。
                   </h4>
-
                   <button type="button"
                     class="btn btn-outline-primary-500 fw-semibold w-100 d-flex justify-content-center">
                     <span class="material-symbols-outlined me-1"> call </span>
@@ -255,6 +259,7 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -264,11 +269,15 @@
           <div class="row">
             <div class="col-12 col-lg-8 mx-auto">
               <div class="faq-area py-10 py-lg-14">
-                <h3 class="faq-title fs-3 text-primary-900 mb-6 mb-lg-10 text-center mx-auto">
-                  關於訂單，你可能想問ㄟ事
-                </h3>
+                <div class="position-relative">
+                  <h3 class="faq-title fs-3 text-primary-900 mb-6 mb-lg-10 text-center mx-auto">
+                    關於訂單，你可能想問ㄟ事
+                  </h3>
+                  <!-- faq插圖定位 -->
+                  <img src="/assets/photo/about/faq-icon.svg"
+                    class="faq-icon img-fluid position-absolute d-lg-block d-none z-1" alt="faq插圖">
+                </div>
                 <!-- 手風琴(使用always open範例去改) -->
-                <!--📌📌📌0916調整padding -->
                 <div class="accordion" id="accordionPanelsStayOpenExample">
                   <div class="accordion-item rounded-20 rounded-lg-40 mb-6">
                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -336,18 +345,17 @@
                         </picture>
                       </div>
                     </div>
-                    <!--手風琴結束 -->
                   </div>
                   <div class="accordion-item rounded-20 rounded-lg-40 mb-6">
                     <h2 class="accordion-header" id="panelsStayOpen-headingFour">
                       <button
                         class="accordion-button collapsed rounded-20 rounded-lg-40 text-neutral-950 fs-lg-4 fw-semibold px-lg-8 py-lg-6"
                         type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
-                        aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+                        aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
                         退貨流程？
                       </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show"
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
                       aria-labelledby="panelsStayOpen-headingFour">
                       <div class="accordion-body px-lg-8 py-lg-6">
                         <p class="fs-7 fs-lg-6 text-neutral-700 mb-3 mb-lg-4">相關流程請參考附圖：</p>
@@ -356,6 +364,7 @@
                       </div>
                     </div>
                   </div>
+                  <!--手風琴結束 -->
                 </div>
               </div>
             </div>
@@ -365,10 +374,10 @@
       <section>
         <div class="container">
           <div class="row">
-            <div class="col-12 col-lg-10 mx-auto py-lg-14">
+            <div class="col-12 col-lg-10 mx-auto pb-lg-14">
               <div
-                class="contact-area d-lg-flex align-items-lg-center p-lg-10 border border-2 border-primary-200 rounded-20 my-10 px-4 py-6">
-                <div class="contact-header bg-neutral-50 w-lg-400 me-lg-10">
+                class="contact-area d-lg-flex align-items-lg-center p-lg-10 border border-2 border-primary-200 bg-primary-50 rounded-20 my-10 px-4 py-6">
+                <div class="contact-header bg-primary-50 w-lg-400 me-lg-10">
                   <div class="contact-title text-center mb-4">
                     <h3 class="fs-3 text-primary-900 mb-4">
                       咱在這裡，隨時等你
