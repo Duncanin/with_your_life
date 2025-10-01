@@ -123,12 +123,12 @@
         <div class="py-10 py-md-14">
           <h2 class="fs-3 fs-md-1 text-center mb-6 mb-md-10">先從分類逛起，陪你一步步找適合的</h2>
           <% const categories = [
-            { img: '/assets/photo/index/sorted/wheelchair.svg', text: '行動協助', url:'http://localhost:5173/with_your_life/page/product.html#list3' },
-            { img: '/assets/photo/index/sorted/meal.svg', text: '用餐照護', url:'http://localhost:5173/with_your_life/page/product.html#list4' },
-            { img: '/assets/photo/index/sorted/toilet.svg', text: '如廁便利', url:'http://localhost:5173/with_your_life/page/product.html#list5' },
-            { img: '/assets/photo/index/sorted/bath.svg', text: '洗浴安全', url:'http://localhost:5173/with_your_life/page/product.html#list6' },
-            { img: '/assets/photo/index/sorted/welfare.svg', text: '補助專區', url:'http://localhost:5173/with_your_life/page/product.html#list7' },
-            { img: '/assets/photo/index/sorted/allClass.svg', text: '全部分類', url:'http://localhost:5173/with_your_life/page/product.html#list' }
+            { img: '/assets/photo/index/sorted/wheelchair.svg', text: '行動協助', url:'/with_your_life/product.html#list3' },
+            { img: '/assets/photo/index/sorted/meal.svg', text: '用餐照護', url:'/with_your_life/product.html#list4' },
+            { img: '/assets/photo/index/sorted/toilet.svg', text: '如廁便利', url:'/with_your_life/product.html#list5' },
+            { img: '/assets/photo/index/sorted/bath.svg', text: '洗浴安全', url:'/with_your_life/product.html#list6' },
+            { img: '/assets/photo/index/sorted/welfare.svg', text: '補助專區', url:'/with_your_life/product.html#list7' },
+            { img: '/assets/photo/index/sorted/allClass.svg', text: '全部分類', url:'/with_your_life/product.html#list' }
           ]; %>
           <div class="d-grid gap-4 gap-md-6 sorted-grid mx-auto">
             <% categories.forEach(category => { %>
@@ -384,7 +384,7 @@
         x: 50,
         y: -50,         // 從左方滑入
         opacity: 0,
-        duration: 1.2,
+        duration: 0.6,
         stagger: 0.6,
         ease: "elastic.out(1, 0.5)",
         scrollTrigger: {
@@ -395,18 +395,6 @@
       });
 
 
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        if (window.location.hash) {
-          const hash = window.location.hash;
-          const tabTriggerEl = document.querySelector(`button[data-bs-target='${hash}']`);
-          if (tabTriggerEl) {
-            tabTriggerEl.click();
-          }
-        }
-      });
     </script>
 
     <script>
@@ -547,21 +535,6 @@
           <p class="fs-7 fs-md-6 text-center text-neutral-700">${item.text}</p>
         `;
 
-        // 加 GSAP hover 事件監聽
-        // card.addEventListener('mouseenter', () => {
-        //   gsap.to(card, {
-        //     boxShadow: "0 0 40px 16px #5fa8ff88",
-        //     borderColor: "#5fa8ff",
-        //     duration: 0.5
-        //   });
-        // });
-        // card.addEventListener('mouseleave', () => {
-        //   gsap.to(card, {
-        //     boxShadow: "0 0 0px 0px #0000",
-        //     borderColor: "#eee",
-        //     duration: 0.5
-        //   });
-        // });
           gsap.to(".glow-dot", {
             rotate: 360,
             duration: 2.4,
