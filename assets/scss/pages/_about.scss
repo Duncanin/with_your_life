@@ -224,10 +224,12 @@
 //💠替換 BS5 手風琴預設 icon
 .accordion-button::after {
   background-image: url("/assets/photo/about/arrow-drop-down.svg");
+  background-position: center; // 垂直+水平置中
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("/assets/photo/about/arrow-drop-up.svg");
+  background-image: url("/assets/photo/about/arrow-drop-down.svg");
+  background-position: center; // 垂直+水平置中
 }
 
 .accordion-button:not(.collapsed) {
